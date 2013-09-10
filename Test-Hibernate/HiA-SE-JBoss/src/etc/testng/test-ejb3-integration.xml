@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CaveatEmptor-EJB3" verbose="123">
+
+    <test name="Runtime">
+        <packages>
+            <package name="org.hibernate.ce.auction.test.testng.runtime"/>
+        </packages>
+    </test>
+
+    <test name="Integration">
+        <groups>
+            <run><include name="integration.*"/></run>
+        </groups>
+        <packages>
+             <package name="org.hibernate.ce.auction.test.testng.persistence"/>
+         </packages>
+    </test>
+
+</suite>

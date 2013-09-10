@@ -1,0 +1,6 @@
+CaveatEmptor (sqlbench) Changelog
+=================================
+
+Changes in version x.x.x (xx.xx.2004)
+------------------------------------
+

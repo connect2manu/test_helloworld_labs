@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"
+[
+<!ENTITY % globals      SYSTEM "/org/hibernate/ce/auction/persistence/globals.dtd">
+%globals;
+]>
+<!--
+
+Mapping file for the AddressEntity class of CaveatEmptor.
+
+This is an alternative mapping for addresses - instead of
+simple components of User, we map this class as an entity.
+This means AddressEntity instances have an independent
+lifecycle and support shared references (e.g. from an
+imaginary Shipment class).
+
+@author Christian Bauer <christian@hibernate.org>
+
+-->
+<hibernate-mapping package="org.hibernate.ce.auction.model">
+
+<class name="AddressEntity"
+	   table="ADDRESS">
+
+	<id name="id"
+		type="long"
+		column="ADDRESS_ID"
+		unsaved-value="null"
+		access="field">
+		<generator class="foreign">
+            <param name="property">user</param>
+        </generator>
+	</id>
+
+	<!-- A versioned entity. -->
+	<version name="version"
+			 column="VERSION"
+			 access="org.hibernate.property.DirectPropertyAccessor"/>
+
+    <property   name="street"
+                type="string"
+                column="STREET"
+                length="255"/>
+
+    <property   name="zipcode"
+                type="string"
+                column="ZIPCODE"
+                length="16"/>
+
+    <property   name="city"
+                type="string"
+                column="CITY"
+                length="255"/>
+
+    <!-- A shared primary key association. -->
+    <one-to-one name="user"
+                class="User"
+                constrained="true"/>
+
+</class>
+
+</hibernate-mapping>

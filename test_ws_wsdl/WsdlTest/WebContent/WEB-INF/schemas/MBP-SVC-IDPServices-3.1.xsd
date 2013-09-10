@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- =====================================================================
+	* File Name			: MBP-SVC-IDPServices-3.1.xsd
+	*
+	* Author				: Rosschaert Fabrice
+	* Owner				: Belgacom ITN
+	* Creation date		: March 2010
+	* Description			: My Belgacom Passport Identity Provider Services
+	* Status				: VERSION - READY TO BE RELEASED
+	*
+	* History				: Rosschaert Fabrice 17/06/2009 v1.0
+	*					   			- Initial
+	*							: Rosschaert Fabrice 30/03/2010 v2.0 
+	*					   			- IDPUser object modified (confirmFlow+additionalInfo)
+	*					   			- MCS checkUserCredentials operation added 
+	*							: Rosschaert Fabrice 09/04/2010 v2.0 
+	*					   			- Merge v2 operation added
+	*							: Rosschaert Fabrice 06/07/2010 v2.1
+	*								- IsMergeAllowed operation added
+	*							: Moerman Joeri 16/01/2012 v3.0
+	*								- change mandatory fields towards non-mandatory (IDPUser object)
+	*							: Rosschaert Fabrice 27/11/2012 v3.1
+	*								- GrantProductRole operation added
+	*								- RevokeProductRole operation added
+	*								- SearchAccountReferences operation added
+	*
+	========================================================================= -->
+<xsd:schema xmlns:vsscheck="urn:v1.checkservice.vss.objects.bgc" xmlns:tns="urn:v3.idpservices.mbp.services.bgc" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:v3.idpservices.mbp.services.bgc" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.1">
+	<!-- ==================================================== -->
+	<!-- Documentation										  -->
+	<!-- ==================================================== -->
+	<xsd:annotation>
+		<xsd:documentation>
+			<tns:ModificationDate>2010-07-06</tns:ModificationDate>
+			<tns:ModificationUser>id815635</tns:ModificationUser>
+			<tns:Comments>Second version of my Belgacom Passport Identity Provider services (MBP-IDP Services)</tns:Comments>
+		</xsd:documentation>
+	</xsd:annotation>
+	<!-- ==================================================== -->
+	<!-- Check Operation									  -->
+	<!-- ==================================================== -->
+	<xsd:import namespace="urn:v1.checkservice.vss.objects.bgc" schemaLocation="VSS-OBJ-CheckService-1.0.xsd"/>
+	<!-- Check operation request -->
+	<xsd:element name="RequestDataCheckService" type="vsscheck:RequestDataCheckServiceType"/>
+	<!-- Check operation response -->
+	<xsd:element name="ResponseDataCheckService" type="vsscheck:ResponseDataCheckServiceType"/>
+	<!-- ==================================================== -->
+	<!-- Operation Request(s)								  -->
+	<!-- ==================================================== -->
+	<!-- Validate email address -->
+	<xsd:element name="RequestDataValidateEmailAddress" type="tns:RequestDataValidateEmailAddressType"/>
+	<!-- Collect account data -->
+	<xsd:element name="RequestDataCollectAccountData" type="tns:RequestDataCollectAccountDataType"/>
+	<!-- Create account -->
+	<xsd:element name="RequestDataCreateAccount" type="tns:RequestDataCreateAccountType"/>
+	<!-- Update account -->
+	<xsd:element name="RequestDataUpdateAccount" type="tns:RequestDataUpdateAccountType"/>
+	<!-- Delete account -->
+	<xsd:element name="RequestDataDeleteAccount" type="tns:RequestDataDeleteAccountType"/>
+	<!-- Bridge account -->
+	<xsd:element name="RequestDataBridgeAccount" type="tns:RequestDataBridgeAccountType"/>
+	<!-- Debridge account -->
+	<xsd:element name="RequestDataDebridgeAccount" type="tns:RequestDataDebridgeAccountType"/>
+	<!-- Merge account -->
+	<xsd:element name="RequestDataMergeAccount" type="tns:RequestDataMergeAccountType"/>
+	<!-- Reset Password -->
+	<xsd:element name="RequestDataResetPassword" type="tns:RequestDataResetPasswordType"/>
+	<!-- Confirm account -->
+	<xsd:element name="RequestDataConfirmAccount" type="tns:RequestDataConfirmAccountType"/>
+	<!-- Collect bridge data -->
+	<xsd:element name="RequestDataCollectBridgeData" type="tns:RequestDataCollectBridgeDataType"/>
+	<!-- Block account -->
+	<xsd:element name="RequestDataBlockAccount" type="tns:RequestDataBlockAccountType"/>
+	<!-- Collect specific bridge data -->
+	<xsd:element name="RequestDataCollectSpecificBridgeData" type="tns:RequestDataCollectSpecificBridgeDataType"/>
+	<!-- Insert/Update specific bridge data -->
+	<xsd:element name="RequestDataUpSertSpecificBridgeData" type="tns:RequestDataUpSertSpecificBridgeDataType"/>
+	<!-- Delete specific bridge data -->
+	<xsd:element name="RequestDataDeleteSpecificBridgeData" type="tns:RequestDataDeleteSpecificBridgeDataType"/>
+	<!-- Check Skynet token validity -->
+	<xsd:element name="RequestDataCheckSkynetTokenValidity" type="tns:RequestDataCheckSkynetTokenValidityType"/>
+	<!-- Check user credentials -->
+	<xsd:element name="RequestDataCheckUserCredentials" type="tns:RequestDataCheckUserCredentialsType"/>
+	<!-- Merge account V2 -->
+	<xsd:element name="RequestDataMergeAccountV2" type="tns:RequestDataMergeAccountV2Type"/>
+	<!-- Is merge allowed -->
+	<xsd:element name="RequestDataIsMergeAllowed" type="tns:RequestDataIsMergeAllowedType"/>
+	<!-- Grant product role -->
+	<xsd:element name="RequestDataGrantProductRole" type="tns:RequestDataGrantProductRoleType"/>
+	<!-- Revoke product role -->
+	<xsd:element name="RequestDataRevokeProductRole" type="tns:RequestDataRevokeProductRoleType"/>
+	<!-- Search account references -->
+	<xsd:element name="RequestDataSearchAccountReferences" type="tns:RequestDataSearchAccountReferencesType"/>
+	<!-- ==================================================== -->
+	<!-- Operation Response(s)								  -->
+	<!-- ==================================================== -->
+	<!-- Validate email address -->
+	<xsd:element name="ResponseDataValidateEmailAddress" type="tns:ResponseDataValidateEmailAddressType"/>
+	<!-- Collect account data -->
+	<xsd:element name="ResponseDataCollectAccountData" type="tns:ResponseDataCollectAccountDataType"/>
+	<!-- Create account -->
+	<xsd:element name="ResponseDataCreateAccount" type="tns:ResponseDataCreateAccountType"/>
+	<!-- Update account -->
+	<xsd:element name="ResponseDataUpdateAccount" type="tns:ResponseDataUpdateAccountType"/>
+	<!-- Delete account -->
+	<xsd:element name="ResponseDataDeleteAccount" type="tns:ResponseDataDeleteAccountType"/>
+	<!-- Bridge account -->
+	<xsd:element name="ResponseDataBridgeAccount" type="tns:ResponseDataBridgeAccountType"/>
+	<!-- Debridge account -->
+	<xsd:element name="ResponseDataDebridgeAccount" type="tns:ResponseDataDebridgeAccountType"/>
+	<!-- Merge account -->
+	<xsd:element name="ResponseDataMergeAccount" type="tns:ResponseDataMergeAccountType"/>
+	<!-- Reset Password -->
+	<xsd:element name="ResponseDataResetPassword" type="tns:ResponseDataResetPasswordType"/>
+	<!-- Confirm account -->
+	<xsd:element name="ResponseDataConfirmAccount" type="tns:ResponseDataConfirmAccountType"/>
+	<!-- Collect bridge data -->
+	<xsd:element name="ResponseDataCollectBridgeData" type="tns:ResponseDataCollectBridgeDataType"/>
+	<!-- Block account -->
+	<xsd:element name="ResponseDataBlockAccount" type="tns:ResponseDataBlockAccountType"/>
+	<!-- Collect specific bridge data -->
+	<xsd:element name="ResponseDataCollectSpecificBridgeData" type="tns:ResponseDataCollectSpecificBridgeDataType"/>
+	<!-- Insert/Update specific bridge data -->
+	<xsd:element name="ResponseDataUpSertSpecificBridgeData" type="tns:ResponseDataUpSertSpecificBridgeDataType"/>
+	<!-- Delete specific bridge data -->
+	<xsd:element name="ResponseDataDeleteSpecificBridgeData" type="tns:ResponseDataDeleteSpecificBridgeDataType"/>
+	<!-- Check Skynet token validity -->
+	<xsd:element name="ResponseDataCheckSkynetTokenValidity" type="tns:ResponseDataCheckSkynetTokenValidityType"/>
+	<!-- Check user credentials -->
+	<xsd:element name="ResponseDataCheckUserCredentials" type="tns:ResponseDataCheckUserCredentialsType"/>
+	<!-- Merge account V2 -->
+	<xsd:element name="ResponseDataMergeAccountV2" type="tns:ResponseDataMergeAccountV2Type"/>
+	<!-- Is merge allowed -->
+	<xsd:element name="ResponseDataIsMergeAllowed" type="tns:ResponseDataIsMergeAllowedType"/>
+	<!-- Grant product role -->
+	<xsd:element name="ResponseDataGrantProductRole" type="tns:ResponseDataGrantProductRoleType"/>
+	<!-- Revoke product role -->
+	<xsd:element name="ResponseDataRevokeProductRole" type="tns:ResponseDataRevokeProductRoleType"/>
+	<!-- Search account references -->
+	<xsd:element name="ResponseDataSearchAccountReferences" type="tns:ResponseDataSearchAccountReferencesType"/>
+	<!-- ==================================================== -->
+	<!-- Transfer objects used in this interface			  -->
+	<!-- ==================================================== -->
+	<!-- Validate email address request -->
+	<xsd:complexType name="RequestDataValidateEmailAddressType">
+		<xsd:annotation>
+			<xsd:documentation>
+				TODO
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Email" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Validate email address response -->
+	<xsd:complexType name="ResponseDataValidateEmailAddressType">
+		<xsd:annotation>
+			<xsd:documentation>
+				TODO
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="EmailValid" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Collect account data request -->
+	<xsd:complexType name="RequestDataCollectAccountDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to collect the account data from the IDP account. 
+				- If ID_USER is given as a parameter, then USER_LOGIN is ignored. 
+				- If ID_USER is NULL, then USER_LOGIN is used as search criterion.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="IdUser" type="xsd:integer"/>
+				<xsd:element name="UserLogin" type="xsd:string"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Collect account data response -->
+	<xsd:complexType name="ResponseDataCollectAccountDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				This operation returns the all account details as stored in the table IDP_USER.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IDPUser" type="tns:IDPUserWSType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Create account request -->
+	<xsd:complexType name="RequestDataCreateAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				The field ID_USER will be not used because it is automatically generated (auto increment) 
+				for each insert and doesnâ€™t need to be included in the input.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IDPUser" type="tns:IDPUserWSType"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Create account response -->
+	<xsd:complexType name="ResponseDataCreateAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the inserting operation has been successful or not.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Update account request -->
+	<xsd:complexType name="RequestDataUpdateAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				The field ID_USER is used as main search criterium.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="IdUser" type="xsd:integer"/>
+				<xsd:element name="UserLogin" type="xsd:string"/>
+			</xsd:choice>
+			<xsd:element name="IDPUserProperties" type="tns:UpdateIDPUserPropertyWSType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Update account response -->
+	<xsd:complexType name="ResponseDataUpdateAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the update operation has been successful or not.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Delete account request -->
+	<xsd:complexType name="RequestDataDeleteAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to schedule for delete an account of the IDP_USER table. 
+				It will change the flag IS_TODELETE in the table IDP_USER  to true. 
+				- If ID_USER is given as a parameter, then USER_LOGIN is ignored. 
+				- If ID_USER is NULL, then USER_LOGIN is used as search criterion.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="IdUser" type="xsd:integer"/>
+				<xsd:element name="UserLogin" type="xsd:string"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Delete account response -->
+	<xsd:complexType name="ResponseDataDeleteAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the set to delete operation has been successful or not.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Bridge account request -->
+	<xsd:complexType name="RequestDataBridgeAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to manipulate the table USER2SP in order to set a bridge between the IDP and a specific SP.
+				- ID_USER: Unique user identifier of the table IDP_USER.
+				- ID_SP: Unique identifier for the table SERVICE_PROVIDER.
+				- SP_USER_LOGIN: The unique user login which exists on the service provider's repository and which would be used when logging in locally.
+				- SP_UNIQUE_ID: Unique user identifier on the SP side.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="User2SP" type="tns:User2SPWSType"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Bridge account response -->
+	<xsd:complexType name="ResponseDataBridgeAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the bridging operation has been successful or not.
+				We only want to support one bridge per SP. 
+				This means that if a bridge already exists for a specific SP an error is given.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Debridge account request -->
+	<xsd:complexType name="RequestDataDebridgeAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to manipulate the table USER2SP in order to destroy a bridge between the IDP and a specific SP.
+				- ID_USER: Unique user identifier of the table IDP_USER.
+				- ID_SP: Unique identifier for the table SERVICE_PROVIDER.
+				- SP_USER_LOGIN: The unique user login which exists on the service provider's repository and which would be used when logging in locally.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="User2SP" type="tns:User2SPWSType"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Debridge account response-->
+	<xsd:complexType name="ResponseDataDebridgeAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the bridging operation has been successful or not.
+				We only want to support one bridge per SP. 
+				This means that if a bridge already exists for a specific SP an error is given.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Merge account request -->
+	<xsd:complexType name="RequestDataMergeAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to merge 2 valid IDP accounts into one IDP account.
+				- ID_USER_TARGET: Unique user identifier of the table IDP_USER identifying the target account.
+				- ID_USER_SOURCE: Unique user identifier of the table IDP_USER identifying the source account.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUserTarget" type="xsd:integer"/>
+			<xsd:element name="IdUserSource" type="xsd:integer"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Merge account response-->
+	<xsd:complexType name="ResponseDataMergeAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the merge operation has been successful or not.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Reset Password request -->
+	<xsd:complexType name="RequestDataResetPasswordType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to generate a new password for a specific user. 
+				- If ID_USER is given as a parameter, then USER_LOGIN is ignored. 
+				- If ID_USER is NULL, then USER_LOGIN is used as search criterion.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="IdUser" type="xsd:integer"/>
+				<xsd:element name="UserLogin" type="xsd:string"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Reset Password response -->
+	<xsd:complexType name="ResponseDataResetPasswordType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the set to reset operation has been successful or not.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Confirm account request -->
+	<xsd:complexType name="RequestDataConfirmAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to change the confirmation status of the given account into confirmed or unconfirmed. 
+				It will therefore manipulate the field IS_CONFIRMED of the table IDP_USER. 
+				- If ID_USER is given as a parameter, then USER_LOGIN is ignored. 
+				- If ID_USER is NULL, then USER_LOGIN is used as search criterion.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="IdUser" type="xsd:integer"/>
+				<xsd:element name="UserLogin" type="xsd:string"/>
+			</xsd:choice>
+			<xsd:element name="isConfirmed" type="xsd:boolean" default="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Confirm account response -->
+	<xsd:complexType name="ResponseDataConfirmAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the update operation has been successful or not.
+				In case the record is not found, return an error.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Collect bridge data request -->
+	<xsd:complexType name="RequestDataCollectBridgeDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to collect the account data from the IDP account linked to a certain user account of his own.
+				- ID_USER: 	Unique user identifier of the table IDP_USER
+				- ID_SP: 	Unique identifier for the SERVICE_PROVIDER. 
+								If this field is omitted, then this web service will need to run all bridge information of all service providers. 
+								If a specific service provider is requested, then only the information for this service provider needs to be provided.
+				- SP_USER_LOGIN: 	User login for the user on the service provider.  
+											Normally this field is omitted, but if it is added it will return the occurrence of USER2SP matching the search or fail. 
+											This could be used to check whether this user has been bridged between the IDP and a specific service provider.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUser" type="xsd:integer"/>
+			<xsd:element name="IdSP" type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="SPUserLogin" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Collect bridge data response -->
+	<xsd:complexType name="ResponseDataCollectBridgeDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return the occurrences of the table USER2SP which match the search criteria.
+				Return a failure in case that the search criteria do not result in hits in the database.  
+				All fields of USER2SP are returned.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="User2SPs" type="tns:User2SPWSType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Block account request -->
+	<xsd:complexType name="RequestDataBlockAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to change the blocking status of the given account into blocked or active.
+				It will therefore manipulate the field IS_BLOCKED of the table IDP_USER.
+				- If ID_USER is given as a parameter, then USER_LOGIN is ignored.
+				- If ID_USER is NULL, then USER_LOGIN is used as search criterion.
+				- IS_BLOCKED:		0 (account is not blocked / active)
+										1 (account is blocked)
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="IdUser" type="xsd:integer"/>
+				<xsd:element name="UserLogin" type="xsd:string"/>
+			</xsd:choice>
+			<xsd:element name="isBlocked" type="xsd:boolean" default="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Block account response -->
+	<xsd:complexType name="ResponseDataBlockAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the update has been successful or not.
+				In case the record is not found, return an error.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Collect specific bridge data request -->
+	<xsd:complexType name="RequestDataCollectSpecificBridgeDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to collect the additional account data from the IDP account linked to a certain user account of his own. 
+				- ID_USER:	Unique user identifier of the table IDP_USER.
+				- ID_SP:		Unique identifier for the SERVICE_PROVIDER. 
+								If this field is omitted, then this web service will need to run all bridge information of all service providers. 
+								If a specific service provider is requested, then only the information for this service provider needs to be provided.
+				- SP_USER_LOGIN	: User login for the user on the service provider.
+				- SP_PARAM: 	Identifier of the additional parameter stored. 
+									If this parameter is omitted, then all the known parameters are returned to the caller. 
+									Otherwise only the record related to this parameter is returned (or an error if it does not exist).
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUser" type="xsd:integer"/>
+			<xsd:element name="IdSP" type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="SPUserLogin" type="xsd:string"/>
+			<xsd:element name="SPParam" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Collect specific bridge data response -->
+	<xsd:complexType name="ResponseDataCollectSpecificBridgeDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return the occurrences of the table USER2SP_INFO which match the search criteria.
+				Return a failure in case that the search criteria do not result in hits in the database.  
+				All fields of USER2SP_INFO are returned.			
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="User2SPInfos" type="tns:User2SPInfoWSType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Insert/Update specific bridge data request -->
+	<xsd:complexType name="RequestDataUpSertSpecificBridgeDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to insert or update specific bridge relevant data. 
+				Whenever the occurrence of SP_PARAM does not exist on the bridge yet, it is created. 
+				If a value of SP_PARAM is already available for that bridge, this value (SP_VALUE) is updated.		
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUser" type="xsd:integer"/>
+			<xsd:element name="IdSP" type="xsd:integer"/>
+			<xsd:element name="SPUserLogin" type="xsd:string"/>
+			<xsd:element name="SPParam" type="xsd:string"/>
+			<xsd:element name="SPValue" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Insert/Update specific bridge data response -->
+	<xsd:complexType name="ResponseDataUpSertSpecificBridgeDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the update/insert operation on USER2SP_INFO has been successful or not. 
+				In case the record is not found, return an error.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Delete specific bridge data request -->
+	<xsd:complexType name="RequestDataDeleteSpecificBridgeDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to to delete specific bridge relevant data.		
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUser" type="xsd:integer"/>
+			<xsd:element name="IdSP" type="xsd:integer"/>
+			<xsd:element name="SPUserLogin" type="xsd:string"/>
+			<xsd:element name="SPParam" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Delete specific bridge data response -->
+	<xsd:complexType name="ResponseDataDeleteSpecificBridgeDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the delete operation on USER2SP_INFO has been successful or not. 
+				In case the record is not found, return an error.			
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Check Skynet token validity request -->
+	<xsd:complexType name="RequestDataCheckSkynetTokenValidityType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Check Skynet token validity
+				TODO: add more info
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Token" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Check Skynet token validity response -->
+	<xsd:complexType name="ResponseDataCheckSkynetTokenValidityType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Check Skynet token validity
+				TODO: add more info
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StatusCode" type="xsd:integer"/>
+			<xsd:element name="StatusMessage" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Check user credentials request -->
+	<xsd:complexType name="RequestDataCheckUserCredentialsType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Check user credentials
+				UserPassword: a SHA1 version of the IDP user password
+				TODO: add more info
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="UserLogin" type="xsd:string"/>
+			<xsd:element name="UserPassword" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Check Skynet token validity response -->
+	<xsd:complexType name="ResponseDataCheckUserCredentialsType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Check user credentials
+				TODO: add more info
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StatusCode" type="xsd:integer"/>
+			<xsd:element name="StatusMessage" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Merge account V2 request -->
+	<xsd:complexType name="RequestDataMergeAccountV2Type">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to merge/transfer/link 2 accounts.
+				- IdUserTarget: Unique master global user identifier (GID) of the table IDP_USER identifying the target account.
+				- SpUserLoginSource: Service provider user login source.
+				- IdSpSource: Unique service provider identifier identifying the source service provider.
+				- SpAbrSource: Service provider abbreviation identifying the source service provider.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUserTarget" type="xsd:integer"/>
+			<xsd:element name="SpUserLoginSource" type="xsd:string"/>
+			<xsd:choice>
+				<xsd:element name="IdSpSource" type="xsd:integer"/>
+				<xsd:element name="SpAbrSource" type="xsd:string"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Merge account V2 response-->
+	<xsd:complexType name="ResponseDataMergeAccountV2Type">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the merge operation has been successful or not.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Is merge allowed request -->
+	<xsd:complexType name="RequestDataIsMergeAllowedType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Operation used to check if merge/bridge is allowed.
+				- IdUserTarget: Unique master global user identifier (GID) of the table IDP_USER identifying the target account.
+				- IdSpSource: Unique service provider identifier identifying the source service provider.
+				- SpAbrSource: Service provider abbreviation identifying the source service provider.
+				- IdUserSource: Unique user identifier of the table IDP_USER identifying the source account.
+				- SpUserLoginSource: Service provider user login source.
+				- Subsegment: Subsegment identifying the source segment to bridge.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUserTarget" type="xsd:integer"/>
+			<xsd:choice>
+				<xsd:element name="IdSpSource" type="xsd:integer"/>
+				<xsd:element name="SpAbrSource" type="xsd:string"/>
+			</xsd:choice>
+			<xsd:choice>
+				<xsd:element name="IdUserSource" type="xsd:integer"/>
+				<xsd:element name="SpUserLoginSource" type="xsd:string"/>
+				<xsd:element name="Subsegment" type="xsd:string"/>
+			</xsd:choice>
+			<xsd:element name="AdditionalParams" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Is merge allowed response-->
+	<xsd:complexType name="ResponseDataIsMergeAllowedType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Return whether the merge operation has been successful or not.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Grant product role request -->
+	<xsd:complexType name="RequestDataGrantProductRoleType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Grand role to a product (linked to UDM)
+				Product should be a msisdn
+				Role can be ['Owner','Reviewer'] 
+				Notifications default: Email and SMS is sent directly, a delay (1 means delay=1 hour) can be set
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Product" type="xsd:string"/>
+			<xsd:element name="Role" type="xsd:string"/>
+			<xsd:element name="Notifications" type="tns:NotificationWSType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="IdUpdateUser" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Grant product role response -->
+	<xsd:complexType name="ResponseDataGrantProductRoleType">
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Revoke product role request -->
+	<xsd:complexType name="RequestDataRevokeProductRoleType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Grand role to a product (linked to UDM)
+				Product should be a msisdn
+				Role can be ['Owner','Reviewer'] 
+				Notifications default: Email and SMS is sent directly, a delay (1 means delay=1 hour) can be set
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Product" type="xsd:string"/>
+			<xsd:element name="Role" type="xsd:string"/>
+			<xsd:element name="Notifications" type="tns:NotificationWSType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="IdUpdateUser" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Revoke product role response -->
+	<xsd:complexType name="ResponseDataRevokeProductRoleType">
+		<xsd:sequence>
+			<xsd:element name="Success" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- Search account references request -->
+	<xsd:complexType name="RequestDataSearchAccountReferencesType">
+		<xsd:annotation>
+			<xsd:documentation>
+				IdUser = GID
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="IdUser" type="xsd:integer"/>
+				<xsd:element name="CustomerId" type="xsd:integer"/>
+				<xsd:element name="Msisdn" type="xsd:integer"/>
+				<xsd:element name="Email" type="xsd:string"/>
+				<xsd:element name="UserLogin" type="xsd:string"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:string" default="3.1"/>
+	</xsd:complexType>
+	<!-- Search account references  response -->
+	<xsd:complexType name="ResponseDataSearchAccountReferencesType">
+		<xsd:sequence>
+			<xsd:element name="IdUser" type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="CustomerId" type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="Msisdn" type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="Email" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="UserLogin" type="xsd:string"/>
+			<xsd:element name="IsFLS" type="xsd:boolean"/>
+			<xsd:element name="IsMCS" type="xsd:boolean"/>
+			<xsd:element name="IsGuest" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- IDPUser type -->
+	<xsd:complexType name="IDPUserWSType">
+		<xsd:annotation>
+			<xsd:documentation>
+				IDP_USER WS Type.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUser" type="xsd:integer"/>
+			<xsd:element name="UserLogin" type="xsd:string"/>
+			<xsd:element name="UserPassword" type="xsd:string"/>
+			<xsd:element name="Email" type="xsd:string"/>
+			<xsd:element name="Surname" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="GivenName" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Civility" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Gender" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Language" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Mobile" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Countrycode" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Zipcode" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="DtBirthdate" type="xsd:date" minOccurs="0"/>
+			<xsd:element name="SecretQuestion" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="SecretAnswer" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="IsConfirmed" type="xsd:boolean" default="0"/>
+			<xsd:element name="IsTodelete" type="xsd:boolean" default="0"/>
+			<xsd:element name="IsLocked" type="xsd:boolean" default="0"/>
+			<xsd:element name="IsExported" type="xsd:boolean" default="0"/>
+			<xsd:element name="ConfirmFlow" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="AdditionalInfo" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="DtCreation" type="xsd:dateTime"/>
+			<xsd:element name="DtUpdate" type="xsd:dateTime"/>
+			<xsd:element name="IdCreateUser" type="xsd:string"/>
+			<xsd:element name="IdUpdateUser" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- User2SP type -->
+	<xsd:complexType name="User2SPWSType">
+		<xsd:annotation>
+			<xsd:documentation>
+				User2SP WS Type.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUser2SP" type="xsd:integer"/>
+			<xsd:element name="IdUser" type="xsd:integer"/>
+			<xsd:element name="IdSP" type="xsd:integer"/>
+			<xsd:element name="SPUserLogin" type="xsd:string"/>
+			<xsd:element name="SPUniqueId" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="DtCreation" type="xsd:dateTime"/>
+			<xsd:element name="IdCreateUser" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- User2SPInfo type -->
+	<xsd:complexType name="User2SPInfoWSType">
+		<xsd:annotation>
+			<xsd:documentation>
+				User2SP_Info WS Type.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IdUser2SPInfo" type="xsd:integer"/>
+			<xsd:element name="IdUser2SP" type="xsd:integer"/>
+			<xsd:element name="SPParam" type="xsd:string"/>
+			<xsd:element name="SPValue" type="xsd:string"/>
+			<xsd:element name="DtCreation" type="xsd:dateTime"/>
+			<xsd:element name="DtUpdate" type="xsd:dateTime"/>
+			<xsd:element name="IdCreateUser" type="xsd:string"/>
+			<xsd:element name="IdUpdateUser" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- IDP user properties -->
+	<xsd:simpleType name="IDPUserPropertiesWSType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="UserLogin"/>
+			<xsd:enumeration value="UserPassword"/>
+			<xsd:enumeration value="Email"/>
+			<xsd:enumeration value="Surname"/>
+			<xsd:enumeration value="GivenName"/>
+			<xsd:enumeration value="Civility"/>
+			<xsd:enumeration value="Gender"/>
+			<xsd:enumeration value="Language"/>
+			<xsd:enumeration value="Mobile"/>
+			<xsd:enumeration value="Countrycode"/>
+			<xsd:enumeration value="Zipcode"/>
+			<xsd:enumeration value="DtBirthdate"/>
+			<xsd:enumeration value="SecretQuestion"/>
+			<xsd:enumeration value="SecretAnswer"/>
+			<xsd:enumeration value="IsConfirmed"/>
+			<xsd:enumeration value="IsTodelete"/>
+			<xsd:enumeration value="IsLocked"/>
+			<xsd:enumeration value="IsExported"/>
+			<xsd:enumeration value="ConfirmFlow"/>
+			<xsd:enumeration value="AdditionalInfo"/>
+			<xsd:enumeration value="IdCreateUser"/>
+			<xsd:enumeration value="IdUpdateUser"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="UpdateIDPUserPropertyWSType">
+		<xsd:sequence>
+			<xsd:element name="IDPUserProperty" type="tns:IDPUserPropertiesWSType"/>
+			<xsd:choice>
+				<xsd:element name="IDPUserStringValue" type="xsd:string" nillable="true"/>
+				<xsd:element name="IDPUserBooleanValue" type="xsd:boolean" nillable="true"/>
+				<xsd:element name="IDPUserDateValue" type="xsd:date" nillable="true"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NotificationWSType">
+		<xsd:sequence>
+			<xsd:element name="Type" type="tns:NotificationTypeWSType"/>
+			<xsd:element name="Delay" type="xsd:integer"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="NotificationTypeWSType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Email"/>
+			<xsd:enumeration value="SMS"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

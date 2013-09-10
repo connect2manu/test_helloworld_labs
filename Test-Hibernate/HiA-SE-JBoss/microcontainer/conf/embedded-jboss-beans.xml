@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deployment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="urn:jboss:bean-deployer bean-deployer_1_0.xsd"
+            xmlns="urn:jboss:bean-deployer">
+   <bean name="Naming" class="org.jnp.server.SingletonNamingServer"/>
+
+   <bean name="InitialContextProperties" class="java.util.Hashtable">
+      <constructor>
+      <parameter class="java.util.Map">
+            <map keyClass="java.lang.String" valueClass="java.lang.String">
+               <entry>
+                  <key>java.naming.factory.initial</key>
+                  <value>org.jnp.interfaces.LocalOnlyContextFactory</value>
+               </entry>
+               <entry>
+                   <key>java.naming.factory.url.pkgs</key>
+                   <value>org.jboss.naming:org.jnp.interfaces</value>
+               </entry>
+            </map>
+      </parameter>
+      </constructor>
+   </bean>
+
+   <bean name="JavaCompInitializer" class="org.jboss.ejb3.embedded.JavaCompInitializer">
+      <property name="jndiProperties"><inject bean="InitialContextProperties"/></property>
+   </bean>
+
+   <bean name="XidFactory" class="org.jboss.tm.XidFactoryImpl"/>
+
+   <bean name="XidFactoryMBean" class="org.jboss.ejb3.embedded.XidFactoryMBean">
+      <constructor>
+         <parameter class="org.jboss.tm.XidFactoryBase">
+            <inject bean="XidFactory"/>
+         </parameter>
+      </constructor>
+   </bean>
+
+   <bean name="TransactionManagerInitializer" class="org.jboss.tm.TransactionManagerInitializer">
+      <property name="xidFactory"><inject bean="XidFactory"/></property>
+      <property name="initialContextProperties"><inject bean="InitialContextProperties"/></property>
+   </bean>
+
+   <bean name="TransactionManager" class="java.lang.Object">
+      <constructor factoryMethod="getTransactionManager">
+         <factory bean="TransactionManagerInitializer"/>
+      </constructor>
+   </bean>
+   <bean name="CachedConnectionManager" class="org.jboss.resource.connectionmanager.CachedConnectionManagerReference">
+      <property name="transactionManager"><inject bean="TransactionManager"/></property>
+   </bean>
+
+</deployment>

@@ -1,0 +1,6 @@
+1) start rmiregistry OR start rmiregistry <port>
+2) start java -classpath <classDir> -Djava.rmi.server.codebase=file:<classDir>/ com.nsn.AuthServiceImpl
+3) java  -classpath <classDir> com.nsn.RMIClient <host:port>
+
+start java -classpath E:/workspace/tqs/RMITest/bin -Djava.rmi.server.codebase=file:E:/workspace/tqs/RMITest/bin/ com.nsn.server.AuthServiceImpl
+java -classpath E:/workspace/tqs/RMITest/bin com.nsn.client.RMIClient

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="demo.rest.mvn.branding">
+    <module_version install_time="1377498566728" last="true" origin="installer" specification_version="1.0">
+        <file crc="3731127489" name="config/Modules/demo-rest-mvn-branding.xml"/>
+        <file crc="677334077" name="core/locale/core_restsample.jar"/>
+        <file crc="533357558" name="modules/demo-rest-mvn-branding.jar"/>
+        <file crc="2516928011" name="modules/locale/org-netbeans-core-windows_restsample.jar"/>
+        <file crc="171818261" name="modules/locale/org-netbeans-core_restsample.jar"/>
+    </module_version>
+</module>

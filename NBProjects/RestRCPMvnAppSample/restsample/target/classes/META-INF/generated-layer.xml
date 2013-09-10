@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="xml">
+        <folder name="entities">
+            <folder name="demo_rest_explorer">
+                <file name="Explorer" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--demo.rest.mvn.restsample.explorer.ExplorerTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//demo.rest.explorer//Explorer//EN"/>
+                </file>
+            </folder>
+            <folder name="demo_rest_editor">
+                <file name="MsgDetails" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--demo.rest.mvn.restsample.editor.MsgDetailsTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//demo.rest.editor//MsgDetails//EN"/>
+                </file>
+            </folder>
+        </folder>
+        <folder name="memory">
+            <folder name="demo">
+                <folder name="rest">
+                    <folder name="mvn">
+                        <folder name="restsample">
+                            <folder name="explorer">
+                                <file name="ExplorerTopComponent">
+                                    <!--demo.rest.mvn.restsample.explorer.ExplorerTopComponent-->
+                                    <attr name="settings.providerPath" stringvalue="xml/lookups//demo_rest_explorer/Explorer.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="editor">
+                                <file name="MsgDetailsTopComponent">
+                                    <!--demo.rest.mvn.restsample.editor.MsgDetailsTopComponent-->
+                                    <attr name="settings.providerPath" stringvalue="xml/lookups//demo_rest_editor/MsgDetails.instance"/>
+                                </file>
+                            </folder>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="lookups">
+            <folder name="demo_rest_explorer">
+                <file name="Explorer.instance">
+                    <!--demo.rest.mvn.restsample.explorer.ExplorerTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="demo.rest.mvn.restsample.explorer.ExplorerTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="demo.rest.mvn.restsample.explorer.ExplorerTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+            </folder>
+            <folder name="demo_rest_editor">
+                <file name="MsgDetails.instance">
+                    <!--demo.rest.mvn.restsample.editor.MsgDetailsTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="demo.rest.mvn.restsample.editor.MsgDetailsTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="demo.rest.mvn.restsample.editor.MsgDetailsTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deployment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:jboss:bean-deployer bean-deployer_1_0.xsd"
+    xmlns="urn:jboss:bean-deployer">
+
+    <!-- Enable a JCA datasource available through JNDI-->
+    <bean name="caveatemptorDataSourceFactory" class="org.jboss.resource.adapter.jdbc.local.LocalTxDataSource">
+        <property name="jndiName">java:/caveatemptorDatasource</property>
+
+        <!-- MySQL
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="connectionURL">jdbc:mysql://localhost/test</property>
+        <property name="userName">test</property>
+        <property name="password">test</property>
+        -->
+
+        <!-- HSQL DB -->
+        <property name="driverClass">org.hsqldb.jdbcDriver</property>
+        <property name="connectionURL">jdbc:hsqldb:hsql://localhost</property>
+        <property name="userName">sa</property>
+
+        <property name="minSize">0</property>
+        <property name="maxSize">10</property>
+        <property name="blockingTimeout">1000</property>
+        <property name="idleTimeout">100000</property>
+        <property name="transactionManager"><inject bean="TransactionManager"/></property>
+        <property name="cachedConnectionManager"><inject bean="CachedConnectionManager"/></property>
+        <property name="initialContextProperties"><inject bean="InitialContextProperties"/></property>
+    </bean>
+
+    <bean name="caveatemptorDatasource" class="java.lang.Object">
+        <constructor factoryMethod="getDatasource">
+            <factory bean="caveatemptorDataSourceFactory"/>
+        </constructor>
+    </bean>
+
+    <!-- You can setup and wire other stateless POJO services here... -->
+
+</deployment>

@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"
+[
+<!ENTITY % globals      SYSTEM "/org/hibernate/ce/auction/persistence/globals.dtd">
+%globals;
+]>
+
+<!--
+
+Mapping file for the Category class of CaveatEmptor.
+
+Categories are versioned and we make some use of the
+DirectSetAccessor for immutable properties and properties
+that are covered with convenience methods that protect
+entity relationships (setChildren() vs. addChildren()).
+
+Interesting is the bidirectional one-to-many association
+that references parent and child categories. This is a
+real parent/child association, with full cascading
+enabled.
+
+There can never be two categories with the same name at
+the same "level", that is, they can't have the same parent
+category. This is protected with a unique constraint.
+
+@author Christian Bauer <christian@hibernate.org>
+
+-->
+<hibernate-mapping package="org.hibernate.ce.auction.model" default-access="field" >
+
+<class name="Category"
+	   table="CATEGORY"
+	   lazy="true">
+
+	<!-- Common id property. -->
+	<id name="id"
+		type="long"
+		column="CATEGORY_ID"
+		unsaved-value="null"
+		access="field">
+		<generator class="&idgenerator;"/>
+	</id>
+
+	<!-- A versioned entity. -->
+	<!--
+	<version name="version"
+			 column="VERSION"
+			 access="org.hibernate.property.DirectPropertyAccessor"/>
+-->
+
+	<!-- Name is limited to 255 characters.-->
+	<property   name="name"
+				type="string">
+		<column name="NAME"
+				not-null="true"
+				length="255"
+				unique-key="UNIQUE_NAME_AT_LEVEL"/>
+	</property>
+
+	<!-- We can't change the creation time, so map it with update="false". -->
+	<property   name="created"
+				column="CREATED"
+				type="java.util.Date"
+				update="false"
+				not-null="true"
+				access="field"/>
+
+    <!-- Nested Set -->
+    <many-to-one name="parent"
+                 class="Category"
+                 access="property"
+                 cascade="save-update, persist, merge"
+                 foreign-key="FK1_CATEGORY_PARENT_ID">
+        <column name="PARENT_CATEGORY_ID"
+                not-null="false"
+                unique-key="UNIQUE_NAME_AT_LEVEL"/>
+    </many-to-one>
+    <set    name="children"
+            access="property"
+            cascade="all"
+            inverse="true">
+        <!--
+            collection-type="org.hibernate.ce.auction.persistence.NestedPersistentSetType" >
+            -->
+        <key column="PARENT_CATEGORY_ID"/>
+        <one-to-many class="Category"/>
+    </set>
+    <component name="nodeInfo" class="NodeInfo" update="false">
+        <parent name="node"/>
+        <property name="thread" column="NS_THREAD"/>
+        <property name="left" column="NS_LEFT"/>
+        <property name="right" column="NS_RIGHT"/>
+    </component>
+
+    <!-- The many-to-many association to Item. -->
+    <list name="items"
+            table="CATEGORY_ITEM">
+        <key column="CATEGORY_ID"/>
+        <list-index column="DISPLAY_POSITION"/>
+        <many-to-many class="Item" column="ITEM_ID"/>
+    </list>
+
+    <!-- This is an alternative for the many-to-many association to Item.
+         We use a one-to-many association to express the relationship
+         to a set of items. There is an intermediate entity class,
+         CategorizedItem, which effectively makes this a many-to-many
+         association between Category and Item.
+    -->
+    <set    name="categorizedItems"
+            cascade="all, delete-orphan"
+            inverse="true"
+            fetch="subselect"
+            access="field">
+        <key foreign-key="FK1_CATEGORIZED_ITEM_ID">
+            <column name="CATEGORY_ID" not-null="true"/>
+        </key>
+        <one-to-many class="CategorizedItem"/>
+    </set>
+
+    <!--
+        This is an alternative mapping for the many-to-many association
+        to Item. We use an intermediate class, CategorizedItem, that
+        represents the link (However, it is a value type in this case,
+        the packaged CategorizedItem class will not work!)
+
+        You can use this mapping style if your association table has
+        additional columns. In our case, we have the USERNAME and
+        DATE_ADDED column. These are also properties of the
+        CategorizedItem class. The many-to-many association we created
+        here is only accessible from the Category side. Items can't
+        access CategorizedItem, it is mapped as a non-shared component
+        of Category.
+
+        You can also make the username property a real many-to-one
+        association to User.
+    -->
+    <set name="categorizedItemComponents"
+         table="CATEGORIZED_ITEM_COMPONENTS">
+        <key>
+            <column name="CATEGORY_ID" not-null="true"/>
+        </key>
+        <composite-element class="CategorizedItemComponent" >
+            <parent name="category"/>
+
+            <many-to-one name="item"
+                         column="ITEM_ID"
+                         class="Item"
+                         not-null="true"
+                         update="false"/>
+
+            <property   name="username"
+                        column="ADDED_BY_USER"
+                        not-null="true"
+                        update="false"/>
+
+            <property   name="dateAdded"
+                        column="ADDED_ON"
+                        type="timestamp"
+                        not-null="true"
+                        update="false"/>
+
+        </composite-element>
+     </set>
+
+    <!-- This is an alternative mapping for the many-to-many association
+         to Item. We use a Map, with the Item as keys, and the User
+         as a value. This makes any intermediate class unnecessary.
+    -->
+    <map name="itemsAndUser"
+         table="ITEMS_BY_USER"
+         cascade="save-update">
+        <key column="CATEGORY_ID"/>
+        <map-key-many-to-many column="ITEM_ID" class="Item"/>
+        <many-to-many column="USER_ID" class="User"/>
+    </map>
+
+
+    <!-- Legacy example, we could use a map of itemid:item, with a formula. -->
+    <map name="itemsByIdentifier" table="CATEGORY_ITEM">
+        <key column="CATEGORY_ID"/>
+        <map-key       type="long" formula="ITEM_ID"/>
+        <many-to-many class="Item"  column="ITEM_ID"/>
+    </map>
+
+</class>
+
+</hibernate-mapping>

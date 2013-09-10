@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<application>
+
+    <app-name>Sample Plugin Application</app-name>
+    
+    <plugin>
+        <name>SMS plugin</name>
+        <class-name>SMSPlugin</class-name>
+        <library>sms.jar</library>
+    </plugin>
+
+     <plugin>
+        <name>MMS plugin</name>
+        <class-name>MMSPlugin</class-name>
+        <library>mms.jar</library>
+    </plugin>
+
+    <plugin>
+        <name>Enhanced MMS plugin</name>
+        <class-name>MMSEnchPlugin</class-name>
+        <library>mmsench.jar</library>
+    </plugin>
+    
+</application>

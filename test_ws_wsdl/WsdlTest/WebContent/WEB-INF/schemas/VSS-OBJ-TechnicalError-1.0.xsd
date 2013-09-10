@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:v1.technicalerror.vss.objects.bgc" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:v1.technicalerror.vss.objects.bgc" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:element name="TechnicalError" type="TechnicalErrorType"/>
+	<!--xsd:element name="InfrastructureError" type="TechnicalErrorType"/-->
+	<xsd:complexType name="TechnicalErrorType">
+		<xsd:sequence>
+			<xsd:element name="originator" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>An unique identifier for the failing component. pattern to follow APPLICATIONNAME:COMPONENTNAME:HOSTNAME:ETC at least the APPLICATIONNAME should be mentioned</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="correlationId" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>AMF Correlation Id If not known, it will not be filled in max 40 Characters ! Will be used to realize a end 2 end tracing of the service request</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="code" type="TechnicalErrorCodeType"/>
+			<xsd:element name="description" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>Error message :small description of error occured</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="detailedDescription" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Free text fields to add more detailed descriptions of occured error</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="TechnicalErrorCodeType">
+		<xsd:restriction base="xsd:long"/>
+	</xsd:simpleType>
+</xsd:schema>

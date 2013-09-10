@@ -1,0 +1,638 @@
+<!--
+
+  CavetEmptor ANT build script.
+
+-->
+<project name="CaveatEmptor" default="junit.run" basedir=".">
+
+    <!-- ############################# Configuration #############################-->
+
+    <property file="build.properties"/>
+
+    <!-- Name of project and version -->
+    <property name="proj.name"      value="CaveatEmptor"/>
+    <property name="proj.shortname" value="caveatemptor"/>
+    <property name="version"        value="3.1alpha5"/>
+
+    <!-- Global properties for this build -->
+    <property name="src.etc.dir"            value="src/etc"/>
+    <property name="src.java.dir"           value="src/java"/>
+    <property name="lib.dir"                value="lib"/>
+    <property name="build.dir"              value="build"/>
+    <property name="container.lib"          value="microcontainer/lib"/>
+    <property name="container.conf"         value="microcontainer/conf"/>
+
+    <!-- Classpath declaration -->
+    <path id="project.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+            <include name="**/*.zip"/>
+        </fileset>
+    </path>
+
+    <!-- Useful shortcuts -->
+    <patternset id="meta.files">
+        <include name="**/*.xml"/>
+        <include name="**/*.properties"/>
+        <include name="**/*.xsd"/>
+        <include name="**/*.dtd"/>
+        <include name="**/*.sql"/>
+    </patternset>
+
+    <!-- ############################# Tasks ############################# -->
+
+    <taskdef name="junit" classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask">
+        <classpath refid="project.classpath"/>
+    </taskdef>
+
+    <taskdef name="testng" classname="com.beust.testng.TestNGAntTask">
+        <classpath refid="project.classpath"/>
+    </taskdef>
+
+    <taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask">
+        <classpath refid="project.classpath"/>
+    </taskdef>
+
+    <!-- ############################# Global targets ############################# -->
+
+    <target name="clean" description="Cleans up everything">
+        <delete dir="${build.dir}"/>
+        <antcall target="junit.clean"/>
+        <antcall target="testng.clean"/>
+        <antcall target="webapp.clean"/>
+        <antcall target="webapp.test.clean"/>
+    </target>
+
+    <target name="db.gui" description="Start HSQL admin tool for $db.url with $db.driver">
+        <!-- Run: ant gui.db -Ddb.url=jdbc:hsqldb:hsql://localhost/ -Ddb.driver=org.hsqldb.jdbcDriver -->
+        <java
+            classname="org.hsqldb.util.DatabaseManagerSwing"
+            fork="yes"
+            classpathref="project.classpath"
+            failonerror="true">
+            <arg value="-url"/>
+            <arg value="${db.url}"/>
+            <arg value="-driver"/>
+            <arg value="${db.driver}"/>
+        </java>
+    </target>
+
+    <target name="db.ddl2file" depends="junit.compile, junit.copyconfig, junit.copymappings"
+            description="Export the schema DDL to SQL file in build directory">
+        <hibernatetool destdir="${build.dir}">
+            <classpath>
+                <pathelement path="${junit.classes.dir}"/>
+            </classpath>
+            <annotationconfiguration configurationfile="${junit.classes.dir}/hibernate.cfg.xml"
+                                     entityresolver="org.hibernate.ce.auction.persistence.ImportFromClasspathEntityResolver"/>
+            <hbm2ddl export="false" console="false" drop="false" create="true"
+                     outputfilename="${proj.shortname}.ddl" delimiter=";"/>
+        </hibernatetool>
+    </target>
+
+    <!-- ############################# JUnit Targets ############################# -->
+
+    <!-- Standalone persistence (EJB3 and normal Hibernate) properties -->
+    <property name="junit.build.dir"    value="${build.dir}/junit"/>
+    <property name="junit.classes.dir"  value="${junit.build.dir}/classes"/>
+    <property name="junit.out.dir"      value="${junit.build.dir}/testout"/>
+    <property name="junit.etc.dir"      value="${src.etc.dir}/junit"/>
+
+    <target name="junit.clean">
+        <delete dir="${junit.build.dir}"/>
+    </target>
+
+    <target name="junit.compile" depends="junit.clean">
+        <mkdir dir="${junit.classes.dir}"/>
+        <javac
+            srcdir="${src.java.dir}"
+            destdir="${junit.classes.dir}"
+            nowarn="on">
+            <classpath refid="project.classpath"/>
+        </javac>
+    </target>
+
+    <target name="junit.copyconfig">
+        <!-- Copy the configuration files -->
+        <copy todir="${junit.classes.dir}">
+            <fileset dir="${junit.etc.dir}">
+                <patternset refid="meta.files"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="junit.copymappings">
+        <!-- Copy the mapping files -->
+        <copy todir="${junit.classes.dir}">
+            <fileset dir="${src.java.dir}">
+                <patternset refid="meta.files"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="junit.run" depends="junit.compile, junit.copyconfig, junit.copymappings"
+        description="Standalone persistence tests with native Hibernate">
+        <mkdir dir="${junit.out.dir}"/>
+        <junit printsummary="yes" fork="yes" haltonfailure="yes">
+            <classpath>
+                <path refid="project.classpath"/>
+                <pathelement path="${junit.classes.dir}"/>
+            </classpath>
+            <formatter type="plain"/>
+            <test name="org.hibernate.ce.auction.test.junit.AllHibernateTests" todir="${junit.out.dir}" haltonfailure="yes"/>
+        </junit>
+    </target>
+
+    <target name="junit.run.importdata" depends="junit.compile, junit.copyconfig, junit.copymappings"
+        description="Standalone data import using native Hibernate">
+        <mkdir dir="${junit.out.dir}"/>
+        <junit printsummary="yes" fork="yes" haltonfailure="yes">
+            <classpath>
+                <path refid="project.classpath"/>
+                <pathelement path="${junit.classes.dir}"/>
+            </classpath>
+            <formatter type="plain"/>
+            <test name="org.hibernate.ce.auction.test.junit.hibernate.OnlyInitDataTest" todir="${junit.out.dir}" haltonfailure="yes"/>
+        </junit>
+    </target>
+
+
+    <!-- With AOP -->
+    <target name="junit.run.aop" depends="junit.compile, junit.copyconfig, junit.copymappings, junit.instrument.aop"
+        description="Test a pseudo-MVC action with build-time AOP">
+        <mkdir dir="${junit.out.dir}"/>
+        <junit printsummary="yes" fork="yes" haltonfailure="yes">
+            <classpath>
+                <path refid="project.classpath"/>
+                <pathelement path="${junit.classes.dir}"/>
+            </classpath>
+            <formatter type="plain"/>
+            <test name="org.hibernate.ce.auction.test.junit.hibernate.ActionTest" todir="${junit.out.dir}" haltonfailure="yes"/>
+        </junit>
+    </target>
+
+    <target name="junit.instrument.aop" depends="junit.compile">
+        <taskdef name="aopc" classname="org.jboss.aop.ant.AopC" classpathref="project.classpath"/>
+
+         <aopc compilerclasspathref="project.classpath"
+               classpath="${junit.classes.dir}">
+            <src path="${junit.classes.dir}"/>
+            <include name="**/*.class"/>
+             <!--
+            <aoppath path="${junit.etc.dir}/META-INF/jboss-aop.xml"/>
+             -->
+         </aopc>
+    </target>
+
+    <target name="junit.run.aop.onload14" depends="junit.compile, junit.copyconfig, junit.copymappings"
+        description="Test a pseudo-MVC action with load-time AOP/JDK 1.4">
+        <echo>To run on JDK 1.4 download JBoss AOP and don't use lib/jboss-aop-jdk5.jar!</echo>
+
+        <!-- Compile a custom classloader first, for JDK 1.4 -->
+        <java
+            classname="org.jboss.aop.hook.GenerateInstrumentedClassLoader"
+            fork="yes"
+            classpathref="project.classpath"
+            failonerror="true">
+            <arg value="${junit.build.dir}/custom_aop_loader"/>
+        </java>
+
+        <!-- Need custom bootclasspath... -->
+        <path id="custom.bootclasspath">
+            <fileset dir="${lib.dir}">
+                <include name="**/jboss-aop.jar"/>
+                <include name="**/jboss-common.jar"/>
+                <include name="**/concurrent.jar"/>
+                <include name="**/trove.jar"/>
+                <include name="**/javassist.jar"/>
+            </fileset>
+            <pathelement path="${junit.build.dir}/custom_aop_loader"/>
+        </path>
+        <property name="bootclasspath" refid="custom.bootclasspath"/>
+
+        <!-- Run tests with custom classloader in boot classpath, prepended -->
+        <mkdir dir="${junit.out.dir}"/>
+        <junit printsummary="yes" fork="yes" haltonfailure="yes">
+            <jvmarg value="-Xbootclasspath/p:${bootclasspath}"/>
+            <jvmarg value="-Djboss.aop.exclude=org.hibernate.impl"/>
+            <!-- Ignoring these prevents warnings -->
+            <jvmarg value="-Djboss.aop.ignore=*ByCGLIB$$*,*dom4j*,*oracle*,*objectweb*"/>
+            <classpath>
+                <path refid="project.classpath"/>
+                <pathelement path="${junit.classes.dir}"/>
+            </classpath>
+            <formatter type="plain"/>
+            <test name="org.hibernate.ce.auction.test.junit.hibernate.ActionTest" todir="${junit.out.dir}" haltonfailure="yes"/>
+        </junit>
+    </target>
+
+
+    <!-- ############################# TestNG Targets ############################# -->
+
+    <property name="testng.build.dir"    value="${build.dir}/testng"/>
+    <property name="testng.classes.dir"  value="${testng.build.dir}/classes"/>
+    <property name="testng.out.dir"      value="${testng.build.dir}/test-output"/>
+    <property name="testng.etc.dir"      value="${src.etc.dir}/testng"/>
+    <property name="testng.conf.dir"     value="${testng.etc.dir}/conf"/>
+
+    <target name="testng.clean">
+        <delete dir="${testng.build.dir}"/>
+    </target>
+
+    <target name="testng.compile" depends="testng.clean">
+        <mkdir dir="${testng.classes.dir}"/>
+        <javac
+            srcdir="${src.java.dir}"
+            destdir="${testng.classes.dir}"
+            nowarn="on">
+            <classpath>
+                <path refid="project.classpath"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="testng.copyconfig">
+        <!-- Copy the runtime configuration files -->
+        <copy todir="${testng.classes.dir}">
+            <fileset dir="${testng.conf.dir}">
+                <patternset refid="meta.files"/>
+            </fileset>
+            <fileset dir="${container.conf}">
+                <patternset refid="meta.files"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="testng.run" depends="testng.compile, testng.copyconfig"
+        description="TestNG tests with the JBoss EJB3 Microcontainer">
+        <mkdir dir="${testng.out.dir}"/>
+
+        <testng outputDir="${testng.out.dir}">
+            <classpath>
+                <path refid="project.classpath"/>
+                <pathelement path="${testng.classes.dir}"/>
+                <path>
+                    <fileset dir="${container.lib}">
+                        <include name="**/*.jar"/>
+                    </fileset>
+                </path>
+            </classpath>
+            <xmlfileset dir="${testng.etc.dir}">
+                <include name="test-ejb3-integration.xml"/>
+            </xmlfileset>
+        </testng>
+    </target>
+
+
+    <!-- ############################# Webapp targets - the full application ############################# -->
+
+    <!-- Webapp properties -->
+    <property name="webapp.build.dir"           value="${build.dir}/webapp"/>
+    <property name="webapp.classes.dir"         value="${webapp.build.dir}/classes"/>
+    <property name="webapp.docroot.dir"         value="src/view.webapp"/>
+    <property name="webapp.etc.dir"             value="${src.etc.dir}/webapp"/>
+    <property name="webapp.tomcat.classpath"    value="${webapp.tomcat.home}/server/lib/catalina-ant.jar"/>
+    <property name="webapp.manager.url"         value="http://localhost:8080/manager"/>
+    <property name="webapp.manager.user"        value="manager"/>
+    <property name="webapp.manager.passwd"      value="secret"/>
+
+    <target name="webapp.clean">
+        <delete dir="${webapp.build.dir}"/>
+    </target>
+
+    <target name="webapp.compile">
+        <mkdir dir="${webapp.classes.dir}"/>
+        <javac
+            srcdir="${src.java.dir}"
+            destdir="${webapp.classes.dir}"
+            nowarn="on">
+            <classpath refid="project.classpath"/>
+        </javac>
+    </target>
+
+    <target name="webapp.copymetadata">
+        <!-- Copy src metadata files -->
+        <copy todir="${webapp.classes.dir}">
+            <fileset dir="${src.java.dir}">
+                <patternset refid="meta.files"/>
+            </fileset>
+        </copy>
+        <!-- Copy configuration files -->
+        <copy todir="${webapp.classes.dir}">
+            <fileset dir="${webapp.etc.dir}/conf">
+                <patternset refid="meta.files"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="webapp.war" depends="webapp.compile, webapp.copymetadata">
+
+        <!-- DOCROOT -->
+        <copy todir="${webapp.build.dir}/${proj.shortname}">
+            <fileset dir="${webapp.docroot.dir}">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+
+        <!-- WEB-INF -->
+        <copy todir="${webapp.build.dir}/${proj.shortname}/WEB-INF">
+            <fileset dir="${webapp.etc.dir}/WEB-INF">
+                <patternset refid="meta.files"/>
+            </fileset>
+        </copy>
+
+        <!-- WEB-INF/lib -->
+        <mkdir dir="${webapp.build.dir}/${proj.shortname}/WEB-INF/lib"/>
+
+        <!-- Package application JAR -->
+        <jar jarfile="${webapp.build.dir}/${proj.shortname}/WEB-INF/lib/${proj.shortname}.jar"
+             basedir="${webapp.classes.dir}"
+             excludes="**/auction/test/**">
+            <manifest>
+              <attribute name="Version" value="${version}"/>
+            </manifest>
+        </jar>
+
+        <!-- Copy application + 3rd party libraries -->
+        <copy todir="${webapp.build.dir}/${proj.shortname}/WEB-INF/lib">
+
+            <!-- JBoss Microcontainer libraries -->
+            <fileset dir="${container.lib}">
+                <include name="**/*.jar"/>
+            </fileset>
+
+            <!-- Webapp-specific 3rd party libraries -->
+            <fileset dir="${webapp.etc.dir}/WEB-INF/lib/">
+                <include name="**/*.jar"/>
+            </fileset>
+
+            <!-- Regular 3rd party libraries -->
+            <fileset dir="${lib.dir}">
+                <!-- MyFaces -->
+                <include name="myfaces*.jar" />
+                <include name="commons-digester*.jar" />
+                <include name="commons-beanutils*.jar" />
+                <include name="commons-codec*.jar" />
+                <include name="commons-fileupload*.jar" />
+
+                <!-- Oracle ADF components -->
+                <include name="adf*.jar" />
+
+                <!-- Hibernate -->
+                <include name="antlr*.jar" />
+                <include name="asm*.jar" />
+                <include name="cglib*.jar" />
+                <include name="commons-collections*.jar" />
+                <include name="commons-logging*.jar" />
+                <include name="dom4j*.jar" />
+                <include name="ehcache*.jar" />
+                <include name="log4j*.jar" />
+                <include name="hibernate3*.jar" />
+
+                <!-- Hibernate Annotations -->
+                <include name="hibernate-annotations*.jar" />
+
+                <!-- Hibernate EntityManager -->
+                <include name="concurrent*.jar" />
+                <include name="ejb3-persistence*.jar" />
+                <include name="javassist*.jar" />
+                <include name="jboss-archive-browsing*.jar" />
+                <include name="jboss-common*.jar" />
+                <include name="hibernate-entitymanager*.jar" />
+
+                <!-- JBoss Seam -->
+                <include name="jboss-seam*.jar" />
+                <include name="jboss-j2ee*.jar" />
+                <include name="jboss-ejb3*.jar" />
+
+                <!-- JBoss AOP -->
+                <include name="jboss-aop*.jar" />
+                <include name="trove*.jar" />
+
+                <!-- Misc-->
+                <include name="hsqldb*.jar" />
+                <include name="mysql*.jar" />
+                <include name="postgresql*.jar" /> <!-- TODO: Remove this -->
+
+            </fileset>
+
+        </copy>
+    </target>
+
+    <!--
+        The following targets are used for quick-turnaround development.
+        The anticipated development process is:
+
+        - Call 'webapp.deploy' to deploy your application first time. Check it in
+          your browser.
+
+        - Make changes to files in the actual deployed exploded directory, in the
+          $TOMCAT_HOME/webapps/ folder. Change only view-related files outside of
+          the WEB-INF directory. Switch between your browser and your editor to
+          quickly preview your changes. You will probably find editing these files
+          in your IDE easier if you create a symbolic link from the deployed directory
+          into your project directory.
+
+        - To test changes to configuration, Java classes, and libraries, you have
+          to reload the webapp context. Before redeploying/undeploying/deploying again,
+          all view-related files you have modified in the deployed exploded directory
+          will be synchronized back to your projects source!
+
+        - Call 'webapp.undeploy' to execute a synchronization and undeployment.
+
+        - Call 'webapp.redeploy' to execute a full cycle of synchronization, undeployment,
+          and deployment.
+    -->
+    <target name="webapp.deploy" depends="webapp.status, webapp.syncdocroot, webapp.war"
+        description="Deploys application to $tomcat.home">
+        <echo>Don't forget to set the path to your Tomcat install as $webapp.tomcat.home!</echo>
+        <copy todir="${webapp.tomcat.home}/webapps/${proj.shortname}">
+            <fileset dir="${webapp.build.dir}/${proj.shortname}"/>
+        </copy>
+        <echo>Application deployed at http://localhost:8080/${proj.shortname}</echo>
+    </target>
+
+    <target name="webapp.undeploy" depends="webapp.status, webapp.syncdocroot"
+        if="webapp.is.deployed"
+        description="Undeploys application from $webapp.tomcat.home">
+
+        <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"
+            classpath="${webapp.tomcat.classpath}"/>
+        <undeploy url="${webapp.manager.url}"
+            username="${webapp.manager.user}"
+            password="${webapp.manager.passwd}"
+            path="/${proj.shortname}"/>
+
+        <!-- Doesn't work on Windows...
+        <delete dir="${webapp.tomcat.home}/webapps/${proj.shortname}"/>
+        -->
+    </target>
+
+    <target name="webapp.redeploy" depends="webapp.undeploy, webapp.clean, webapp.deploy"
+        description="Undeploys and deploys the webapp again"/>
+
+    <target name="webapp.syncdocroot"
+        if="webapp.is.deployed">
+        <!-- Copy files from deployed directory back to source directory... -->
+        <copy todir="${webapp.docroot.dir}">
+            <fileset dir="${webapp.tomcat.home}/webapps/${proj.shortname}">
+                <include name="**/*"/>
+                <exclude name="**/WEB-INF/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="webapp.status">
+        <available property="webapp.is.deployed"
+                   file="web.xml"
+                   filepath="${webapp.tomcat.home}/webapps/${proj.shortname}/WEB-INF/"/>
+    </target>
+
+    <!-- BROKEN IN TOMCAT! Can't deploy exploded WAR directory...
+    <target name="webapp.deploy" depends="webapp.war"
+        description="Deploy WAR directory on Tomcat (in-place, no copy)">
+
+        <echo>Deploying WAR file:${basedir}/${webapp.build.dir}/${proj.shortname}</echo>
+        <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask"
+                 classpath="${webapp.tomcat.classpath}"/>
+        <deploy url="${webapp.manager.url}"
+            username="${webapp.manager.user}"
+            password="${webapp.manager.passwd}"
+            path="/${proj.shortname}"
+            war="file:${basedir}/${webapp.build.dir}/${proj.shortname}"/>
+    </target>
+    -->
+
+    <!-- ############################# Webapp targets - for testing (no Seam) ############################# -->
+
+    <!-- Webapp test properties -->
+    <property name="webapp.test.build.dir"           value="${build.dir}/webapp.test"/>
+    <property name="webapp.test.classes.dir"         value="${webapp.test.build.dir}/classes"/>
+    <property name="webapp.test.docroot.dir"         value="src/view.webapp.test"/>
+    <property name="webapp.test.etc.dir"             value="${src.etc.dir}/webapp.test"/>
+
+    <target name="webapp.test.clean">
+        <delete dir="${webapp.test.build.dir}"/>
+    </target>
+
+    <target name="webapp.test.compile">
+        <mkdir dir="${webapp.test.classes.dir}"/>
+        <javac
+            srcdir="${src.java.dir}"
+            destdir="${webapp.test.classes.dir}"
+            nowarn="on">
+            <classpath refid="project.classpath"/>
+        </javac>
+    </target>
+
+    <target name="webapp.test.copymetadata">
+        <!-- Copy src metadata files -->
+        <copy todir="${webapp.test.classes.dir}">
+            <fileset dir="${src.java.dir}">
+                <patternset refid="meta.files"/>
+            </fileset>
+        </copy>
+        <!-- Copy configuration files -->
+        <copy todir="${webapp.test.classes.dir}">
+            <fileset dir="${webapp.test.etc.dir}/conf">
+                <patternset refid="meta.files"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="webapp.test.war" depends="webapp.test.compile, webapp.test.copymetadata">
+
+        <!-- DOCROOT -->
+        <copy todir="${webapp.test.build.dir}/${proj.shortname}">
+            <fileset dir="${webapp.test.docroot.dir}">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+
+        <!-- WEB-INF -->
+        <copy todir="${webapp.test.build.dir}/${proj.shortname}/WEB-INF">
+            <fileset dir="${webapp.test.etc.dir}/WEB-INF">
+                <patternset refid="meta.files"/>
+            </fileset>
+        </copy>
+
+        <!-- WEB-INF/lib ... -->
+        <mkdir dir="${webapp.test.build.dir}/${proj.shortname}/WEB-INF/lib"/>
+
+        <!-- Package application JAR -->
+        <jar jarfile="${webapp.test.build.dir}/${proj.shortname}/WEB-INF/lib/${proj.shortname}.jar"
+             basedir="${webapp.test.classes.dir}"
+             excludes="**/auction/test/**">
+            <manifest>
+              <attribute name="Version" value="${version}"/>
+            </manifest>
+        </jar>
+
+        <!-- Copy application + 3rd party libraries -->
+        <copy todir="${webapp.test.build.dir}/${proj.shortname}/WEB-INF/lib">
+
+            <!-- Regular 3rd party libraries -->
+            <fileset dir="${lib.dir}">
+
+                <!-- Hibernate -->
+                <include name="antlr*.jar" />
+                <include name="asm*.jar" />
+                <include name="cglib*.jar" />
+                <include name="commons-collections*.jar" />
+                <include name="commons-logging*.jar" />
+                <include name="dom4j*.jar" />
+                <include name="jta*.jar" />
+                <include name="hibernate3*.jar" />
+                <include name="hibernate-annotations*.jar" />
+                <include name="hibernate-entitymanager*.jar" />
+                <include name="ejb3-persistence*.jar" />
+
+                <!-- Misc-->
+                <include name="hsqldb*.jar" />
+
+            </fileset>
+
+        </copy>
+    </target>
+
+    <target name="webapp.test.deploy" depends="webapp.test.war"
+        description="Deploys application to $tomcat.home">
+        <echo>Don't forget to set the path to your Tomcat install as $webapp.tomcat.home!</echo>
+        <copy todir="${webapp.tomcat.home}/webapps/${proj.shortname}-test">
+            <fileset dir="${webapp.test.build.dir}/${proj.shortname}"/>
+        </copy>
+        <echo>Application deployed at http://localhost:8080/${proj.shortname}-test/</echo>
+    </target>
+
+    <target name="webapp.test.undeploy"
+        description="Undeploys application from $webapp.tomcat.home">
+        <delete dir="${webapp.tomcat.home}/webapps/${proj.shortname}-test"/>
+    </target>
+
+    <target name="webapp.test.redeploy" depends="webapp.test.undeploy, webapp.test.clean, webapp.test.deploy"
+        description="Undeploys and deploys the webapp again"/>
+
+</project>
+
+<!--
+    <target name="dbunit.template" description="Generates skeleton files for DBUnit from mapping XML files">
+        <style basedir="${src.java.dir}/org/hibernate/ce/auction/model"
+               destdir="${basedir}"
+               style="${src.java.dir}/org/hibernate/ce/auction/test/dbunit.xsl">
+            <mapper type="glob" from="*.hbm.xml" to="*.data.xml"/>
+            <include name="**/*.hbm.xml"/>
+        </style>
+    </target>
+
+    <target name="test.run" depends="compiletest" description="Bytecode instrumentation for lazy loading and test run">
+        <taskdef name="instrument"
+                classname="org.hibernate.tool.instrument.InstrumentTask"
+                classpathref="project.classpath"/>
+
+        <instrument verbose="true">
+            <fileset dir="${classes.dir}">
+                <include name="*.class"/>
+            </fileset>
+        </instrument>
+        <java fork="true" classname="Test" classpathref="project.classpath"/>
+    </target>
+-->

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <!-- Test Hibernate startup-on-deployment listener -->
+    <listener>
+        <listener-class>org.hibernate.ce.auction.web.listener.HibernateListener</listener-class>
+    </listener>
+
+    <!-- Testing Hibernate simple filters for plain webapps (no Seam).
+         If you change this to HibernateThreadFilter, also switch to "thread"
+         Session context management for session-per-request in hibernate.cfg.xml
+    -->
+    <filter>
+        <filter-name>Hibernate Filter</filter-name>
+        <filter-class>org.hibernate.ce.auction.web.filter.HibernateThreadExtendedFilter</filter-class>
+        <!--<filter-class>org.hibernate.ce.auction.web.filter.HibernateThreadFilter</filter-class>-->
+    </filter>
+    <filter-mapping>
+        <filter-name>Hibernate Filter</filter-name>
+        <url-pattern>/filtertest</url-pattern>
+    </filter-mapping>
+
+    <!-- Call http://localhost:8080/caveatemptor-test and click through the tests -->
+    <servlet>
+        <servlet-name>Filter Test</servlet-name>
+        <servlet-class>org.hibernate.ce.auction.web.filter.FilterTestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Filter Test</servlet-name>
+        <url-pattern>/filtertest</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="MBP-IDPServices-3.1-standard" targetNamespace="urn:v3.idpservices.mbp.services.bgc" xmlns:wstns="urn:v3.idpservices.mbp.services.bgc" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:techerr="urn:v1.technicalerror.vss.objects.bgc" xmlns:funcerr="urn:v1.functionalerror.vss.objects.bgc">
+    <wsdl:types>
+        <xsd:schema targetNamespace="urn:v3.idpservices.mbp.services.bgc" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.1">
+            <xsd:import namespace="urn:v1.technicalerror.vss.objects.bgc" schemaLocation="VSS-OBJ-TechnicalError-1.0.xsd"/>
+            <xsd:import namespace="urn:v1.functionalerror.vss.objects.bgc" schemaLocation="VSS-OBJ-FunctionalError-1.0.xsd"/>
+            <xsd:include schemaLocation="MBP-SVC-IDPServices-3.1.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <!-- ================================================== -->
+    <!-- Messages                                           -->
+    <!-- ================================================== -->
+    <!-- CheckService Message -->
+    <wsdl:message name="CheckServiceRequestMessage">
+        <wsdl:part name="CheckServiceRequestMessagePart" element="wstns:RequestDataCheckService"/>
+    </wsdl:message>
+    <wsdl:message name="CheckServiceResponseMessage">
+        <wsdl:part name="CheckServiceResponseMessagePart" element="wstns:ResponseDataCheckService"/>
+    </wsdl:message>
+    <!-- ValidateEmailAddress Message -->
+    <wsdl:message name="ValidateEmailAddressRequestMessage">
+        <wsdl:part name="ValidateEmailAddressRequestMessagePart" element="wstns:RequestDataValidateEmailAddress"/>
+    </wsdl:message>
+    <wsdl:message name="ValidateEmailAddressResponseMessage">
+        <wsdl:part name="ValidateEmailAddressResponseMessagePart" element="wstns:ResponseDataValidateEmailAddress"/>
+    </wsdl:message>
+    <!-- CollectAccountData Message -->
+    <wsdl:message name="CollectAccountDataRequestMessage">
+        <wsdl:part name="CollectAccountDataRequestMessagePart" element="wstns:RequestDataCollectAccountData"/>
+    </wsdl:message>
+    <wsdl:message name="CollectAccountDataResponseMessage">
+        <wsdl:part name="CollectAccountDataResponseMessagePart" element="wstns:ResponseDataCollectAccountData"/>
+    </wsdl:message>
+    <!-- CreateAccount Message -->
+    <wsdl:message name="CreateAccountRequestMessage">
+        <wsdl:part name="CreateAccountRequestMessagePart" element="wstns:RequestDataCreateAccount"/>
+    </wsdl:message>
+    <wsdl:message name="CreateAccountResponseMessage">
+        <wsdl:part name="CreateAccountResponseMessagePart" element="wstns:ResponseDataCreateAccount"/>
+    </wsdl:message>
+    <!-- UpdateAccount Message -->
+    <wsdl:message name="UpdateAccountRequestMessage">
+        <wsdl:part name="UpdateAccountRequestMessagePart" element="wstns:RequestDataUpdateAccount"/>
+    </wsdl:message>
+    <wsdl:message name="UpdateAccountResponseMessage">
+        <wsdl:part name="UpdateAccountResponseMessagePart" element="wstns:ResponseDataUpdateAccount"/>
+    </wsdl:message>
+    <!-- DeleteAccount Message -->
+    <wsdl:message name="DeleteAccountRequestMessage">
+        <wsdl:part name="DeleteAccountRequestMessagePart" element="wstns:RequestDataDeleteAccount"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteAccountResponseMessage">
+        <wsdl:part name="DeleteAccountResponseMessagePart" element="wstns:ResponseDataDeleteAccount"/>
+    </wsdl:message>
+    <!-- BridgeAccount Message -->
+    <wsdl:message name="BridgeAccountRequestMessage">
+        <wsdl:part name="BridgeAccountRequestMessagePart" element="wstns:RequestDataBridgeAccount"/>
+    </wsdl:message>
+    <wsdl:message name="BridgeAccountResponseMessage">
+        <wsdl:part name="BridgeAccountResponseMessagePart" element="wstns:ResponseDataBridgeAccount"/>
+    </wsdl:message>
+    <!-- DebridgeAccount Message -->
+    <wsdl:message name="DebridgeAccountRequestMessage">
+        <wsdl:part name="DebridgeAccountRequestMessagePart" element="wstns:RequestDataDebridgeAccount"/>
+    </wsdl:message>
+    <wsdl:message name="DebridgeAccountResponseMessage">
+        <wsdl:part name="DebridgeAccountResponseMessagePart" element="wstns:ResponseDataDebridgeAccount"/>
+    </wsdl:message>
+    <!-- MergeAccount Message -->
+    <wsdl:message name="MergeAccountRequestMessage">
+        <wsdl:part name="MergeAccountRequestMessagePart" element="wstns:RequestDataMergeAccount"/>
+    </wsdl:message>
+    <wsdl:message name="MergeAccountResponseMessage">
+        <wsdl:part name="MergeAccountResponseMessagePart" element="wstns:ResponseDataMergeAccount"/>
+    </wsdl:message>
+    <!-- ResetPassword Message -->
+    <wsdl:message name="ResetPasswordRequestMessage">
+        <wsdl:part name="ResetPasswordRequestMessagePart" element="wstns:RequestDataResetPassword"/>
+    </wsdl:message>
+    <wsdl:message name="ResetPasswordResponseMessage">
+        <wsdl:part name="ResetPasswordResponseMessagePart" element="wstns:ResponseDataResetPassword"/>
+    </wsdl:message>
+    <!-- ConfirmAccount Message -->
+    <wsdl:message name="ConfirmAccountRequestMessage">
+        <wsdl:part name="ConfirmAccountRequestMessagePart" element="wstns:RequestDataConfirmAccount"/>
+    </wsdl:message>
+    <wsdl:message name="ConfirmAccountResponseMessage">
+        <wsdl:part name="ConfirmAccountResponseMessagePart" element="wstns:ResponseDataConfirmAccount"/>
+    </wsdl:message>
+    <!-- CollectBridgeData Message -->
+    <wsdl:message name="CollectBridgeDataRequestMessage">
+        <wsdl:part name="CollectBridgeDataRequestMessagePart" element="wstns:RequestDataCollectBridgeData"/>
+    </wsdl:message>
+    <wsdl:message name="CollectBridgeDataResponseMessage">
+        <wsdl:part name="CollectBridgeDataResponseMessagePart" element="wstns:ResponseDataCollectBridgeData"/>
+    </wsdl:message>
+    <!-- BlockAccount Message -->
+    <wsdl:message name="BlockAccountRequestMessage">
+        <wsdl:part name="BlockAccountRequestMessagePart" element="wstns:RequestDataBlockAccount"/>
+    </wsdl:message>
+    <wsdl:message name="BlockAccountResponseMessage">
+        <wsdl:part name="BlockAccountResponseMessagePart" element="wstns:ResponseDataBlockAccount"/>
+    </wsdl:message>
+    <!-- CollectSpecificBridgeData Message -->
+    <wsdl:message name="CollectSpecificBridgeDataRequestMessage">
+        <wsdl:part name="CollectSpecificBridgeDataRequestMessagePart" element="wstns:RequestDataCollectSpecificBridgeData"/>
+    </wsdl:message>
+    <wsdl:message name="CollectSpecificBridgeDataResponseMessage">
+        <wsdl:part name="CollectSpecificBridgeDataResponseMessagePart" element="wstns:ResponseDataCollectSpecificBridgeData"/>
+    </wsdl:message>
+    <!-- UpSertSpecificBridgeData Message -->
+    <wsdl:message name="UpSertSpecificBridgeDataRequestMessage">
+        <wsdl:part name="UpSertSpecificBridgeDataRequestMessagePart" element="wstns:RequestDataUpSertSpecificBridgeData"/>
+    </wsdl:message>
+    <wsdl:message name="UpSertSpecificBridgeDataResponseMessage">
+        <wsdl:part name="UpSertSpecificBridgeDataResponseMessagePart" element="wstns:ResponseDataUpSertSpecificBridgeData"/>
+    </wsdl:message>
+    <!-- DeleteSpecificBridgeData Message -->
+    <wsdl:message name="DeleteSpecificBridgeDataRequestMessage">
+        <wsdl:part name="DeleteSpecificBridgeDataRequestMessagePart" element="wstns:RequestDataDeleteSpecificBridgeData"/>
+    </wsdl:message>
+    <wsdl:message name="DeleteSpecificBridgeDataResponseMessage">
+        <wsdl:part name="DeleteSpecificBridgeDataResponseMessagePart" element="wstns:ResponseDataDeleteSpecificBridgeData"/>
+    </wsdl:message>
+    <!-- CheckSkynetTokenValidity Message -->
+    <wsdl:message name="CheckSkynetTokenValidityRequestMessage">
+        <wsdl:part name="CheckSkynetTokenValidityRequestMessagePart" element="wstns:RequestDataCheckSkynetTokenValidity"/>
+    </wsdl:message>
+    <wsdl:message name="CheckSkynetTokenValidityResponseMessage">
+        <wsdl:part name="CheckSkynetTokenValidityResponseMessagePart" element="wstns:ResponseDataCheckSkynetTokenValidity"/>
+    </wsdl:message>
+    <!-- CheckUserCredentials Message -->
+    <wsdl:message name="CheckUserCredentialsRequestMessage">
+        <wsdl:part name="CheckUserCredentialsRequestMessagePart" element="wstns:RequestDataCheckUserCredentials"/>
+    </wsdl:message>
+    <wsdl:message name="CheckUserCredentialsResponseMessage">
+        <wsdl:part name="CheckUserCredentialsResponseMessagePart" element="wstns:ResponseDataCheckUserCredentials"/>
+    </wsdl:message>
+    <!-- MergeAccountV2 Message -->
+    <wsdl:message name="MergeAccountV2RequestMessage">
+        <wsdl:part name="MergeAccountV2RequestMessagePart" element="wstns:RequestDataMergeAccountV2"/>
+    </wsdl:message>
+    <wsdl:message name="MergeAccountV2ResponseMessage">
+        <wsdl:part name="MergeAccountV2ResponseMessagePart" element="wstns:ResponseDataMergeAccountV2"/>
+    </wsdl:message>
+    <!-- IsMergeAllowed Message -->
+    <wsdl:message name="IsMergeAllowedRequestMessage">
+        <wsdl:part name="IsMergeAllowedRequestMessagePart" element="wstns:RequestDataIsMergeAllowed"/>
+    </wsdl:message>
+    <wsdl:message name="IsMergeAllowedResponseMessage">
+        <wsdl:part name="IsMergeAllowedResponseMessagePart" element="wstns:ResponseDataIsMergeAllowed"/>
+    </wsdl:message>
+    <!-- GrantProductRole Message -->
+    <wsdl:message name="GrantProductRoleRequestMessage">
+        <wsdl:part name="GrantProductRoleRequestMessagePart" element="wstns:RequestDataGrantProductRole"/>
+    </wsdl:message>
+    <wsdl:message name="GrantProductRoleResponseMessage">
+        <wsdl:part name="GrantProductRoleResponseMessagePart" element="wstns:ResponseDataGrantProductRole"/>
+    </wsdl:message>
+    <!-- RevokeProductRole Message -->
+    <wsdl:message name="RevokeProductRoleRequestMessage">
+        <wsdl:part name="RevokeProductRoleRequestMessagePart" element="wstns:RequestDataRevokeProductRole"/>
+    </wsdl:message>
+    <wsdl:message name="RevokeProductRoleResponseMessage">
+        <wsdl:part name="RevokeProductRoleResponseMessagePart" element="wstns:ResponseDataRevokeProductRole"/>
+    </wsdl:message>
+    <!-- SearchAccountReferences Message -->
+    <wsdl:message name="SearchAccountReferencesRequestMessage">
+        <wsdl:part name="SearchAccountReferencesRequestMessagePart" element="wstns:RequestDataSearchAccountReferences"/>
+    </wsdl:message>
+    <wsdl:message name="SearchAccountReferencesResponseMessage">
+        <wsdl:part name="SearchAccountReferencesResponseMessagePart" element="wstns:ResponseDataSearchAccountReferences"/>
+    </wsdl:message>
+    <wsdl:message name="TechnicalFaultMessage">
+        <wsdl:part name="TechnicalFaultMessagePart" element="techerr:TechnicalError"/>
+    </wsdl:message>
+    <wsdl:message name="FunctionalFaultMessage">
+        <wsdl:part name="FunctionalFaultMessagePart" element="funcerr:FunctionalError"/>
+    </wsdl:message>
+    <!-- ================================================== -->
+    <!-- PortType                                           -->
+    <!-- ================================================== -->
+    <wsdl:portType name="IDPServicesPortType">
+        <wsdl:operation name="CheckService">
+            <wsdl:input name="CheckServiceInput" message="wstns:CheckServiceRequestMessage"/>
+            <wsdl:output name="CheckServiceOutput" message="wstns:CheckServiceResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ValidateEmailAddress">
+            <wsdl:input name="ValidateEmailAddressInput" message="wstns:ValidateEmailAddressRequestMessage"/>
+            <wsdl:output name="ValidateEmailAddressOutput" message="wstns:ValidateEmailAddressResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CollectAccountData">
+            <wsdl:input name="CollectAccountDataInput" message="wstns:CollectAccountDataRequestMessage"/>
+            <wsdl:output name="CollectAccountDataOutput" message="wstns:CollectAccountDataResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CreateAccount">
+            <wsdl:input name="CreateAccountInput" message="wstns:CreateAccountRequestMessage"/>
+            <wsdl:output name="CreateAccountOutput" message="wstns:CreateAccountResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateAccount">
+            <wsdl:input name="UpdateAccountInput" message="wstns:UpdateAccountRequestMessage"/>
+            <wsdl:output name="UpdateAccountOutput" message="wstns:UpdateAccountResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteAccount">
+            <wsdl:input name="DeleteAccountInput" message="wstns:DeleteAccountRequestMessage"/>
+            <wsdl:output name="DeleteAccountOutput" message="wstns:DeleteAccountResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="BridgeAccount">
+            <wsdl:input name="BridgeAccountInput" message="wstns:BridgeAccountRequestMessage"/>
+            <wsdl:output name="BridgeAccountOutput" message="wstns:BridgeAccountResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DebridgeAccount">
+            <wsdl:input name="DebridgeAccountInput" message="wstns:DebridgeAccountRequestMessage"/>
+            <wsdl:output name="DebridgeAccountOutput" message="wstns:DebridgeAccountResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="MergeAccount">
+            <wsdl:input name="MergeAccountInput" message="wstns:MergeAccountRequestMessage"/>
+            <wsdl:output name="MergeAccountOutput" message="wstns:MergeAccountResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ResetPassword">
+            <wsdl:input name="ResetPasswordInput" message="wstns:ResetPasswordRequestMessage"/>
+            <wsdl:output name="ResetPasswordOutput" message="wstns:ResetPasswordResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ConfirmAccount">
+            <wsdl:input name="ConfirmAccountInput" message="wstns:ConfirmAccountRequestMessage"/>
+            <wsdl:output name="ConfirmAccountOutput" message="wstns:ConfirmAccountResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CollectBridgeData">
+            <wsdl:input name="CollectBridgeDataInput" message="wstns:CollectBridgeDataRequestMessage"/>
+            <wsdl:output name="CollectBridgeDataOutput" message="wstns:CollectBridgeDataResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="BlockAccount">
+            <wsdl:input name="BlockAccountInput" message="wstns:BlockAccountRequestMessage"/>
+            <wsdl:output name="BlockAccountOutput" message="wstns:BlockAccountResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CollectSpecificBridgeData">
+            <wsdl:input name="CollectSpecificBridgeDataInput" message="wstns:CollectSpecificBridgeDataRequestMessage"/>
+            <wsdl:output name="CollectSpecificBridgeDataOutput" message="wstns:CollectSpecificBridgeDataResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpSertSpecificBridgeData">
+            <wsdl:input name="UpSertSpecificBridgeDataInput" message="wstns:UpSertSpecificBridgeDataRequestMessage"/>
+            <wsdl:output name="UpSertSpecificBridgeDataOutput" message="wstns:UpSertSpecificBridgeDataResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="DeleteSpecificBridgeData">
+            <wsdl:input name="DeleteSpecificBridgeDataInput" message="wstns:DeleteSpecificBridgeDataRequestMessage"/>
+            <wsdl:output name="DeleteSpecificBridgeDataOutput" message="wstns:DeleteSpecificBridgeDataResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CheckSkynetTokenValidity">
+            <wsdl:input name="CheckSkynetTokenValidityInput" message="wstns:CheckSkynetTokenValidityRequestMessage"/>
+            <wsdl:output name="CheckSkynetTokenValidityOutput" message="wstns:CheckSkynetTokenValidityResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CheckUserCredentials">
+            <wsdl:input name="CheckUserCredentialsInput" message="wstns:CheckUserCredentialsRequestMessage"/>
+            <wsdl:output name="CheckUserCredentialsOutput" message="wstns:CheckUserCredentialsResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="MergeAccountV2">
+            <wsdl:input name="MergeAccountV2Input" message="wstns:MergeAccountV2RequestMessage"/>
+            <wsdl:output name="MergeAccountV2Output" message="wstns:MergeAccountV2ResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="IsMergeAllowed">
+            <wsdl:input name="IsMergeAllowedInput" message="wstns:IsMergeAllowedRequestMessage"/>
+            <wsdl:output name="IsMergeAllowedOutput" message="wstns:IsMergeAllowedResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GrantProductRole">
+            <wsdl:input name="GrantProductRoleInput" message="wstns:GrantProductRoleRequestMessage"/>
+            <wsdl:output name="GrantProductRoleOutput" message="wstns:GrantProductRoleResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="RevokeProductRole">
+            <wsdl:input name="RevokeProductRoleInput" message="wstns:RevokeProductRoleRequestMessage"/>
+            <wsdl:output name="RevokeProductRoleOutput" message="wstns:RevokeProductRoleResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SearchAccountReferences">
+            <wsdl:input name="SearchAccountReferencesInput" message="wstns:SearchAccountReferencesRequestMessage"/>
+            <wsdl:output name="SearchAccountReferencesOutput" message="wstns:SearchAccountReferencesResponseMessage"/>
+            <wsdl:fault name="TechnicalFault" message="wstns:TechnicalFaultMessage"/>
+            <wsdl:fault name="FunctionalFault" message="wstns:FunctionalFaultMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>
+<!-- Generated on Tue Nov 27 14:45:24 MET 2012 -->

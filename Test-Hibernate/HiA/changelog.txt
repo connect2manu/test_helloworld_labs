@@ -1,0 +1,31 @@
+CaveatEmptor Changelog
+===================
+
+Changes in version 0.9.6 (xx.xx.2004)
+------------------------------------
+
+* fixed trivial bug in UserSession
+* added new test for User-related operations
+
+Changes in version 0.9.5 (13.08.2004)
+------------------------------------
+
+* updated to Hibernate 2.1.6
+* added new composite identifier example for many-to-many solution
+* externalized HQL queries to mapping files
+* fixed initialization of 'created' property in all business classes
+* fixed AuditTest, deregistering interceptor after test
+
+
+Changes in version 0.9.2 (04.08.2004)
+------------------------------------
+
+* updated to Hibernate 2.1.5
+* added 'exportddl' Ant task
+* fixed some minor issues with SessionFactory rebuild and FK names
+
+Changes in version 0.9.1 (31.07.2004)
+------------------------------------
+
+* added some missing (but not neccessary) inverse="true" attributes
+* improved DDL by adding foreign key constraint names

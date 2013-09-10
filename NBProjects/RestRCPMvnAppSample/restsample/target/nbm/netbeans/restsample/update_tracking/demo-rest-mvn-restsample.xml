@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="demo.rest.mvn.restsample">
+    <module_version install_time="1377498675708" last="true" origin="installer" specification_version="1.0">
+        <file crc="4144451746" name="config/Modules/demo-rest-mvn-restsample.xml"/>
+        <file crc="4025302822" name="modules/demo-rest-mvn-restsample.jar"/>
+        <file crc="3558753978" name="modules/ext/asm/asm-3.1.jar"/>
+        <file crc="4182913129" name="modules/ext/com.sun.jersey/jersey-client-1.1.4.jar"/>
+        <file crc="3192556494" name="modules/ext/com.sun.jersey/jersey-core-1.1.4.jar"/>
+        <file crc="3006244794" name="modules/ext/com.sun.jersey/jersey-json-1.1.4.jar"/>
+        <file crc="3253636945" name="modules/ext/com.sun.jersey/jersey-server-1.1.4.jar"/>
+        <file crc="3216557771" name="modules/ext/com.sun.xml.bind/jaxb-impl-2.1.12.jar"/>
+        <file crc="984909869" name="modules/ext/javax.activation/activation-1.1.jar"/>
+        <file crc="1796310173" name="modules/ext/javax.ws.rs/jsr311-api-1.1.1.jar"/>
+        <file crc="3224142146" name="modules/ext/javax.xml.bind/jaxb-api-2.1.jar"/>
+        <file crc="1775435017" name="modules/ext/javax.xml.stream/stax-api-1.0-2.jar"/>
+        <file crc="674290392" name="modules/ext/org.codehaus.jackson/jackson-core-asl-1.1.1.jar"/>
+        <file crc="3902866820" name="modules/ext/org.codehaus.jettison/jettison-1.1.jar"/>
+        <file crc="718358633" name="modules/ext/stax/stax-api-1.0.1.jar"/>
+    </module_version>
+</module>

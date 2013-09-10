@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deployment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:jboss:bean-deployer bean-deployer_1_0.xsd"
+    xmlns="urn:jboss:bean-deployer">
+
+    <!-- ###################### JNDI/JTA/JCA ######################## -->
+
+    <!-- Enable a JNDI registry, one per VM -->
+    <bean name="Naming" class="org.jnp.server.SingletonNamingServer"/>
+    <bean name="InitialContextProperties" class="java.util.Hashtable">
+       <constructor>
+       <parameter class="java.util.Map">
+             <map keyClass="java.lang.String" valueClass="java.lang.String">
+                <entry>
+                   <key>java.naming.factory.initial</key>
+                   <value>org.jnp.interfaces.LocalOnlyContextFactory</value>
+                </entry>
+                <entry>
+                    <key>java.naming.factory.url.pkgs</key>
+                    <value>org.jboss.naming:org.jnp.interfaces</value>
+                </entry>
+             </map>
+       </parameter>
+       </constructor>
+    </bean>
+
+    <!-- Enable JTA available through JNDI (regular JBoss location for TM)-->
+    <bean name="TransactionManagerFactory" class="org.jboss.seam.microcontainer.TransactionManagerFactory">
+        <property name="initialContextProperties"><inject bean="InitialContextProperties"/></property>
+    </bean>
+    <bean name="TransactionManager" class="java.lang.Object">
+        <constructor factoryMethod="getTransactionManager">
+            <factory bean="TransactionManagerFactory"/>
+        </constructor>
+    </bean>
+
+    <!-- Enable a JCA datasource available through JNDI-->
+    <bean name="caveatemptorDataSourceFactory" class="org.jboss.seam.microcontainer.DataSourceFactory">
+        <property name="jndiName">java:/caveatemptorDatasource</property>
+
+        <!-- MySQL
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="connectionUrl">jdbc:mysql://localhost/test</property>
+        <property name="userName">test</property>
+        <property name="password">test</property>
+        -->
+
+        <!-- HSQL DB -->
+        <property name="driverClass">org.hsqldb.jdbcDriver</property>
+        <property name="connectionUrl">jdbc:hsqldb:hsql://localhost</property>
+        <property name="userName">sa</property>
+
+        <property name="minSize">0</property>
+        <property name="maxSize">10</property>
+        <property name="blockingTimeout">1000</property>
+        <property name="idleTimeout">100000</property>
+        <property name="transactionManager"><inject bean="TransactionManager"/></property>
+        <property name="initialContextProperties"><inject bean="InitialContextProperties"/></property>
+    </bean>
+    <bean name="caveatemptorDatasource" class="java.lang.Object">
+        <constructor factoryMethod="getDataSource">
+            <factory bean="caveatemptorDataSourceFactory"/>
+        </constructor>
+    </bean>
+
+    <!-- ###################### Hibernate service ######################## -->
+
+    <!-- Setup a Hibernate configuration factory -->
+    <bean name="HibernateFactory" class="org.jboss.seam.microcontainer.HibernateFactory">
+        <property name="jndiProperties"><inject bean="InitialContextProperties"/></property>
+        <property name="cfgProperties">
+            <map keyClass="java.lang.String" valueClass="java.lang.String">
+                <entry>
+                    <key>hibernate.session_factory_name</key>
+                    <value>java:/hibernate/caveatemptorDatabase</value>
+                </entry>
+                <entry>
+                    <key>hibernate.jdbc.batch_size</key>
+                    <value>0</value>
+                </entry>
+                <entry>
+                    <key>hibernate.connection.datasource</key>
+                    <value>java:/caveatemptorDatasource</value>
+                </entry>
+                <entry>
+                    <key>hibernate.dialect</key>
+                    <!--<value>org.hibernate.dialect.MySQLInnoDBDialect</value> -->
+                    <value>org.hibernate.dialect.HSQLDialect</value>
+                </entry>
+                <entry>
+                    <key>hibernate.hbm2ddl.auto</key>
+                    <value>create</value>
+                </entry>
+                <entry>
+                    <key>hibernate.cache.provider_class</key>
+                    <value>org.hibernate.cache.NoCacheProvider</value>
+                </entry>
+                <entry> <!-- Needed for ExtendedManagedPersistence strategy -->
+                    <key>hibernate.transaction.flush_before_completion</key>
+                    <value>true</value>
+                </entry>
+                <entry>
+                    <key>hibernate.connection.release_mode</key>
+                    <value>after_statement</value>
+                </entry>
+                <entry>
+                    <key>hibernate.transaction.manager_lookup_class</key>
+                    <value>org.hibernate.transaction.JBossTransactionManagerLookup</value>
+                </entry>
+                <entry>
+                    <key>hibernate.transaction.factory_class</key>
+                    <value>org.hibernate.transaction.JTATransactionFactory</value>
+                </entry>
+                <entry>
+                    <!-- The default is for JBoss AS, Seam/Microcontainer is different... -->
+                    <key>jta.UserTransaction</key>
+                    <value>java:comp/UserTransaction</value>
+                </entry>
+                <entry>
+                    <key>show_sql</key>
+                    <value>false</value>
+                </entry>
+                <entry>
+                    <key>format_sql</key>
+                    <value>true</value>
+                </entry>
+            </map>
+        </property>
+        <property name="mappingClasses">
+            <list elementClass="java.lang.String">
+                <value>org.hibernate.ce.auction.persistence.audit.AuditLogRecord</value>
+                <value>org.hibernate.ce.auction.model.User</value>
+                <value>org.hibernate.ce.auction.model.Item</value>
+                <value>org.hibernate.ce.auction.model.Category</value>
+                <value>org.hibernate.ce.auction.model.CategorizedItem</value>
+                <value>org.hibernate.ce.auction.model.Bid</value>
+                <value>org.hibernate.ce.auction.model.BillingDetails</value>
+                <value>org.hibernate.ce.auction.model.CreditCard</value>
+                <value>org.hibernate.ce.auction.model.BankAccount</value>
+                <value>org.hibernate.ce.auction.model.Comment</value>
+            </list>
+        </property>
+        <property name="mappingPackages">
+            <list elementClass="java.lang.String">
+                <value>org.hibernate.ce.auction.persistence</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Build the Hibernate SessionFactory -->
+    <bean name="caveatemptorSessionFactory" class="java.lang.Object">
+        <constructor factoryMethod="buildSessionFactory">
+            <factory bean="HibernateFactory"/>
+        </constructor>
+        <!-- First initialize the datasource as a dependency -->
+        <depends>caveatemptorDatasource</depends>
+    </bean>
+
+</deployment>

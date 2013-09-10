@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"
+[
+<!ENTITY % globals      SYSTEM "/org/hibernate/ce/auction/persistence/globals.dtd">
+%globals;
+]>
+<!--
+
+Mapping file for the Shipment class of CaveatEmptor.
+
+A class for the escrow service on CE, links a buyer
+to a seller. Optionally (and usually) also refers to
+a particular auction item using a link table (one-to-one
+using a join table with unique constraints).
+
+@author Christian Bauer <christian@hibernate.org>
+
+-->
+<hibernate-mapping package="org.hibernate.ce.auction.model">
+
+<class name="Shipment"
+       table="SHIPMENT">
+
+    <id name="id"
+        type="long"
+        column="SHIPMENT_ID"
+        unsaved-value="null"
+        access="field">
+        <generator class="&idgenerator;"/>
+    </id>
+
+    <!-- A versioned entity. -->
+    <version name="version"
+             column="VERSION"
+             access="field"/>
+
+    <property   name="inspectionPeriodDays"
+                type="int"
+                column="INSPECTION_PERIOD_DAYS"
+                update="false"
+                not-null="true"/>
+
+    <!-- Simple property mapped with a custom usertype. -->
+    <property   name="state"
+                column="SHIPMENT_STATE"
+                type="shipment_state"
+                not-null="true"
+                access="field"/>
+
+    <!-- We can't change the creation time, so map it with update="false". -->
+    <property   name="created"
+                column="CREATED"
+                type="java.util.Date"
+                update="false"
+                not-null="true"
+                access="field"/>
+
+    <many-to-one name="deliveryAddress"
+                 class="AddressEntity"
+                 column="DELIVERY_ADDRESS_ID"
+                 not-null="true"
+                 update="false"
+                 foreign-key="FK_DELIVER_ADDRESS"/>
+
+    <many-to-one name="buyer"
+                 class="User"
+                 column="BUYER_ID"
+                 not-null="true"
+                 update="false"
+                 foreign-key="FK_BUYER_ID"/>
+
+    <many-to-one name="seller"
+                 class="User"
+                 column="SELLER_ID"
+                 not-null="true"
+                 update="false"
+                 foreign-key="FK_SELLER_ID"/>
+
+    <!-- The optional link to a particular auction, via a link table. -->
+    <join table="ITEM_SHIPMENT" optional="true">
+        <key column="SHIPMENT_ID"/>
+        <many-to-one name="auction"
+                     column="ITEM_ID"
+                     not-null="true"
+                     unique="true"/>
+    </join>
+
+</class>
+
+</hibernate-mapping>

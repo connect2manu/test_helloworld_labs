@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/E:/MBP-SVC-IDPServices-3.1-standard-http_binding.wsdl" uri="xml-resources/web-service-references/MBP-SVC-IDPServices-3.1-standard-http_binding/wsdl/MBP-SVC-IDPServices-3.1-standard-http_binding.wsdl"/>
+    <system systemId="file:/E:/VSS-OBJ-Context-4.0.xsd" uri="xml-resources/web-service-references/MBP-SVC-IDPServices-3.1-standard-http_binding/wsdl/VSS-OBJ-Context-4.0.xsd"/>
+    <system systemId="file:/E:/MBP-SVC-IDPServices-3.1-standard-def.wsdl" uri="xml-resources/web-service-references/MBP-SVC-IDPServices-3.1-standard-http_binding/wsdl/MBP-SVC-IDPServices-3.1-standard-def.wsdl"/>
+    <system systemId="file:/E:/VSS-OBJ-TechnicalError-1.0.xsd" uri="xml-resources/web-service-references/MBP-SVC-IDPServices-3.1-standard-http_binding/wsdl/VSS-OBJ-TechnicalError-1.0.xsd"/>
+    <system systemId="file:/E:/VSS-OBJ-FunctionalError-1.0.xsd" uri="xml-resources/web-service-references/MBP-SVC-IDPServices-3.1-standard-http_binding/wsdl/VSS-OBJ-FunctionalError-1.0.xsd"/>
+    <system systemId="file:/E:/MBP-SVC-IDPServices-3.1.xsd" uri="xml-resources/web-service-references/MBP-SVC-IDPServices-3.1-standard-http_binding/wsdl/MBP-SVC-IDPServices-3.1.xsd"/>
+</catalog>

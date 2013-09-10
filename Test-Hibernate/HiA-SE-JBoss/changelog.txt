@@ -1,0 +1,42 @@
+CaveatEmptor Changelog
+===========================
+
+Changes in version 3.1.0 alpha 5 (24.11.2005)
+-----------------------------------------------
+
+* switched to non-viral license
+* added TestNG examples with JBoss EJB 3.0 microcontainer
+* added collection and entity association mapping examples
+* added webapp targets for testing of filters and listeners
+
+Changes in version 3.1.0 alpha 4 (08.10.2005)
+-----------------------------------------------
+
+* added AOP interceptor for transaction demarcation
+* fixed getCurrentSession() examples
+* added long Conversation examples
+* first native SQL/SP customization mappings
+
+Changes in version 3.1.0 alpha 3 (30.09.2005)
+-----------------------------------------------
+
+* more advanced mappings with formulas
+* updated inheritance mappings
+* cleaned up usertypes
+* new Session handling with getCurrentSession()
+
+Changes in version 3.1.0 alpha 2 (04.09.2005)
+-----------------------------------------------
+
+* added custom entity resolver to support includes in XML mappings
+* smart HibernateUtil with resource-local transaction/BMT/CMT detection
+* improved servlet filters for transaction/session handling
+* new DAO framework using Generics/JDK 5.0
+* rewrote JUnit test infrastructure with new test superclasses
+* added Nested Set model, interceptor, and tests
+
+Changes in version 3.1.0 alpha 1 (02.07.2005)
+-----------------------------------------------
+
+* initial port to Hibernate3 for HiA Second Edition
+

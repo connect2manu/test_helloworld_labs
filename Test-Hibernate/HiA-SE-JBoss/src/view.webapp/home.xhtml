@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- No template, initial starting page... -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>CaveatEmptor - Login</title>
+	<link href="css/screen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <h:form>
+
+    <div id="document">
+        <div id="header">
+            <h1>CaveatEmptor</h1>
+            <h2>Login</h2>
+        </div>
+        <div id="sidebar">
+            <p>
+                This is CaveatEmptor.
+            </p>
+        </div>
+        <div id="content">
+            <div class="section">
+                <h1>Login</h1>
+            </div>
+            <div class="section">
+                <fieldset>
+                    <div>
+                        <h:outputLabel for="username">Login Name</h:outputLabel>
+                        <br/>
+                        <h:inputText id="username" value="#{user.username}" style="width: 175px;"/>
+                    </div>
+                    <div>
+                        <h:outputLabel for="password">Password</h:outputLabel>
+                        <br/>
+                        <h:inputSecret id="password" value="#{user.password}" style="width: 175px;"/>
+                    </div>
+                    <div class="errors">
+                        <h:messages globalOnly="true"/>
+                    </div>
+                    <div class="buttonBox">
+                        <h:commandButton action="#{login.login}" value="Account Login" class="button"/>
+                    </div>
+                    <div class="notes">
+                        <h:commandLink action="register">Register User</h:commandLink>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+       <div id="footer">Created with Hibernate, JBoss Seam, MyFaces, and Facelets. Running on JBoss Microcontainer.</div>
+    </div>
+
+    <ui:debug hotkey="D"/>
+
+    </h:form>
+
+</body>
+</html>

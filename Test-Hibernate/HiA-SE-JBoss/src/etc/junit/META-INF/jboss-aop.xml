@@ -1,0 +1,11 @@
+<aop>
+
+    <!--
+        Apply a Hibernate Transaction context to all execute() methods
+        in all Action implementors.
+    -->
+    <bind pointcut="execution(* $instanceof{org.hibernate.ce.auction.web.actions.Action}->execute(..))">
+        <interceptor class="org.hibernate.ce.auction.persistence.TransactionInterceptor"/>
+    </bind>
+
+</aop>

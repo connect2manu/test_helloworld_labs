@@ -1,0 +1,71 @@
+<project name="CaveatEmptor" default="sqlbench.hibernate" basedir=".">
+
+	<!-- Name of project and version, used to create filenames. -->
+	<property name="name.project"   value="CaveatEmptor.sqlbench"/>
+	<property name="name.short"     value="caveatemptor.sqlbench"/>
+
+	<!-- Global properties for this build. -->
+	<property name="src.java.dir"   value="src/java"/>
+	<property name="lib.dir"        value="lib"/>
+	<property name="build.dir"      value="build"/>
+    <property name="etc.dir"        value="etc"/>
+	<property name="classes.dir"    value="${build.dir}/standalone"/>
+	<property name="test.out.dir"   value="testout"/>
+	<property name="test.driver"    value="${lib.dir}/hsqldb.jar"/>
+
+	<!-- Classpath declaration. -->
+	<path id="lib.class.path">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+	<patternset id="meta.files">
+		<include name="**/*.xml"/>
+		<include name="**/*.properties"/>
+	</patternset>
+
+	<!-- Targets -->
+
+	<target name="clean" description="Cleans up build and dist directories">
+		<delete dir="${build.dir}"/>
+		<delete dir="${test.out.dir}"/>
+        <delete>
+            <fileset dir="." includes="test.*"/>
+            <fileset dir="." includes="*.log"/>
+        </delete>
+	</target>
+
+	<target name="compile" depends="clean" description="Compile the tests">
+		<mkdir dir="${classes.dir}"/>
+		<javac
+			srcdir="${src.java.dir}"
+			destdir="${classes.dir}"
+			nowarn="on">
+			<classpath refid="lib.class.path"/>
+		</javac>
+
+		<!-- Copy over all meta and configuration files -->
+		<copy todir="${classes.dir}">
+			<fileset dir="${src.java.dir}">
+				<patternset refid="meta.files"/>
+			</fileset>
+            <fileset dir="${etc.dir}">
+                <patternset refid="meta.files"/>
+            </fileset>
+		</copy>
+
+	</target>
+
+    <target name="sqlbench.hibernate" depends = "compile" description="Run the benchmark for: Hibernate 2.1.x">
+        <java  classname="org.hibernate.auction.bench.client.BenchmarkSql" fork="true" dir="${classes.dir}">
+            <classpath refid="lib.class.path"/>
+            <classpath location="${classes.dir}"/>
+
+            <!-- Use the Hibernate 2.x service and DAO factory. -->
+            <arg value="org.hibernate.auction.bench.server.HibernateAuctionService"/>
+            <arg value="org.hibernate.auction.persistence.hibernate.dao.DAOFactoryImpl"/>
+        </java>
+    </target>
+
+</project>

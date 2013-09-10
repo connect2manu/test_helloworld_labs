@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>CaveatEmptor - <ui:insert name="screen"/></title>
+	<link href="css/screen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="document">
+        <div id="header">
+            <h1>CaveatEmptor</h1>
+            <h2><ui:insert name="screen"/></h2>
+
+            <div id="navigation">
+                <h:commandLink action="browse">Browse Catalog</h:commandLink>
+                <h:commandLink action="search">Search</h:commandLink>
+                <h:commandLink action="sell">Sell Item</h:commandLink>
+            </div>
+
+            <div id="status">
+                <h:form>
+                Welcome #{user.firstname} #{user.lastname}
+                | <h:commandLink action="password">Settings</h:commandLink>
+                | <h:commandLink action="#{login.logout}">Logout</h:commandLink>
+                </h:form>
+            </div>
+        </div>
+        <div id="sidebar">
+            <ui:insert name="sidebar"/>
+        </div>
+        <div id="content">
+            <ui:insert name="content"/>
+        </div>
+       <div id="footer">Created with Hibernate, JBoss Seam, MyFaces, and Facelets. Running on JBoss Microcontainer.</div>
+    </div>
+
+    <ui:debug hotkey="D"/>
+
+</body>
+</html>
