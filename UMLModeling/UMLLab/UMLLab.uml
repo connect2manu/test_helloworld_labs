@@ -1,0 +1,1705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_DUq2QBuEEeOEn_wPEUKreg" name="UMLLab">
+    <eAnnotations xmi:id="_EDiHYBuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_EDiHYRuEEeOEn_wPEUKreg" source="codegen">
+        <details xmi:id="_EDiHYhuEEeOEn_wPEUKreg" key="codegenDirectory" value="/UMLLab/src"/>
+        <details xmi:id="_EEbfQBuEEeOEn_wPEUKreg" key="observedFolders" value="/UMLLab/src"/>
+        <details xmi:id="_TStnUBuEEeOEn_wPEUKreg" key="AssociatedSourceCode" value="/ParallelTaskExecTest/src/parallel/test/broker/TaskManager.java;2292930253/1;/ParallelTaskExecTest/src/parallel/test/message/ErrorResponse.java;844074364/1;/ParallelTaskExecTest/src/parallel/test/message/MBPRequest.java;120745959/1;/ParallelTaskExecTest/src/parallel/test/message/MBPResponse.java;2434454148/1;/ParallelTaskExecTest/src/parallel/test/message/Request.java;1209403171/1;/ParallelTaskExecTest/src/parallel/test/message/Response.java;1423482249/1;/ParallelTaskExecTest/src/parallel/test/message/URHRequest.java;2673780728/1;/ParallelTaskExecTest/src/parallel/test/message/URHResponse.java;1817125480/1;/ParallelTaskExecTest/src/parallel/test/message/UUSDRequest.java;1091218597/1;/ParallelTaskExecTest/src/parallel/test/message/UUSDResponse.java;320761528/1;/ParallelTaskExecTest/src/parallel/test/pool/AuthThread.java;203266505/1;/ParallelTaskExecTest/src/parallel/test/pool/AuthThreadFactory.java;4278239622/1;/ParallelTaskExecTest/src/parallel/test/pool/AuthThreadPoolExecutor.java;4139557358/1;/ParallelTaskExecTest/src/parallel/test/task/MBPTask.java;2592247632/1;/ParallelTaskExecTest/src/parallel/test/task/Task.java;522250993/1;/ParallelTaskExecTest/src/parallel/test/task/URHTask.java;1206392893/1;/ParallelTaskExecTest/src/parallel/test/task/UUSDTask.java;2972661509/1;/ParallelTaskExecTest/src/parallel/test/task/exception/TaskExecutionException.java;1468425955/1;/UMLLab/src/parallel/test/ClassA.java;1407274749/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_QhrDEBuEEeOEn_wPEUKreg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_Qh00EBuEEeOEn_wPEUKreg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_Qh00ERuEEeOEn_wPEUKreg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_Qh00EhuEEeOEn_wPEUKreg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_Qh00ExuEEeOEn_wPEUKreg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_Qh00FBuEEeOEn_wPEUKreg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_Qh00FRuEEeOEn_wPEUKreg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_Qh00FhuEEeOEn_wPEUKreg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_Qh00FxuEEeOEn_wPEUKreg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_QhOXIBuEEeOEn_wPEUKreg" name="parallel">
+      <packagedElement xmi:type="uml:Package" xmi:id="_QhOXIRuEEeOEn_wPEUKreg" name="test">
+        <packagedElement xmi:type="uml:Package" xmi:id="_QhYIIxuEEeOEn_wPEUKreg" name="message">
+          <packagedElement xmi:type="uml:Class" xmi:id="_QlZFcBuEEeOEn_wPEUKreg" name="ErrorResponse">
+            <eAnnotations xmi:id="_QlZFcRuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QlZFchuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QlZFcxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_RQ_AIBuEEeOEn_wPEUKreg" general="_QmSdUBuEEeOEn_wPEUKreg"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmaYBuEEeOEn_wPEUKreg" name="ErrorResponse" specification="_RSeN5huEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmaYRuEEeOEn_wPEUKreg" name="s" type="_RSUc6RuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVmaYhuEEeOEn_wPEUKreg" type="_QlZFcBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.exception = s;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmaYxuEEeOEn_wPEUKreg" name="getResponseType" specification="_QlZFeRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmaZBuEEeOEn_wPEUKreg" type="_RSeN6xuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return RESPONSE_TYPE.ERROR;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QlZFdBuEEeOEn_wPEUKreg" name="ErrorResponse">
+              <eAnnotations xmi:id="_QlZFdRuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_QlZFdhuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_QlZFeBuEEeOEn_wPEUKreg" type="_QlZFcBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QlZFeRuEEeOEn_wPEUKreg" name="getResponseType" method="_RVmaYxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSeN7RuEEeOEn_wPEUKreg" type="_RSeN6xuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RSeN5huEEeOEn_wPEUKreg" name="ErrorResponse" method="_RVmaYBuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_RSeN6BuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_RSeN6RuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_RSeN5xuEEeOEn_wPEUKreg" name="s" type="_RSUc6RuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RSeN6huEEeOEn_wPEUKreg" type="_QlZFcBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Qli2cBuEEeOEn_wPEUKreg" name="MBPRequest">
+            <eAnnotations xmi:id="_Qli2cRuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_Qli2chuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_Qli2cxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_RQ_AIhuEEeOEn_wPEUKreg" general="_Ql_iYBuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUQWlBuEEeOEn_wPEUKreg" name="reuquestType" visibility="package" isLeaf="true" type="_RSeN7huEEeOEn_wPEUKreg" isReadOnly="true" association="_RWWBRhuEEeOEn_wPEUKreg">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUQWlRuEEeOEn_wPEUKreg" value="REQUEST_TYPE.MBP_WS"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUQWlxuEEeOEn_wPEUKreg" name="requestId" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmaZRuEEeOEn_wPEUKreg" name="MBPRequest" specification="_Qli2dBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmaZhuEEeOEn_wPEUKreg" name="requestId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVmaZxuEEeOEn_wPEUKreg" type="_Qli2cBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.requestId = requestId;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmaaBuEEeOEn_wPEUKreg" name="getRequestType" specification="_Qli2eRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmaaRuEEeOEn_wPEUKreg" type="_RSeN7huEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return reuquestType;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmaahuEEeOEn_wPEUKreg" name="createTask" specification="_QlsAYBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_flWaoBulEeOSZbMDD0aGnA" type="_fk5usBulEeOSZbMDD0aGnA" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>MBPTask task = new MBPTask();&#xD;
+		task.setRequest(this);&#xD;
+		return task;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmabBuEEeOEn_wPEUKreg" name="hashCode" specification="_QlsAYRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmabRuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>final int prime = 31;&#xD;
+		int result = 1;&#xD;
+		result = prime * result&#xD;
+				+ ((requestId == null) ? 0 : requestId.hashCode());&#xD;
+		result = prime * result&#xD;
+				+ ((reuquestType == null) ? 0 : reuquestType.hashCode());&#xD;
+		return result;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmabhuEEeOEn_wPEUKreg" name="equals" specification="_RSn-5BuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmabxuEEeOEn_wPEUKreg" name="obj" type="_RSn-4huEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVmacBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>if (this == obj)&#xD;
+			return true;&#xD;
+		if (obj == null)&#xD;
+			return false;&#xD;
+		if (getClass() != obj.getClass())&#xD;
+			return false;&#xD;
+		MBPRequest other = (MBPRequest) obj;&#xD;
+		if (requestId == null) {&#xD;
+			if (other.requestId != null)&#xD;
+				return false;&#xD;
+		} else if (!requestId.equals(other.requestId))&#xD;
+			return false;&#xD;
+		if (reuquestType != other.reuquestType)&#xD;
+			return false;&#xD;
+		return true;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_Qli2dBuEEeOEn_wPEUKreg" name="MBPRequest" method="_RVmaZRuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_Qli2dhuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_Qli2dxuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_Qli2dRuEEeOEn_wPEUKreg" name="requestId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_Qli2eBuEEeOEn_wPEUKreg" type="_Qli2cBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_Qli2eRuEEeOEn_wPEUKreg" name="getRequestType" method="_RVmaaBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSn-4RuEEeOEn_wPEUKreg" type="_RSeN7huEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QlsAYBuEEeOEn_wPEUKreg" name="createTask" method="_RVmaahuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RQ_AIRuEEeOEn_wPEUKreg" type="_fk5usBulEeOSZbMDD0aGnA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QlsAYRuEEeOEn_wPEUKreg" name="hashCode" method="_RVmabBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_QlsAYhuEEeOEn_wPEUKreg" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RSn-5BuEEeOEn_wPEUKreg" name="equals" method="_RVmabhuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSn-5RuEEeOEn_wPEUKreg" name="obj" type="_RSn-4huEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RSn-5huEEeOEn_wPEUKreg" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Ql1xYRuEEeOEn_wPEUKreg" name="MBPResponse">
+            <eAnnotations xmi:id="_Ql1xYhuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_Ql1xYxuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_Ql1xZBuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_RQ_AIxuEEeOEn_wPEUKreg" general="_QmSdUBuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUQWmRuEEeOEn_wPEUKreg" name="allAddresses" isOrdered="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RUQWmhuEEeOEn_wPEUKreg" value="*"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmacRuEEeOEn_wPEUKreg" name="getResponseType" specification="_Ql1xZRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmachuEEeOEn_wPEUKreg" type="_RSeN6xuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return RESPONSE_TYPE.MBP_WS;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_Ql1xZRuEEeOEn_wPEUKreg" name="getResponseType" method="_RVmacRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSn-6huEEeOEn_wPEUKreg" type="_RSeN6xuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Ql_iYBuEEeOEn_wPEUKreg" name="Request" isAbstract="true">
+            <eAnnotations xmi:id="_Ql_iYRuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_Ql_iYhuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_Ql_iYxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_RUQWmxuEEeOEn_wPEUKreg" name="timeOutInSeconds" visibility="protected">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUQWnBuEEeOEn_wPEUKreg" value="Integer.MAX_VALUE"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUQWnhuEEeOEn_wPEUKreg" name="requestType" type="_Ql_iZBuEEeOEn_wPEUKreg"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmacxuEEeOEn_wPEUKreg" name="getTimeOutInSeconds" specification="_QmIsUxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmadBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return timeOutInSeconds;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmadRuEEeOEn_wPEUKreg" name="setTimeOutInSeconds" specification="_QmIsVRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmadhuEEeOEn_wPEUKreg" name="timeOutInSeconds">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.timeOutInSeconds = timeOutInSeconds;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QmIsUxuEEeOEn_wPEUKreg" name="getTimeOutInSeconds" method="_RVmacxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_QmIsVBuEEeOEn_wPEUKreg" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QmIsVRuEEeOEn_wPEUKreg" name="setTimeOutInSeconds" method="_RVmadRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_QmIsVhuEEeOEn_wPEUKreg" name="timeOutInSeconds">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QmIsVxuEEeOEn_wPEUKreg" name="getRequestType" isAbstract="true">
+              <ownedParameter xmi:id="_RRIxIBuEEeOEn_wPEUKreg" type="_Ql_iZBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QmIsWBuEEeOEn_wPEUKreg" name="createTask" isAbstract="true">
+              <ownedParameter xmi:id="_RRIxIRuEEeOEn_wPEUKreg" type="_fk5usBulEeOSZbMDD0aGnA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QmIsWRuEEeOEn_wPEUKreg" name="hashCode" isAbstract="true">
+              <ownedParameter xmi:id="_QmIsWhuEEeOEn_wPEUKreg" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RSn-6xuEEeOEn_wPEUKreg" name="equals" isAbstract="true">
+              <ownedParameter xmi:id="_RSn-7BuEEeOEn_wPEUKreg" name="otherRequest" type="_RSn-4huEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RSn-7RuEEeOEn_wPEUKreg" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+            <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_Ql_iZBuEEeOEn_wPEUKreg" name="REQUEST_TYPE">
+              <ownedLiteral xmi:id="_QmIsUBuEEeOEn_wPEUKreg" name="MBP_WS"/>
+              <ownedLiteral xmi:id="_QmIsURuEEeOEn_wPEUKreg" name="URH_EJB"/>
+              <ownedLiteral xmi:id="_QmIsUhuEEeOEn_wPEUKreg" name="UUSD_EJB"/>
+            </nestedClassifier>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QmSdUBuEEeOEn_wPEUKreg" name="Response" isAbstract="true">
+            <eAnnotations xmi:id="_QmSdURuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QmSdUhuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QmSdUxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_RUaHkBuEEeOEn_wPEUKreg" name="responseType" type="_QmSdVBuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUaHkhuEEeOEn_wPEUKreg" name="exception" visibility="protected" type="_RSUc6RuEEeOEn_wPEUKreg" association="_RWWBSRuEEeOEn_wPEUKreg"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmadxuEEeOEn_wPEUKreg" name="setRequestType" specification="_QmSdWhuEEeOEn_wPEUKreg">
+              <language>java</language>
+              <body>getResponseType();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmaeBuEEeOEn_wPEUKreg" name="getException" specification="_QmbnQBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmaeRuEEeOEn_wPEUKreg" type="_RSUc6RuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return exception;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmaehuEEeOEn_wPEUKreg" name="setException" specification="_RSxI0RuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmaexuEEeOEn_wPEUKreg" name="e" type="_RSUc6RuEEeOEn_wPEUKreg"/>
+              <language>java</language>
+              <body>this.exception = e;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QmSdWhuEEeOEn_wPEUKreg" name="setRequestType" method="_RVmadxuEEeOEn_wPEUKreg"/>
+            <ownedOperation xmi:id="_QmSdWxuEEeOEn_wPEUKreg" name="getResponseType" isAbstract="true">
+              <ownedParameter xmi:id="_RRIxIhuEEeOEn_wPEUKreg" type="_QmSdVBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QmbnQBuEEeOEn_wPEUKreg" name="getException" method="_RVmaeBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSxI0BuEEeOEn_wPEUKreg" type="_RSUc6RuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RSxI0RuEEeOEn_wPEUKreg" name="setException" method="_RVmaehuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSxI0huEEeOEn_wPEUKreg" name="e" type="_RSUc6RuEEeOEn_wPEUKreg"/>
+            </ownedOperation>
+            <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_QmSdVBuEEeOEn_wPEUKreg" name="RESPONSE_TYPE">
+              <ownedLiteral xmi:id="_QmSdVhuEEeOEn_wPEUKreg" name="MBP_WS"/>
+              <ownedLiteral xmi:id="_QmSdVxuEEeOEn_wPEUKreg" name="URH_EJB"/>
+              <ownedLiteral xmi:id="_QmSdWBuEEeOEn_wPEUKreg" name="UUSD_EJB"/>
+              <ownedLiteral xmi:id="_QmSdWRuEEeOEn_wPEUKreg" name="ERROR"/>
+            </nestedClassifier>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QmbnQRuEEeOEn_wPEUKreg" name="URHRequest">
+            <eAnnotations xmi:id="_QmbnQhuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QmbnQxuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QmbnRBuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_RRIxJBuEEeOEn_wPEUKreg" general="_Ql_iYBuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUaHlBuEEeOEn_wPEUKreg" name="reuquestType" visibility="package" isLeaf="true" type="_RSeN7huEEeOEn_wPEUKreg" isReadOnly="true" association="_RWfLMRuEEeOEn_wPEUKreg">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUaHlRuEEeOEn_wPEUKreg" value="REQUEST_TYPE.URH_EJB"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUaHlxuEEeOEn_wPEUKreg" name="requestId" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmafBuEEeOEn_wPEUKreg" name="URHRequest" specification="_QmbnRRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmafRuEEeOEn_wPEUKreg" name="requestId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVmafhuEEeOEn_wPEUKreg" type="_QmbnQRuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.requestId = requestId;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmafxuEEeOEn_wPEUKreg" name="getRequestType" specification="_QmlYRBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmagBuEEeOEn_wPEUKreg" type="_RSeN7huEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return reuquestType;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmagRuEEeOEn_wPEUKreg" name="createTask" specification="_QmlYRRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_flgLoBulEeOSZbMDD0aGnA" type="_fk5usBulEeOSZbMDD0aGnA" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>URHTask task = new URHTask();&#xD;
+		task.setRequest(this);&#xD;
+		return task;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmagxuEEeOEn_wPEUKreg" name="equals" specification="_RSxI1BuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmahBuEEeOEn_wPEUKreg" name="obj" type="_RSn-4huEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVmahRuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>if (this == obj)&#xD;
+			return true;&#xD;
+		if (obj == null)&#xD;
+			return false;&#xD;
+		if (getClass() != obj.getClass())&#xD;
+			return false;&#xD;
+		URHRequest other = (URHRequest) obj;&#xD;
+		if (requestId == null) {&#xD;
+			if (other.requestId != null)&#xD;
+				return false;&#xD;
+		} else if (!requestId.equals(other.requestId))&#xD;
+			return false;&#xD;
+		if (reuquestType != other.reuquestType)&#xD;
+			return false;&#xD;
+		return true;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmahhuEEeOEn_wPEUKreg" name="hashCode" specification="_QmlYRhuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmahxuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>final int prime = 31;&#xD;
+		int result = 1;&#xD;
+		result = prime * result&#xD;
+				+ ((requestId == null) ? 0 : requestId.hashCode());&#xD;
+		result = prime * result&#xD;
+				+ ((reuquestType == null) ? 0 : reuquestType.hashCode());&#xD;
+		return result;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QmbnRRuEEeOEn_wPEUKreg" name="URHRequest" method="_RVmafBuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_QmlYQRuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_QmlYQhuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_QmlYQBuEEeOEn_wPEUKreg" name="requestId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_QmlYQxuEEeOEn_wPEUKreg" type="_QmbnQRuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QmlYRBuEEeOEn_wPEUKreg" name="getRequestType" method="_RVmafxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSxI0xuEEeOEn_wPEUKreg" type="_RSeN7huEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QmlYRRuEEeOEn_wPEUKreg" name="createTask" method="_RVmagRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RRIxIxuEEeOEn_wPEUKreg" type="_fk5usBulEeOSZbMDD0aGnA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QmlYRhuEEeOEn_wPEUKreg" name="hashCode" method="_RVmahhuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_QmlYRxuEEeOEn_wPEUKreg" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RSxI1BuEEeOEn_wPEUKreg" name="equals" method="_RVmagxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSxI1RuEEeOEn_wPEUKreg" name="obj" type="_RSn-4huEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RSxI1huEEeOEn_wPEUKreg" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QmvJQBuEEeOEn_wPEUKreg" name="URHResponse">
+            <eAnnotations xmi:id="_QmvJQRuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QmvJQhuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QmvJQxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_RRIxJRuEEeOEn_wPEUKreg" general="_QmSdUBuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUaHmRuEEeOEn_wPEUKreg" name="allAddresses" isOrdered="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RUaHmhuEEeOEn_wPEUKreg" value="*"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmaiBuEEeOEn_wPEUKreg" name="getResponseType" specification="_QmvJRBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmaiRuEEeOEn_wPEUKreg" type="_RSeN6xuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return RESPONSE_TYPE.URH_EJB;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QmvJRBuEEeOEn_wPEUKreg" name="getResponseType" method="_RVmaiBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSxI2huEEeOEn_wPEUKreg" type="_RSeN6xuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QmvJRRuEEeOEn_wPEUKreg" name="UUSDRequest">
+            <eAnnotations xmi:id="_QmvJRhuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QmvJRxuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QmvJSBuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_RRR7ERuEEeOEn_wPEUKreg" general="_Ql_iYBuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUaHmxuEEeOEn_wPEUKreg" name="reuquestType" visibility="package" isLeaf="true" type="_RSeN7huEEeOEn_wPEUKreg" isReadOnly="true" association="_RWfLNBuEEeOEn_wPEUKreg">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUaHnBuEEeOEn_wPEUKreg" value="REQUEST_TYPE.UUSD_EJB"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUaHnhuEEeOEn_wPEUKreg" name="requestId" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVmaihuEEeOEn_wPEUKreg" name="UUSDRequest" specification="_QmvJSRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVmaixuEEeOEn_wPEUKreg" name="requestId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVmajBuEEeOEn_wPEUKreg" type="_QmvJRRuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.requestId = requestId;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkUBuEEeOEn_wPEUKreg" name="getRequestType" specification="_Qm4TNBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkURuEEeOEn_wPEUKreg" type="_RSeN7huEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return reuquestType;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkUhuEEeOEn_wPEUKreg" name="createTask" specification="_Qm4TNRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_flgLoRulEeOSZbMDD0aGnA" type="_fk5usBulEeOSZbMDD0aGnA" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>URHTask task = new URHTask();&#xD;
+		task.setRequest(this);&#xD;
+		return task;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkVBuEEeOEn_wPEUKreg" name="equals" specification="_RSxI3BuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkVRuEEeOEn_wPEUKreg" name="obj" type="_RSn-4huEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkVhuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>if (this == obj)&#xD;
+			return true;&#xD;
+		if (obj == null)&#xD;
+			return false;&#xD;
+		if (getClass() != obj.getClass())&#xD;
+			return false;&#xD;
+		UUSDRequest other = (UUSDRequest) obj;&#xD;
+		if (requestId == null) {&#xD;
+			if (other.requestId != null)&#xD;
+				return false;&#xD;
+		} else if (!requestId.equals(other.requestId))&#xD;
+			return false;&#xD;
+		if (reuquestType != other.reuquestType)&#xD;
+			return false;&#xD;
+		return true;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkVxuEEeOEn_wPEUKreg" name="hashCode" specification="_Qm4TNhuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkWBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>final int prime = 31;&#xD;
+		int result = 1;&#xD;
+		result = prime * result&#xD;
+				+ ((requestId == null) ? 0 : requestId.hashCode());&#xD;
+		result = prime * result&#xD;
+				+ ((reuquestType == null) ? 0 : reuquestType.hashCode());&#xD;
+		return result;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QmvJSRuEEeOEn_wPEUKreg" name="UUSDRequest" method="_RVmaihuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_Qm4TMRuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_Qm4TMhuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_Qm4TMBuEEeOEn_wPEUKreg" name="requestId">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_Qm4TMxuEEeOEn_wPEUKreg" type="_QmvJRRuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_Qm4TNBuEEeOEn_wPEUKreg" name="getRequestType" method="_RVvkUBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSxI2xuEEeOEn_wPEUKreg" type="_RSeN7huEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_Qm4TNRuEEeOEn_wPEUKreg" name="createTask" method="_RVvkUhuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RRR7EBuEEeOEn_wPEUKreg" type="_fk5usBulEeOSZbMDD0aGnA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_Qm4TNhuEEeOEn_wPEUKreg" name="hashCode" method="_RVvkVxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_Qm4TNxuEEeOEn_wPEUKreg" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RSxI3BuEEeOEn_wPEUKreg" name="equals" method="_RVvkVBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSxI3RuEEeOEn_wPEUKreg" name="obj" type="_RSn-4huEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RS650BuEEeOEn_wPEUKreg" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QnCEMBuEEeOEn_wPEUKreg" name="UUSDResponse">
+            <eAnnotations xmi:id="_QnCEMRuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QnCEMhuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QnCEMxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_RRR7EhuEEeOEn_wPEUKreg" general="_QmSdUBuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUjRgRuEEeOEn_wPEUKreg" name="allAddresses" isOrdered="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RUjRghuEEeOEn_wPEUKreg" value="*"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkWRuEEeOEn_wPEUKreg" name="getResponseType" specification="_QnCENBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkWhuEEeOEn_wPEUKreg" type="_RSeN6xuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return RESPONSE_TYPE.URH_EJB;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QnCENBuEEeOEn_wPEUKreg" name="getResponseType" method="_RVvkWRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RS651BuEEeOEn_wPEUKreg" type="_RSeN6xuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RSeN6xuEEeOEn_wPEUKreg" name="RESPONSE_TYPE"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RSeN7huEEeOEn_wPEUKreg" name="REQUEST_TYPE"/>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWWBRhuEEeOEn_wPEUKreg" name="" memberEnd="_RWWBRxuEEeOEn_wPEUKreg _RUQWlBuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWWBRxuEEeOEn_wPEUKreg" name="" type="_Qli2cBuEEeOEn_wPEUKreg" association="_RWWBRhuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWWBSRuEEeOEn_wPEUKreg" name="" memberEnd="_RWWBShuEEeOEn_wPEUKreg _RUaHkhuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWWBShuEEeOEn_wPEUKreg" name="" type="_QmSdUBuEEeOEn_wPEUKreg" association="_RWWBSRuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWfLMRuEEeOEn_wPEUKreg" name="" memberEnd="_RWfLMhuEEeOEn_wPEUKreg _RUaHlBuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWfLMhuEEeOEn_wPEUKreg" name="" type="_QmbnQRuEEeOEn_wPEUKreg" association="_RWfLMRuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWfLNBuEEeOEn_wPEUKreg" name="" memberEnd="_RWfLNRuEEeOEn_wPEUKreg _RUaHmxuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWfLNRuEEeOEn_wPEUKreg" name="" type="_QmvJRRuEEeOEn_wPEUKreg" association="_RWfLNBuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Qhh5IBuEEeOEn_wPEUKreg" name="pool">
+          <packagedElement xmi:type="uml:Class" xmi:id="_QnCENRuEEeOEn_wPEUKreg" name="AuthThread">
+            <eAnnotations xmi:id="_QnCENhuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QnCENxuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QnCEOBuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_RS653xuEEeOEn_wPEUKreg" general="_RS651RuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUjRgxuEEeOEn_wPEUKreg" name="NAME" isLeaf="true" isStatic="true" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUjRhBuEEeOEn_wPEUKreg" value="&quot;AUTH-Thread&quot;"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUjRhRuEEeOEn_wPEUKreg" name="created" visibility="private" isLeaf="true" isStatic="true" type="_RRR7ExuEEeOEn_wPEUKreg" isReadOnly="true" association="_RWfLNxuEEeOEn_wPEUKreg">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUjRhhuEEeOEn_wPEUKreg" value="new AtomicInteger()"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkWxuEEeOEn_wPEUKreg" name="AuthThread" specification="_RS652RuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkXBuEEeOEn_wPEUKreg" name="r" type="_RS651xuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkXRuEEeOEn_wPEUKreg" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkXhuEEeOEn_wPEUKreg" type="_QnCENRuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>super(r, name + &quot;-&quot; + created.incrementAndGet());&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkXxuEEeOEn_wPEUKreg" name="run" specification="_QnCEORuEEeOEn_wPEUKreg">
+              <language>java</language>
+              <body>super.run();&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QnCEORuEEeOEn_wPEUKreg" name="run" method="_RVvkXxuEEeOEn_wPEUKreg"/>
+            <ownedOperation xmi:id="_RS652RuEEeOEn_wPEUKreg" name="AuthThread" method="_RVvkWxuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_RS653BuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_RS653RuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_RS652huEEeOEn_wPEUKreg" name="r" type="_RS651xuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RS652xuEEeOEn_wPEUKreg" name="name">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RS653huEEeOEn_wPEUKreg" type="_QnCENRuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QnLOIBuEEeOEn_wPEUKreg" clientDependency="_RTXlwBuEEeOEn_wPEUKreg" name="AuthThreadFactory">
+            <eAnnotations xmi:id="_QnLOIRuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QnLOIhuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QnLOIxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_RUjRhxuEEeOEn_wPEUKreg" name="poolName" visibility="private" isLeaf="true" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <interfaceRealization xmi:id="_RTXlwBuEEeOEn_wPEUKreg" client="_QnLOIBuEEeOEn_wPEUKreg" supplier="_RRbsEBuEEeOEn_wPEUKreg" contract="_RRbsEBuEEeOEn_wPEUKreg"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkYBuEEeOEn_wPEUKreg" name="AuthThreadFactory" specification="_QnLOJBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkYRuEEeOEn_wPEUKreg" name="poolName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkYhuEEeOEn_wPEUKreg" type="_QnLOIBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.poolName = poolName;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkYxuEEeOEn_wPEUKreg" name="newThread" specification="_RTXlwRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkZBuEEeOEn_wPEUKreg" name="r" type="_RS651xuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkZRuEEeOEn_wPEUKreg" type="_RS651RuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return new AuthThread(r, poolName);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QnLOJBuEEeOEn_wPEUKreg" name="AuthThreadFactory" method="_RVvkYBuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_QnLOJhuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_QnLOJxuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_QnLOJRuEEeOEn_wPEUKreg" name="poolName">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_QnLOKBuEEeOEn_wPEUKreg" type="_QnLOIBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RTXlwRuEEeOEn_wPEUKreg" name="newThread" method="_RVvkYxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RTXlwhuEEeOEn_wPEUKreg" name="r" type="_RS651xuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTXlwxuEEeOEn_wPEUKreg" type="_RS651RuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QnLOKRuEEeOEn_wPEUKreg" name="AuthThreadPoolExecutor">
+            <eAnnotations xmi:id="_QnLOKhuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QnU_IBuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QnU_IRuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_RTzqqRuEEeOEn_wPEUKreg" general="_RQsFMxuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUjRiRuEEeOEn_wPEUKreg" name="startTime" visibility="private" isLeaf="true" type="_RTXlxBuEEeOEn_wPEUKreg" isReadOnly="true" association="_RWfLOhuEEeOEn_wPEUKreg">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUjRixuEEeOEn_wPEUKreg" value="new ThreadLocal&lt;Long>()"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUjRjRuEEeOEn_wPEUKreg" name="totalTime" visibility="private" isLeaf="true" type="_RRbsFhuEEeOEn_wPEUKreg" isReadOnly="true" association="_RWfLPRuEEeOEn_wPEUKreg">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUjRjhuEEeOEn_wPEUKreg" value="new AtomicLong()"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUjRkBuEEeOEn_wPEUKreg" name="numberOfTasks" visibility="private" isLeaf="true" type="_RRbsFhuEEeOEn_wPEUKreg" isReadOnly="true" association="_RWfLQBuEEeOEn_wPEUKreg">
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUtCgBuEEeOEn_wPEUKreg" value="new AtomicLong()"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkZhuEEeOEn_wPEUKreg" name="AuthThreadPoolExecutor" specification="_RTgvsRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkZxuEEeOEn_wPEUKreg" name="corePoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkaBuEEeOEn_wPEUKreg" name="maximumPoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkaRuEEeOEn_wPEUKreg" name="keepAliveTime">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkahuEEeOEn_wPEUKreg" name="unit" type="_RQsFNRuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkaxuEEeOEn_wPEUKreg" name="workQueue" type="_RRbsEhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkbBuEEeOEn_wPEUKreg" type="_QnLOKRuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkbRuEEeOEn_wPEUKreg" name="AuthThreadPoolExecutor" specification="_RTgvuxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkbhuEEeOEn_wPEUKreg" name="corePoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkbxuEEeOEn_wPEUKreg" name="maximumPoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkcBuEEeOEn_wPEUKreg" name="keepAliveTime">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkcRuEEeOEn_wPEUKreg" name="unit" type="_RQsFNRuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkchuEEeOEn_wPEUKreg" name="workQueue" type="_RRbsEhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkcxuEEeOEn_wPEUKreg" name="threadFactory" type="_RRbsEBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkdBuEEeOEn_wPEUKreg" type="_QnLOKRuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,&#xD;
+				threadFactory);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkdRuEEeOEn_wPEUKreg" name="AuthThreadPoolExecutor" specification="_RTqgsRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkdhuEEeOEn_wPEUKreg" name="corePoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkdxuEEeOEn_wPEUKreg" name="maximumPoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkeBuEEeOEn_wPEUKreg" name="keepAliveTime">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkeRuEEeOEn_wPEUKreg" name="unit" type="_RQsFNRuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkehuEEeOEn_wPEUKreg" name="workQueue" type="_RRbsEhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkexuEEeOEn_wPEUKreg" name="handler" type="_RRbsFBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkfBuEEeOEn_wPEUKreg" type="_QnLOKRuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,&#xD;
+				handler);&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkfRuEEeOEn_wPEUKreg" name="AuthThreadPoolExecutor" specification="_RTqgvBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkfhuEEeOEn_wPEUKreg" name="corePoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkfxuEEeOEn_wPEUKreg" name="maximumPoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkgBuEEeOEn_wPEUKreg" name="keepAliveTime">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RVvkgRuEEeOEn_wPEUKreg" name="unit" type="_RQsFNRuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkghuEEeOEn_wPEUKreg" name="workQueue" type="_RRbsEhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkgxuEEeOEn_wPEUKreg" name="threadFactory" type="_RRbsEBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkhBuEEeOEn_wPEUKreg" name="handler" type="_RRbsFBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkhRuEEeOEn_wPEUKreg" type="_QnLOKRuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue,&#xD;
+				threadFactory, handler);&#xD;
+		System.out.println(&quot;WSThreadPoolExecutor init....&quot;);&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkhhuEEeOEn_wPEUKreg" name="beforeExecute" specification="_RTzqoRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkhxuEEeOEn_wPEUKreg" name="t" type="_RS651RuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkiBuEEeOEn_wPEUKreg" name="r" type="_RS651xuEEeOEn_wPEUKreg"/>
+              <language>java</language>
+              <body>super.beforeExecute(t, r);&#xD;
+		System.out.println(&quot;Thread :&quot; + t + &quot; start &quot; + r);&#xD;
+		startTime.set(System.nanoTime());&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVvkiRuEEeOEn_wPEUKreg" name="afterExecution" specification="_RTzqphuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVvkihuEEeOEn_wPEUKreg" name="r" type="_RS651xuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVvkixuEEeOEn_wPEUKreg" name="t" type="_RTzqpBuEEeOEn_wPEUKreg"/>
+              <language>java</language>
+              <body>try {&#xD;
+			long endTime = System.nanoTime();&#xD;
+			long taskTime = endTime - startTime.get();&#xD;
+			numberOfTasks.incrementAndGet();&#xD;
+			totalTime.addAndGet(taskTime);&#xD;
+			System.out.println(&quot;Thread :&quot; + t + &quot; end &quot; + r&#xD;
+					+ &quot; , total time taken=&quot; + taskTime);&#xD;
+		} finally {&#xD;
+			super.afterExecute(r, t);&#xD;
+		}&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VUBuEEeOEn_wPEUKreg" name="terminated" specification="_QnewIBuEEeOEn_wPEUKreg">
+              <language>java</language>
+              <body>try {&#xD;
+//			System.out.println(&quot;Terminated: average time=&quot;&#xD;
+//					+ (totalTime.get() / numberOfTasks.get()));&#xD;
+		} finally {&#xD;
+			super.terminated();&#xD;
+		}&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QnewIBuEEeOEn_wPEUKreg" name="terminated" visibility="protected" method="_RV5VUBuEEeOEn_wPEUKreg"/>
+            <ownedOperation xmi:id="_RTgvsRuEEeOEn_wPEUKreg" name="AuthThreadPoolExecutor" method="_RVvkZhuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_RTgvtxuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_RTgvuBuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_RTgvshuEEeOEn_wPEUKreg" name="corePoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTgvsxuEEeOEn_wPEUKreg" name="maximumPoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTgvtBuEEeOEn_wPEUKreg" name="keepAliveTime">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTgvtRuEEeOEn_wPEUKreg" name="unit" type="_RQsFNRuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTgvthuEEeOEn_wPEUKreg" name="workQueue" type="_RRbsEhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTgvuRuEEeOEn_wPEUKreg" type="_QnLOKRuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RTgvuxuEEeOEn_wPEUKreg" name="AuthThreadPoolExecutor" method="_RVvkbRuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_RTgvwhuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_RTgvwxuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_RTgvvBuEEeOEn_wPEUKreg" name="corePoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTgvvRuEEeOEn_wPEUKreg" name="maximumPoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTgvvhuEEeOEn_wPEUKreg" name="keepAliveTime">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTgvvxuEEeOEn_wPEUKreg" name="unit" type="_RQsFNRuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTgvwBuEEeOEn_wPEUKreg" name="workQueue" type="_RRbsEhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTgvwRuEEeOEn_wPEUKreg" name="threadFactory" type="_RRbsEBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTgvxBuEEeOEn_wPEUKreg" type="_QnLOKRuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RTqgsRuEEeOEn_wPEUKreg" name="AuthThreadPoolExecutor" method="_RVvkdRuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_RTqguBuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_RTqguRuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_RTqgshuEEeOEn_wPEUKreg" name="corePoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTqgsxuEEeOEn_wPEUKreg" name="maximumPoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTqgtBuEEeOEn_wPEUKreg" name="keepAliveTime">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTqgtRuEEeOEn_wPEUKreg" name="unit" type="_RQsFNRuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTqgthuEEeOEn_wPEUKreg" name="workQueue" type="_RRbsEhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTqgtxuEEeOEn_wPEUKreg" name="handler" type="_RRbsFBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTqguhuEEeOEn_wPEUKreg" type="_QnLOKRuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RTqgvBuEEeOEn_wPEUKreg" name="AuthThreadPoolExecutor" method="_RVvkfRuEEeOEn_wPEUKreg">
+              <eAnnotations xmi:id="_RTqgxBuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_RTqgxRuEEeOEn_wPEUKreg" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_RTqgvRuEEeOEn_wPEUKreg" name="corePoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTqgvhuEEeOEn_wPEUKreg" name="maximumPoolSize">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTqgvxuEEeOEn_wPEUKreg" name="keepAliveTime">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RTqgwBuEEeOEn_wPEUKreg" name="unit" type="_RQsFNRuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTqgwRuEEeOEn_wPEUKreg" name="workQueue" type="_RRbsEhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTqgwhuEEeOEn_wPEUKreg" name="threadFactory" type="_RRbsEBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTqgwxuEEeOEn_wPEUKreg" name="handler" type="_RRbsFBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTqgxhuEEeOEn_wPEUKreg" type="_QnLOKRuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RTzqoRuEEeOEn_wPEUKreg" name="beforeExecute" visibility="protected" method="_RVvkhhuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RTzqohuEEeOEn_wPEUKreg" name="t" type="_RS651RuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTzqoxuEEeOEn_wPEUKreg" name="r" type="_RS651xuEEeOEn_wPEUKreg"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RTzqphuEEeOEn_wPEUKreg" name="afterExecution" visibility="protected" method="_RVvkiRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RTzqpxuEEeOEn_wPEUKreg" name="r" type="_RS651xuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RTzqqBuEEeOEn_wPEUKreg" name="t" type="_RTzqpBuEEeOEn_wPEUKreg"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWfLNxuEEeOEn_wPEUKreg" name="" memberEnd="_RWfLOBuEEeOEn_wPEUKreg _RUjRhRuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWfLOBuEEeOEn_wPEUKreg" name="" type="_QnCENRuEEeOEn_wPEUKreg" association="_RWfLNxuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWfLOhuEEeOEn_wPEUKreg" name="" memberEnd="_RWfLOxuEEeOEn_wPEUKreg _RUjRiRuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWfLOxuEEeOEn_wPEUKreg" name="" type="_QnLOKRuEEeOEn_wPEUKreg" association="_RWfLOhuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWfLPRuEEeOEn_wPEUKreg" name="" memberEnd="_RWfLPhuEEeOEn_wPEUKreg _RUjRjRuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWfLPhuEEeOEn_wPEUKreg" name="" type="_QnLOKRuEEeOEn_wPEUKreg" association="_RWfLPRuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWfLQBuEEeOEn_wPEUKreg" name="" memberEnd="_RWfLQRuEEeOEn_wPEUKreg _RUjRkBuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWfLQRuEEeOEn_wPEUKreg" name="" type="_QnLOKRuEEeOEn_wPEUKreg" association="_RWfLQBuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Qhh5IRuEEeOEn_wPEUKreg" name="task">
+          <packagedElement xmi:type="uml:Package" xmi:id="_QjUB0BuEEeOEn_wPEUKreg" name="exception">
+            <packagedElement xmi:type="uml:Class" xmi:id="_QoXg8BuEEeOEn_wPEUKreg" name="TaskExecutionException">
+              <eAnnotations xmi:id="_QoXg8RuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+                <contents xmi:type="ecore:EAnnotation" xmi:id="_QoXg8huEEeOEn_wPEUKreg" source="codegen">
+                  <details xmi:id="_QoXg8xuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+                </contents>
+              </eAnnotations>
+              <generalization xmi:id="_RT9bqxuEEeOEn_wPEUKreg" general="_RSUc6RuEEeOEn_wPEUKreg"/>
+              <ownedAttribute xmi:id="_RU_9dhuEEeOEn_wPEUKreg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_RU_9dxuEEeOEn_wPEUKreg" value="1L"/>
+              </ownedAttribute>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VbxuEEeOEn_wPEUKreg" name="TaskExecutionException" specification="_QoXg-RuEEeOEn_wPEUKreg">
+                <ownedParameter xmi:id="_RV5VcBuEEeOEn_wPEUKreg" name="message">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_RV5VcRuEEeOEn_wPEUKreg" type="_QoXg8BuEEeOEn_wPEUKreg" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>super(message);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VchuEEeOEn_wPEUKreg" name="TaskExecutionException" specification="_RT9boBuEEeOEn_wPEUKreg">
+                <ownedParameter xmi:id="_RV5VcxuEEeOEn_wPEUKreg" name="message">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_RV5VdBuEEeOEn_wPEUKreg" name="throwable" type="_RTzqpBuEEeOEn_wPEUKreg"/>
+                <ownedParameter xmi:id="_RV5VdRuEEeOEn_wPEUKreg" type="_QoXg8BuEEeOEn_wPEUKreg" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>super(message, throwable);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VdhuEEeOEn_wPEUKreg" name="TaskExecutionException" specification="_RT9bphuEEeOEn_wPEUKreg">
+                <ownedParameter xmi:id="_RV5VdxuEEeOEn_wPEUKreg" name="throwable" type="_RTzqpBuEEeOEn_wPEUKreg"/>
+                <ownedParameter xmi:id="_RV5VeBuEEeOEn_wPEUKreg" type="_QoXg8BuEEeOEn_wPEUKreg" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
+                <language>java</language>
+                <body>super(throwable);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_QoXg9BuEEeOEn_wPEUKreg" name="TaskExecutionException">
+                <eAnnotations xmi:id="_QoXg9RuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_QoXg9huEEeOEn_wPEUKreg" key="create"/>
+                </eAnnotations>
+                <ownedParameter xmi:id="_QoXg-BuEEeOEn_wPEUKreg" type="_QoXg8BuEEeOEn_wPEUKreg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_QoXg-RuEEeOEn_wPEUKreg" name="TaskExecutionException" method="_RV5VbxuEEeOEn_wPEUKreg">
+                <eAnnotations xmi:id="_QohR8BuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_QohR8RuEEeOEn_wPEUKreg" key="create"/>
+                </eAnnotations>
+                <ownedParameter xmi:id="_QoXg-huEEeOEn_wPEUKreg" name="message">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_QohR8huEEeOEn_wPEUKreg" type="_QoXg8BuEEeOEn_wPEUKreg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_RT9boBuEEeOEn_wPEUKreg" name="TaskExecutionException" method="_RV5VchuEEeOEn_wPEUKreg">
+                <eAnnotations xmi:id="_RT9boxuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_RT9bpBuEEeOEn_wPEUKreg" key="create"/>
+                </eAnnotations>
+                <ownedParameter xmi:id="_RT9boRuEEeOEn_wPEUKreg" name="message">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_RT9bohuEEeOEn_wPEUKreg" name="throwable" type="_RTzqpBuEEeOEn_wPEUKreg"/>
+                <ownedParameter xmi:id="_RT9bpRuEEeOEn_wPEUKreg" type="_QoXg8BuEEeOEn_wPEUKreg" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_RT9bphuEEeOEn_wPEUKreg" name="TaskExecutionException" method="_RV5VdhuEEeOEn_wPEUKreg">
+                <eAnnotations xmi:id="_RT9bqBuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_RT9bqRuEEeOEn_wPEUKreg" key="create"/>
+                </eAnnotations>
+                <ownedParameter xmi:id="_RT9bpxuEEeOEn_wPEUKreg" name="throwable" type="_RTzqpBuEEeOEn_wPEUKreg"/>
+                <ownedParameter xmi:id="_RT9bqhuEEeOEn_wPEUKreg" type="_QoXg8BuEEeOEn_wPEUKreg" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Qnn6EBuEEeOEn_wPEUKreg" name="MBPTask">
+            <eAnnotations xmi:id="_Qnn6ERuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_Qnn6EhuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_Qnn6ExuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_flMpoBulEeOSZbMDD0aGnA" general="_fk5usBulEeOSZbMDD0aGnA"/>
+            <ownedAttribute xmi:id="_RUtCghuEEeOEn_wPEUKreg" name="request" type="_Qli2cBuEEeOEn_wPEUKreg" association="_RWo8MRuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUtCiBuEEeOEn_wPEUKreg" name="endPointUrl" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUtCiRuEEeOEn_wPEUKreg" value="null"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUtCixuEEeOEn_wPEUKreg" name="user" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUtCjBuEEeOEn_wPEUKreg" value="null"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUtCjhuEEeOEn_wPEUKreg" name="pass" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUtCjxuEEeOEn_wPEUKreg" value="null"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VVRuEEeOEn_wPEUKreg" name="setConectionParam" specification="_QnxrEBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RV5VVhuEEeOEn_wPEUKreg" name="endPointURL">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RV5VVxuEEeOEn_wPEUKreg" name="user">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RV5VWBuEEeOEn_wPEUKreg" name="pass">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.endPointUrl = endPointURL;&#xD;
+		this.user = user;&#xD;
+		this.pass = pass;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VWRuEEeOEn_wPEUKreg" name="call" specification="_QnxrFBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RV5VWhuEEeOEn_wPEUKreg" type="_QmSdUBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>MBPResponse response = new MBPResponse();&#xD;
+		try {&#xD;
+			// call web service&#xD;
+			// get response&#xD;
+			// fake response for now&#xD;
+			&#xD;
+//			throw new IllegalStateException(&quot;Authentication invalid !!!&quot;);&#xD;
+			&#xD;
+			List&lt;String> all = new ArrayList&lt;String>();&#xD;
+			all.add(&quot;Manu at MBP&quot;);&#xD;
+			response.setAllAddresses(all);&#xD;
+			return response;&#xD;
+		} catch (Exception e) {&#xD;
+			TaskExecutionException taskExecutionException = new TaskExecutionException(&#xD;
+					e.getMessage());&#xD;
+			taskExecutionException.initCause(e);&#xD;
+			throw taskExecutionException;&#xD;
+		}&#xD;
+&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QnxrEBuEEeOEn_wPEUKreg" name="setConectionParam" method="_RV5VVRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_QnxrERuEEeOEn_wPEUKreg" name="endPointURL">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_QnxrEhuEEeOEn_wPEUKreg" name="user">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_QnxrExuEEeOEn_wPEUKreg" name="pass">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QnxrFBuEEeOEn_wPEUKreg" name="call" method="_RV5VWRuEEeOEn_wPEUKreg" raisedException="_QoXg8BuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RRunABuEEeOEn_wPEUKreg" type="_QmSdUBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QoEmABuEEeOEn_wPEUKreg" name="URHTask">
+            <eAnnotations xmi:id="_QoEmARuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QoEmAhuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QoEmAxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_flMpoRulEeOSZbMDD0aGnA" general="_fk5usBulEeOSZbMDD0aGnA"/>
+            <ownedAttribute xmi:id="_RU2zgRuEEeOEn_wPEUKreg" name="request" type="_QmbnQRuEEeOEn_wPEUKreg" association="_RWo8NBuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RU2zhxuEEeOEn_wPEUKreg" name="dbUrl" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RU2ziRuEEeOEn_wPEUKreg" name="user" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RU2zixuEEeOEn_wPEUKreg" name="pass" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VXxuEEeOEn_wPEUKreg" name="setConectionParam" specification="_QoEmBBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RV5VYBuEEeOEn_wPEUKreg" name="dbURL">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RV5VYRuEEeOEn_wPEUKreg" name="user">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RV5VYhuEEeOEn_wPEUKreg" name="pass">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.dbUrl = dbURL;&#xD;
+		this.user = user;&#xD;
+		this.pass = pass;&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VYxuEEeOEn_wPEUKreg" name="call" specification="_QoEmCBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RV5VZBuEEeOEn_wPEUKreg" type="_QmSdUBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>URHResponse response = new URHResponse();&#xD;
+		try {&#xD;
+			// call DB&#xD;
+			// get response&#xD;
+			// fake response for now&#xD;
+			List all = new ArrayList();&#xD;
+			all.add(&quot;Manu at URH-TM-DB&quot;);&#xD;
+			response.setAllAddresses(all);&#xD;
+			return response;&#xD;
+		} catch (Exception e) {&#xD;
+			TaskExecutionException taskExecutionException = new TaskExecutionException(&#xD;
+					e.getMessage());&#xD;
+			taskExecutionException.initCause(e);&#xD;
+			throw taskExecutionException;&#xD;
+		}&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QoEmBBuEEeOEn_wPEUKreg" name="setConectionParam" method="_RV5VXxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_QoEmBRuEEeOEn_wPEUKreg" name="dbURL">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_QoEmBhuEEeOEn_wPEUKreg" name="user">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_QoEmBxuEEeOEn_wPEUKreg" name="pass">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QoEmCBuEEeOEn_wPEUKreg" name="call" method="_RV5VYxuEEeOEn_wPEUKreg" raisedException="_QoXg8BuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RR4YBxuEEeOEn_wPEUKreg" type="_QmSdUBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_QoOXABuEEeOEn_wPEUKreg" name="UUSDTask">
+            <eAnnotations xmi:id="_QoOXARuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QoOXAhuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QoOXAxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <generalization xmi:id="_flMpohulEeOSZbMDD0aGnA" general="_fk5usBulEeOSZbMDD0aGnA"/>
+            <ownedAttribute xmi:id="_RU2zjRuEEeOEn_wPEUKreg" name="request" type="_QmvJRRuEEeOEn_wPEUKreg" association="_RWo8NxuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RU_9chuEEeOEn_wPEUKreg" name="user" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RU_9dBuEEeOEn_wPEUKreg" name="pass" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_DTwlYBuGEeOEn_wPEUKreg" name="dbUrl" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VaRuEEeOEn_wPEUKreg" name="setConectionParam" specification="_QoOXBBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RV5VahuEEeOEn_wPEUKreg" name="dbURL">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RV5VaxuEEeOEn_wPEUKreg" name="user">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_RV5VbBuEEeOEn_wPEUKreg" name="pass">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>this.dbUrl = dbURL;
+		this.user = user;
+		this.pass = pass;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RV5VbRuEEeOEn_wPEUKreg" name="call" specification="_QoOXCBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RV5VbhuEEeOEn_wPEUKreg" type="_QmSdUBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>UUSDResponse response = new UUSDResponse();
+		try {
+			// call DB
+			// get response
+			// fake response for now
+			List all = new ArrayList();
+			all.add(&quot;Manu at UUSD&quot;);
+			response.setAllAddresses(all);
+			return response;
+		} catch (Exception e) {
+			TaskExecutionException taskExecutionException = new TaskExecutionException(
+					e.getMessage());
+			taskExecutionException.initCause(e);
+			throw taskExecutionException;
+		}
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QoOXBBuEEeOEn_wPEUKreg" name="setConectionParam" method="_RV5VaRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_QoOXBRuEEeOEn_wPEUKreg" name="dbURL">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_QoOXBhuEEeOEn_wPEUKreg" name="user">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_QoOXBxuEEeOEn_wPEUKreg" name="pass">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_QoOXCBuEEeOEn_wPEUKreg" name="call" method="_RV5VbRuEEeOEn_wPEUKreg" raisedException="_QoXg8BuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSBh8BuEEeOEn_wPEUKreg" type="_QmSdUBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWo8MRuEEeOEn_wPEUKreg" name="" memberEnd="_RWo8MhuEEeOEn_wPEUKreg _RUtCghuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWo8MhuEEeOEn_wPEUKreg" name="" type="_Qnn6EBuEEeOEn_wPEUKreg" association="_RWo8MRuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWo8NBuEEeOEn_wPEUKreg" name="" memberEnd="_RWo8NRuEEeOEn_wPEUKreg _RU2zgRuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWo8NRuEEeOEn_wPEUKreg" name="" type="_QoEmABuEEeOEn_wPEUKreg" association="_RWo8NBuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWo8NxuEEeOEn_wPEUKreg" name="" memberEnd="_RWo8OBuEEeOEn_wPEUKreg _RU2zjRuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWo8OBuEEeOEn_wPEUKreg" name="" type="_QoOXABuEEeOEn_wPEUKreg" association="_RWo8NxuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_fk5usBulEeOSZbMDD0aGnA" name="Task"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Qh00GRuEEeOEn_wPEUKreg" name="broker">
+          <packagedElement xmi:type="uml:Class" xmi:id="_QkzPkBuEEeOEn_wPEUKreg" name="TaskManager">
+            <eAnnotations xmi:id="_QkzPkRuEEeOEn_wPEUKreg" source="http://ns.yatta.de/umllab">
+              <contents xmi:type="ecore:EAnnotation" xmi:id="_QkzPkhuEEeOEn_wPEUKreg" source="codegen">
+                <details xmi:id="_QkzPkxuEEeOEn_wPEUKreg" key="codegenDirectory" value="/ParallelTaskExecTest/src"/>
+              </contents>
+            </eAnnotations>
+            <ownedAttribute xmi:id="_RUHMoBuEEeOEn_wPEUKreg" name="webServiceExecutor" visibility="private" isStatic="true" type="_RQsFMxuEEeOEn_wPEUKreg" association="_RWWBQBuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUHMohuEEeOEn_wPEUKreg" name="ejbExecutor" visibility="private" isStatic="true" type="_RQsFMxuEEeOEn_wPEUKreg" association="_RWWBQxuEEeOEn_wPEUKreg"/>
+            <ownedAttribute xmi:id="_RUHMpxuEEeOEn_wPEUKreg" name="MAX_POOL_SIZE" visibility="private" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUHMqBuEEeOEn_wPEUKreg" value="15"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUHMqhuEEeOEn_wPEUKreg" name="KEEP_ALIVE_TIME" visibility="private" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUHMqxuEEeOEn_wPEUKreg" value="10"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_RUQWkRuEEeOEn_wPEUKreg" name="BLOCKING_QUEUE_CPACITY" visibility="private" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_RUQWkhuEEeOEn_wPEUKreg" value="10"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_1ntPoBuGEeOEn_wPEUKreg" name="CORE_POOL_SIZE" visibility="private" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_1ntPoRuGEeOEn_wPEUKreg" value="10"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVS4YBuEEeOEn_wPEUKreg" name="init">
+              <language>java</language>
+              <body>webServiceExecutor = new AuthThreadPoolExecutor(&#xD;
+									CORE_POOL_SIZE,&#xD;
+									MAX_POOL_SIZE, &#xD;
+									KEEP_ALIVE_TIME, &#xD;
+									TimeUnit.SECONDS,&#xD;
+									new PriorityBlockingQueue&lt;Runnable>(BLOCKING_QUEUE_CPACITY),&#xD;
+									new AuthThreadFactory(&quot;WSThreadPool&quot;));&#xD;
+&#xD;
+		ejbExecutor = new AuthThreadPoolExecutor(&#xD;
+									CORE_POOL_SIZE, &#xD;
+									MAX_POOL_SIZE,&#xD;
+									KEEP_ALIVE_TIME, &#xD;
+									TimeUnit.SECONDS,&#xD;
+									new PriorityBlockingQueue&lt;Runnable>(BLOCKING_QUEUE_CPACITY),&#xD;
+									new AuthThreadFactory(&quot;EJBThreadPool&quot;));&#xD;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVcpYBuEEeOEn_wPEUKreg" name="shutdown" specification="_QlGKgBuEEeOEn_wPEUKreg">
+              <language>java</language>
+              <body>webServiceExecutor.shutdownNow();
+		ejbExecutor.shutdownNow();
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVcpYRuEEeOEn_wPEUKreg" name="processRequest" specification="_RSLS8BuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVcpYhuEEeOEn_wPEUKreg" name="requests" type="_RQiUMhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVcpYxuEEeOEn_wPEUKreg" type="_RQiUNBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>if (requests == null || requests.isEmpty()) {
+			throw new IllegalArgumentException(&quot;request is null or empty.&quot;);
+		}
+
+		Iterator&lt;Request> requestItr = requests.iterator();
+		List&lt;Task> taskList = new ArrayList&lt;Task>();
+
+		while (requestItr.hasNext()) {
+			Request request = requestItr.next();
+			Task task = request.createTask();
+			taskList.add(task);
+		}
+
+		TaskManager parallelTaskManager = new TaskManager();
+		parallelTaskManager.init();
+
+		return parallelTaskManager.processInParallel(taskList);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVcpZBuEEeOEn_wPEUKreg" name="processInParallel" specification="_RSUc4xuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVcpZRuEEeOEn_wPEUKreg" name="tasks" type="_RQiUMhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVcpZhuEEeOEn_wPEUKreg" type="_RQiUNBuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>Map&lt;Request, Response> responseMap = new HashMap&lt;Request, Response>();
+		
+		Map&lt;Request, Future&lt;Response>> returnMap = Collections
+				.synchronizedMap(new HashMap&lt;Request, Future&lt;Response>>());
+		Iterator&lt;Task> taskItr = tasks.iterator();
+		while (taskItr.hasNext()) {
+			Task task = taskItr.next();
+			Request req = task.getRequest();
+			Request.REQUEST_TYPE rtype = req.getRequestType();
+			ThreadPoolExecutor threadPoolExecutor = getExecutor(rtype);
+
+			if (threadPoolExecutor == null) {
+				throw new RuntimeException(
+						&quot;Could not get proper ThreadPoolExecutor, aborting the tasks..&quot;);
+			}
+
+			// submit(task) will return Future
+			returnMap.put(req, threadPoolExecutor.submit(task));
+		}
+
+		List&lt;Request> requestList = new ArrayList&lt;Request>(returnMap.keySet());
+		Request request = null;
+		Future&lt;Response> futureResponse = null;
+		for (Request request1 : requestList) {
+			request = request1;
+			futureResponse = returnMap.get(request);
+			try {
+				// get with timeout on Future
+				responseMap.put(request, futureResponse.get(
+						request.getTimeOutInSeconds(), TimeUnit.SECONDS));
+
+			} catch (TimeoutException e) {
+				createErrorResponse(responseMap, request, e);
+			} catch (ExecutionException e) {
+				createErrorResponse(responseMap, request, e);
+			} catch (InterruptedException e) {
+				createErrorResponse(responseMap, request, e);
+			} catch (CancellationException e) {
+				createErrorResponse(responseMap, request, e);
+				// cancel all other task if one fails (optional)
+				for (Request req : requestList) {
+					returnMap.get(req).cancel(true);
+				}
+			} finally {
+				futureResponse.cancel(true);
+			}
+		}
+		return responseMap;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVcpZxuEEeOEn_wPEUKreg" name="createErrorResponse" specification="_RSeN4BuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVcpaBuEEeOEn_wPEUKreg" name="responseMap" type="_RQiUNBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVcpaRuEEeOEn_wPEUKreg" name="request" type="_Ql_iYBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVcpahuEEeOEn_wPEUKreg" name="e" type="_RSUc6RuEEeOEn_wPEUKreg"/>
+              <language>java</language>
+              <body>ErrorResponse errorResponse = new ErrorResponse();
+		errorResponse.setException(e);
+		responseMap.put(request, errorResponse);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVcpaxuEEeOEn_wPEUKreg" name="getExecutor" specification="_RQ1PIhuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVcpbBuEEeOEn_wPEUKreg" name="requestType" type="_RQ1PIBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RVcpbRuEEeOEn_wPEUKreg" type="_RQsFMxuEEeOEn_wPEUKreg" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>switch (requestType) {
+		case URH_EJB:
+			return ejbExecutor;
+		case MBP_WS:
+			return webServiceExecutor;
+		case UUSD_EJB:
+			return ejbExecutor;
+		}
+		return null;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RVcpbhuEEeOEn_wPEUKreg" name="main" specification="_QlGKgRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RVcpbxuEEeOEn_wPEUKreg" name="args">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RVcpcBuEEeOEn_wPEUKreg" value="*"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>Request urhRequest = new URHRequest(&quot;URH_RequestId&quot;);
+		Request uusdRequest = new UUSDRequest(&quot;UUSD_RequestId&quot;);
+		Request mbpRequest = new MBPRequest(&quot;MBP_RequestId&quot;);
+		
+
+		List&lt;Request> requests = new ArrayList&lt;Request>();
+		requests.add(urhRequest);
+		requests.add(uusdRequest);
+		requests.add(mbpRequest);
+		
+		Map&lt;Request, Response> aggregateResponseMap = processRequest(requests);
+		System.out.println(&quot;>> aggregateResponseMap = &quot;+aggregateResponseMap);
+
+		Response response = null;
+		for (Request request : aggregateResponseMap.keySet()) {
+			response = aggregateResponseMap.get(request);
+			
+			switch (response.getResponseType()) {
+			case URH_EJB:
+				List&lt;String> dbResAddresses = ((URHResponse)response).getAllAddresses();
+				System.out.println(&quot;+ inside TaskManager | main() > dbResAddresses = [&quot;+request.getRequestType()+&quot;,&quot;+response.getResponseType() +&quot;, &quot;+dbResAddresses+&quot;]&quot;);
+				break;
+			case MBP_WS:
+				List&lt;String> wsResAddresses = ((MBPResponse)response).getAllAddresses();
+				System.out.println(&quot;+ inside TaskManager | main() > wsResAddresses = [&quot;+request.getRequestType()+&quot;,&quot;+response.getResponseType() +&quot;, &quot;+wsResAddresses+&quot;]&quot;);
+				break;
+			case UUSD_EJB:
+				break;
+			case ERROR:
+				Exception excep = ((ErrorResponse)response).getException();
+				System.out.println(&quot;+ inside TaskManager | main() > excep = [&quot;+request.getRequestType()+&quot;,&quot;+response.getResponseType() +&quot;, &quot;+excep.getMessage()+&quot;]&quot;);
+				break;
+			default:
+				System.out.println(&quot;+ inside TaskManager | main() > INVALID ResponseType = &quot;+request.requestType+&quot;,&quot;+response.getResponseType());
+			}
+		}
+		
+		shutdown();
+		// decorate aggregated response.
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_aVdmcRuGEeOEn_wPEUKreg" name="init" specification="_aVdmcBuGEeOEn_wPEUKreg">
+              <language>java</language>
+              <body>webServiceExecutor = new AuthThreadPoolExecutor(
+									CORE_POOL_SIZE,
+									MAX_POOL_SIZE, 
+									KEEP_ALIVE_TIME, 
+									TimeUnit.SECONDS,
+									new PriorityBlockingQueue&lt;Runnable>(BLOCKING_QUEUE_CPACITY),
+									new AuthThreadFactory(&quot;WSThreadPool&quot;));
+
+		ejbExecutor = new AuthThreadPoolExecutor(
+									CORE_POOL_SIZE, 
+									MAX_POOL_SIZE,
+									KEEP_ALIVE_TIME, 
+									TimeUnit.SECONDS,
+									new PriorityBlockingQueue&lt;Runnable>(BLOCKING_QUEUE_CPACITY),
+									new AuthThreadFactory(&quot;EJBThreadPool&quot;));
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_QlGKgBuEEeOEn_wPEUKreg" name="shutdown" isStatic="true" method="_RVcpYBuEEeOEn_wPEUKreg"/>
+            <ownedOperation xmi:id="_QlGKgRuEEeOEn_wPEUKreg" name="main" isStatic="true" method="_RVcpbhuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_QlGKghuEEeOEn_wPEUKreg" name="args">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QlGKhBuEEeOEn_wPEUKreg" value="*"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RQ1PIhuEEeOEn_wPEUKreg" name="getExecutor" visibility="private" method="_RVcpaxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RQ1PIxuEEeOEn_wPEUKreg" name="requestType" type="_RQ1PIBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RSeN5RuEEeOEn_wPEUKreg" type="_RQsFMxuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RSLS8BuEEeOEn_wPEUKreg" name="processRequest" isStatic="true" method="_RVcpYRuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSLS8RuEEeOEn_wPEUKreg" name="requests" type="_RQiUMhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RSUc4RuEEeOEn_wPEUKreg" type="_RQiUNBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RSUc4xuEEeOEn_wPEUKreg" name="processInParallel" method="_RVcpZBuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSUc5BuEEeOEn_wPEUKreg" name="tasks" type="_RQiUMhuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RSUc5huEEeOEn_wPEUKreg" type="_RQiUNBuEEeOEn_wPEUKreg" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_RSeN4BuEEeOEn_wPEUKreg" name="createErrorResponse" visibility="private" method="_RVcpZxuEEeOEn_wPEUKreg">
+              <ownedParameter xmi:id="_RSeN4RuEEeOEn_wPEUKreg" name="responseMap" type="_RQiUNBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RSeN4huEEeOEn_wPEUKreg" name="request" type="_Ql_iYBuEEeOEn_wPEUKreg"/>
+              <ownedParameter xmi:id="_RSeN4xuEEeOEn_wPEUKreg" name="e" type="_RSUc6RuEEeOEn_wPEUKreg"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_aVdmcBuGEeOEn_wPEUKreg" name="init" visibility="public" method="_aVdmcRuGEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWWBQBuEEeOEn_wPEUKreg" name="" memberEnd="_RWWBQRuEEeOEn_wPEUKreg _RUHMoBuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWWBQRuEEeOEn_wPEUKreg" name="" type="_QkzPkBuEEeOEn_wPEUKreg" association="_RWWBQBuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_RWWBQxuEEeOEn_wPEUKreg" name="" memberEnd="_RWWBRBuEEeOEn_wPEUKreg _RUHMohuEEeOEn_wPEUKreg">
+            <ownedEnd xmi:id="_RWWBRBuEEeOEn_wPEUKreg" name="" type="_QkzPkBuEEeOEn_wPEUKreg" association="_RWWBQxuEEeOEn_wPEUKreg"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_QhYIIBuEEeOEn_wPEUKreg" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_QhYIIRuEEeOEn_wPEUKreg" name="util">
+        <packagedElement xmi:type="uml:Package" xmi:id="_QhYIIhuEEeOEn_wPEUKreg" name="concurrent">
+          <packagedElement xmi:type="uml:Package" xmi:id="_QjBG4BuEEeOEn_wPEUKreg" name="atomic">
+            <packagedElement xmi:type="uml:Class" xmi:id="_RRR7ExuEEeOEn_wPEUKreg" name="AtomicInteger"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_RRbsFhuEEeOEn_wPEUKreg" name="AtomicLong"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RQiUNhuEEeOEn_wPEUKreg" name="CancellationException"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RQiUOBuEEeOEn_wPEUKreg" name="ExecutionException"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_RQiUOhuEEeOEn_wPEUKreg" name="Future"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RQsFMRuEEeOEn_wPEUKreg" name="PriorityBlockingQueue"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RQsFMxuEEeOEn_wPEUKreg" name="ThreadPoolExecutor"/>
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_RQsFNRuEEeOEn_wPEUKreg" name="TimeUnit"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_RQsFNxuEEeOEn_wPEUKreg" name="TimeoutException"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_RRbsEBuEEeOEn_wPEUKreg" name="ThreadFactory"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_RRbsEhuEEeOEn_wPEUKreg" name="BlockingQueue"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_RRbsFBuEEeOEn_wPEUKreg" name="RejectedExecutionHandler"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_RR4YARuEEeOEn_wPEUKreg" name="Callable"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RQFoQBuEEeOEn_wPEUKreg" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RQFoQhuEEeOEn_wPEUKreg" name="Collections"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RQFoRBuEEeOEn_wPEUKreg" name="HashMap"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_RQiUMBuEEeOEn_wPEUKreg" name="Iterator"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_RQiUMhuEEeOEn_wPEUKreg" name="List"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_RQiUNBuEEeOEn_wPEUKreg" name="Map"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_RSUc6BuEEeOEn_wPEUKreg" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_RSUc6RuEEeOEn_wPEUKreg" name="Exception"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RSn-4huEEeOEn_wPEUKreg" name="Object"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RS651RuEEeOEn_wPEUKreg" name="Thread"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_RS651xuEEeOEn_wPEUKreg" name="Runnable"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RTXlxBuEEeOEn_wPEUKreg" name="ThreadLocal"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RTzqpBuEEeOEn_wPEUKreg" name="Throwable"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Qh00GBuEEeOEn_wPEUKreg" name="Request">
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_RQ1PIBuEEeOEn_wPEUKreg" name="REQUEST_TYPE"/>
+    </packagedElement>
+    <profileApplication xmi:id="_EDr4YBuEEeOEn_wPEUKreg">
+      <eAnnotations xmi:id="_ED1CUBuEEeOEn_wPEUKreg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_EEH9QBuEEeOEn_wPEUKreg" base_Package="_DUq2QBuEEeOEn_wPEUKreg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_QlGKgxuEEeOEn_wPEUKreg" base_Element="_QlGKgRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Array xmi:id="_QlGKhRuEEeOEn_wPEUKreg" dimensions="0" base_Element="_QlGKghuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_QlZFdxuEEeOEn_wPEUKreg" base_Element="_QlZFdBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_QlsAYxuEEeOEn_wPEUKreg" base_Element="_QlsAYRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Annotations xmi:id="_QlsAZBuEEeOEn_wPEUKreg" base_Element="_QlsAYRuEEeOEn_wPEUKreg">
+    <annotations xmi:id="_Ql1xYBuEEeOEn_wPEUKreg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Ql_iZRuEEeOEn_wPEUKreg" base_Element="_Ql_iZBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_QmSdVRuEEeOEn_wPEUKreg" base_Element="_QmSdVBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_QmlYSBuEEeOEn_wPEUKreg" base_Element="_QmlYRhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Annotations xmi:id="_QmlYSRuEEeOEn_wPEUKreg" base_Element="_QmlYRhuEEeOEn_wPEUKreg">
+    <annotations xmi:id="_QmlYShuEEeOEn_wPEUKreg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Qm4TOBuEEeOEn_wPEUKreg" base_Element="_Qm4TNhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Annotations xmi:id="_Qm4TORuEEeOEn_wPEUKreg" base_Element="_Qm4TNhuEEeOEn_wPEUKreg">
+    <annotations xmi:id="_Qm4TOhuEEeOEn_wPEUKreg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_QoXg9xuEEeOEn_wPEUKreg" base_Element="_QoXg9BuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQFoQRuEEeOEn_wPEUKreg" base_Element="_RQFoQBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQFoQxuEEeOEn_wPEUKreg" base_Element="_RQFoQhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQPZQBuEEeOEn_wPEUKreg" base_Element="_RQFoRBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQiUMRuEEeOEn_wPEUKreg" base_Element="_RQiUMBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQiUMxuEEeOEn_wPEUKreg" base_Element="_RQiUMhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQiUNRuEEeOEn_wPEUKreg" base_Element="_RQiUNBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQiUNxuEEeOEn_wPEUKreg" base_Element="_RQiUNhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQiUORuEEeOEn_wPEUKreg" base_Element="_RQiUOBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQsFMBuEEeOEn_wPEUKreg" base_Element="_RQiUOhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQsFMhuEEeOEn_wPEUKreg" base_Element="_RQsFMRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQsFNBuEEeOEn_wPEUKreg" base_Element="_RQsFMxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQsFNhuEEeOEn_wPEUKreg" base_Element="_RQsFNRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQsFOBuEEeOEn_wPEUKreg" base_Element="_RQsFNxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RQ1PIRuEEeOEn_wPEUKreg" base_Element="_RQ1PIBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RRR7FBuEEeOEn_wPEUKreg" base_Element="_RRR7ExuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RRbsERuEEeOEn_wPEUKreg" base_Element="_RRbsEBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RRbsExuEEeOEn_wPEUKreg" base_Element="_RRbsEhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RRbsFRuEEeOEn_wPEUKreg" base_Element="_RRbsFBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RRk2ABuEEeOEn_wPEUKreg" base_Element="_RRbsFhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RR4YAhuEEeOEn_wPEUKreg" base_Element="_RR4YARuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RSUc4BuEEeOEn_wPEUKreg" genericsValue="Request, Response" base_Element="_RSLS8BuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RSUc4huEEeOEn_wPEUKreg" genericsValue="Request" base_Element="_RSLS8RuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RSUc5RuEEeOEn_wPEUKreg" genericsValue="Request, Response" base_Element="_RSUc4xuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RSUc5xuEEeOEn_wPEUKreg" genericsValue="Task" base_Element="_RSUc5BuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RSUc6huEEeOEn_wPEUKreg" base_Element="_RSUc6RuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RSeN5BuEEeOEn_wPEUKreg" genericsValue="Request, Response" base_Element="_RSeN4RuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RSeN7BuEEeOEn_wPEUKreg" base_Element="_RSeN6xuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RSn-4BuEEeOEn_wPEUKreg" base_Element="_RSeN7huEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RSn-4xuEEeOEn_wPEUKreg" base_Element="_RSn-4huEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RSn-5xuEEeOEn_wPEUKreg" base_Element="_RSn-5BuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Annotations xmi:id="_RSn-6BuEEeOEn_wPEUKreg" base_Element="_RSn-5BuEEeOEn_wPEUKreg">
+    <annotations xmi:id="_RSn-6RuEEeOEn_wPEUKreg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RSxI1xuEEeOEn_wPEUKreg" base_Element="_RSxI1BuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Annotations xmi:id="_RSxI2BuEEeOEn_wPEUKreg" base_Element="_RSxI1BuEEeOEn_wPEUKreg">
+    <annotations xmi:id="_RSxI2RuEEeOEn_wPEUKreg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RS650RuEEeOEn_wPEUKreg" base_Element="_RSxI3BuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Annotations xmi:id="_RS650huEEeOEn_wPEUKreg" base_Element="_RSxI3BuEEeOEn_wPEUKreg">
+    <annotations xmi:id="_RS650xuEEeOEn_wPEUKreg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_RS651huEEeOEn_wPEUKreg" base_Element="_RS651RuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RS652BuEEeOEn_wPEUKreg" base_Element="_RS651xuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RTgvsBuEEeOEn_wPEUKreg" base_Element="_RTXlxBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RTgvuhuEEeOEn_wPEUKreg" genericsValue="Runnable" base_Element="_RTgvthuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RTqgsBuEEeOEn_wPEUKreg" genericsValue="Runnable" base_Element="_RTgvwBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RTqguxuEEeOEn_wPEUKreg" genericsValue="Runnable" base_Element="_RTqgthuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RTzqoBuEEeOEn_wPEUKreg" genericsValue="Runnable" base_Element="_RTqgwRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RTzqpRuEEeOEn_wPEUKreg" base_Element="_RTzqpBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUHMoRuEEeOEn_wPEUKreg" base_Element="_RUHMoBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUHMoxuEEeOEn_wPEUKreg" base_Element="_RUHMohuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUHMqRuEEeOEn_wPEUKreg" base_Element="_RUHMpxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUQWkBuEEeOEn_wPEUKreg" base_Element="_RUHMqhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUQWkxuEEeOEn_wPEUKreg" base_Element="_RUQWkRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUQWlhuEEeOEn_wPEUKreg" base_Element="_RUQWlBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUQWmBuEEeOEn_wPEUKreg" base_Element="_RUQWlxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUQWnRuEEeOEn_wPEUKreg" base_Element="_RUQWmxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUQWnxuEEeOEn_wPEUKreg" base_Element="_RUQWnhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUaHkRuEEeOEn_wPEUKreg" base_Element="_RUaHkBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUaHkxuEEeOEn_wPEUKreg" base_Element="_RUaHkhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUaHlhuEEeOEn_wPEUKreg" base_Element="_RUaHlBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUaHmBuEEeOEn_wPEUKreg" base_Element="_RUaHlxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUaHnRuEEeOEn_wPEUKreg" base_Element="_RUaHmxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUjRgBuEEeOEn_wPEUKreg" base_Element="_RUaHnhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUjRiBuEEeOEn_wPEUKreg" base_Element="_RUjRhxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Generics xmi:id="_RUjRihuEEeOEn_wPEUKreg" genericsValue="Long" base_Element="_RUjRiRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUjRjBuEEeOEn_wPEUKreg" base_Element="_RUjRiRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUjRjxuEEeOEn_wPEUKreg" base_Element="_RUjRjRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUtCgRuEEeOEn_wPEUKreg" base_Element="_RUjRkBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUtCgxuEEeOEn_wPEUKreg" base_Element="_RUtCghuEEeOEn_wPEUKreg">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_RUtChBuEEeOEn_wPEUKreg" name="getRequest" method="_RV5VURuEEeOEn_wPEUKreg">
+      <ownedParameter xmi:id="_RUtChxuEEeOEn_wPEUKreg" type="_Ql_iYBuEEeOEn_wPEUKreg" direction="return"/>
+    </associatedElement>
+    <associatedElement xmi:type="uml:Operation" xmi:id="_RUtChRuEEeOEn_wPEUKreg" name="setRequest" method="_RV5VUxuEEeOEn_wPEUKreg">
+      <ownedParameter xmi:id="_RUtChhuEEeOEn_wPEUKreg" name="request" type="_Ql_iYBuEEeOEn_wPEUKreg"/>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUtCihuEEeOEn_wPEUKreg" base_Element="_RUtCiBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RUtCjRuEEeOEn_wPEUKreg" base_Element="_RUtCixuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RU2zgBuEEeOEn_wPEUKreg" base_Element="_RUtCjhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RU2zghuEEeOEn_wPEUKreg" base_Element="_RU2zgRuEEeOEn_wPEUKreg">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_RU2zgxuEEeOEn_wPEUKreg" name="getRequest" method="_RV5VWxuEEeOEn_wPEUKreg">
+      <ownedParameter xmi:id="_RU2zhhuEEeOEn_wPEUKreg" type="_Ql_iYBuEEeOEn_wPEUKreg" direction="return"/>
+    </associatedElement>
+    <associatedElement xmi:type="uml:Operation" xmi:id="_RU2zhBuEEeOEn_wPEUKreg" name="setRequest" method="_RV5VXRuEEeOEn_wPEUKreg">
+      <ownedParameter xmi:id="_RU2zhRuEEeOEn_wPEUKreg" name="request" type="_Ql_iYBuEEeOEn_wPEUKreg"/>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RU2ziBuEEeOEn_wPEUKreg" base_Element="_RU2zhxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RU2zihuEEeOEn_wPEUKreg" base_Element="_RU2ziRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RU2zjBuEEeOEn_wPEUKreg" base_Element="_RU2zixuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RU2zjhuEEeOEn_wPEUKreg" base_Element="_RU2zjRuEEeOEn_wPEUKreg">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_RU2zjxuEEeOEn_wPEUKreg" name="getRequest" method="_RV5VZRuEEeOEn_wPEUKreg">
+      <ownedParameter xmi:id="_RU2zkhuEEeOEn_wPEUKreg" type="_Ql_iYBuEEeOEn_wPEUKreg" direction="return"/>
+    </associatedElement>
+    <associatedElement xmi:type="uml:Operation" xmi:id="_RU2zkBuEEeOEn_wPEUKreg" name="setRequest" method="_RV5VZxuEEeOEn_wPEUKreg">
+      <ownedParameter xmi:id="_RU2zkRuEEeOEn_wPEUKreg" name="request" type="_Ql_iYBuEEeOEn_wPEUKreg"/>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RU_9cxuEEeOEn_wPEUKreg" base_Element="_RU_9chuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_RU_9dRuEEeOEn_wPEUKreg" base_Element="_RU_9dBuEEeOEn_wPEUKreg"/>
+  <uml:OpaqueBehavior xmi:id="_RV5VURuEEeOEn_wPEUKreg" name="getRequest" specification="_RUtChBuEEeOEn_wPEUKreg">
+    <ownedParameter xmi:id="_RV5VUhuEEeOEn_wPEUKreg" type="_Ql_iYBuEEeOEn_wPEUKreg" direction="return">
+      <name xsi:nil="true"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return request;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_RV5VUxuEEeOEn_wPEUKreg" name="setRequest" specification="_RUtChRuEEeOEn_wPEUKreg">
+    <ownedParameter xmi:id="_RV5VVBuEEeOEn_wPEUKreg" name="request" type="_Ql_iYBuEEeOEn_wPEUKreg"/>
+    <language>java</language>
+    <body>this.request = (MBPRequest) request;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_RV5VWxuEEeOEn_wPEUKreg" name="getRequest" specification="_RU2zgxuEEeOEn_wPEUKreg">
+    <ownedParameter xmi:id="_RV5VXBuEEeOEn_wPEUKreg" type="_Ql_iYBuEEeOEn_wPEUKreg" direction="return">
+      <name xsi:nil="true"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return request;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_RV5VXRuEEeOEn_wPEUKreg" name="setRequest" specification="_RU2zhBuEEeOEn_wPEUKreg">
+    <ownedParameter xmi:id="_RV5VXhuEEeOEn_wPEUKreg" name="request" type="_Ql_iYBuEEeOEn_wPEUKreg"/>
+    <language>java</language>
+    <body>this.request = (URHRequest) request;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_RV5VZRuEEeOEn_wPEUKreg" name="getRequest" specification="_RU2zjxuEEeOEn_wPEUKreg">
+    <ownedParameter xmi:id="_RV5VZhuEEeOEn_wPEUKreg" type="_Ql_iYBuEEeOEn_wPEUKreg" direction="return">
+      <name xsi:nil="true"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return request;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_RV5VZxuEEeOEn_wPEUKreg" name="setRequest" specification="_RU2zkBuEEeOEn_wPEUKreg">
+    <ownedParameter xmi:id="_RV5VaBuEEeOEn_wPEUKreg" name="request" type="_Ql_iYBuEEeOEn_wPEUKreg"/>
+    <language>java</language>
+    <body>this.request = (UUSDRequest) request;
+	</body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:Reference xmi:id="_RWWBQhuEEeOEn_wPEUKreg" base_Element="_RWWBQBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWWBRRuEEeOEn_wPEUKreg" base_Element="_RWWBQxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWWBSBuEEeOEn_wPEUKreg" base_Element="_RWWBRhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWfLMBuEEeOEn_wPEUKreg" base_Element="_RWWBSRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWfLMxuEEeOEn_wPEUKreg" base_Element="_RWfLMRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWfLNhuEEeOEn_wPEUKreg" base_Element="_RWfLNBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWfLORuEEeOEn_wPEUKreg" base_Element="_RWfLNxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWfLPBuEEeOEn_wPEUKreg" base_Element="_RWfLOhuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWfLPxuEEeOEn_wPEUKreg" base_Element="_RWfLPRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWo8MBuEEeOEn_wPEUKreg" base_Element="_RWfLQBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWo8MxuEEeOEn_wPEUKreg" base_Element="_RWo8MRuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWo8NhuEEeOEn_wPEUKreg" base_Element="_RWo8NBuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_RWo8ORuEEeOEn_wPEUKreg" base_Element="_RWo8NxuEEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_DTwlYRuGEeOEn_wPEUKreg" base_Element="_DTwlYBuGEeOEn_wPEUKreg"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_1ntPohuGEeOEn_wPEUKreg" base_Element="_1ntPoBuGEeOEn_wPEUKreg"/>
+  <UMLLabProfile:Reference xmi:id="_fk5usRulEeOSZbMDD0aGnA" base_Element="_fk5usBulEeOSZbMDD0aGnA"/>
+</xmi:XMI>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AgileJWebModel version="1.7.16.v20130804-1241">
+    <type deep="true" elementName="URHTask" isBinary="false" isDeprecated="false" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask">
+        <filters>
+            <filter signature="all classes"/>
+            <filter signature="all types"/>
+            <filter signature="classes with a default constructor"/>
+            <filter signature="concrete classes"/>
+            <filter signature="inner types named {type-name}" switchValues="URHTask"/>
+            <filter signature="members of package {package-name}" switchValues="parallel.test.task"/>
+            <filter signature="non java star package types"/>
+            <filter signature="public types"/>
+            <filter signature="source code types"/>
+            <filter signature="top level source types"/>
+            <filter signature="top level types"/>
+            <filter signature="types named {type-name-pattern}" switchValues="URHTask"/>
+        </filters>
+        <outermostType>
+            <type deep="false" elementName="URHTask" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask"/>
+        </outermostType>
+        <field deep="true" elementName="request" fieldLineTooltipDescription="URHTask.request&#10;references one&#10;URHRequest" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.task.URHTask.request" modifiers="private,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="request"/>
+                <filter signature="private fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="URHTask" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="URHRequest" modelMemberIdentifier="type:parallel.test.message.URHRequest" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.URHRequest"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="URHRequest" modelMemberIdentifier="type:parallel.test.message.URHRequest" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.URHRequest"/>
+            </containedType>
+        </field>
+        <field deep="true" elementName="dbUrl" fieldLineTooltipDescription="URHTask.dbUrl&#10;references one&#10;String" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.task.URHTask.dbUrl" modifiers="private,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="dbUrl"/>
+                <filter signature="private fields"/>
+                <filter signature="string fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="URHTask" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </containedType>
+        </field>
+        <field deep="true" elementName="user" fieldLineTooltipDescription="URHTask.user&#10;references one&#10;String" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.task.URHTask.user" modifiers="private,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="user"/>
+                <filter signature="private fields"/>
+                <filter signature="string fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="URHTask" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </containedType>
+        </field>
+        <field deep="true" elementName="pass" fieldLineTooltipDescription="URHTask.pass&#10;references one&#10;String" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.task.URHTask.pass" modifiers="private,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="pass"/>
+                <filter signature="private fields"/>
+                <filter signature="string fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="URHTask" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </containedType>
+        </field>
+        <method deep="true" elementName="setConectionParam" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.task.URHTask.setConectionParam((QString;QString;QString;)V)" modifiers="public," parameterNames="dbURL,user,pass">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="setConectionParam"/>
+                <filter signature="methods of {method-owner}" switchValues="URHTask"/>
+                <filter signature="public methods"/>
+                <filter signature="setter methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="URHTask" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask"/>
+            </declarer>
+            <parameterTypes>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </parameterTypes>
+            <return>
+                <type deep="false" elementName="void" modelMemberIdentifier="type:void" modifiers="" packageName="" qualifiedName="void"/>
+            </return>
+        </method>
+        <method deep="true" elementName="setRequest" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.task.URHTask.setRequest((QRequest;)V)" modifiers="public," parameterNames="request">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="setRequest"/>
+                <filter signature="methods of {method-owner}" switchValues="URHTask"/>
+                <filter signature="public methods"/>
+                <filter signature="setter methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="URHTask" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask"/>
+            </declarer>
+            <parameterTypes>
+                <type deep="false" elementName="Request" modelMemberIdentifier="type:parallel.test.message.Request" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Request"/>
+            </parameterTypes>
+            <return>
+                <type deep="false" elementName="void" modelMemberIdentifier="type:void" modifiers="" packageName="" qualifiedName="void"/>
+            </return>
+        </method>
+        <method deep="true" elementName="getRequest" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.task.URHTask.getRequest(()QRequest;)" modifiers="public,">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="getter methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="getRequest"/>
+                <filter signature="methods of {method-owner}" switchValues="URHTask"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="URHTask" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask"/>
+            </declarer>
+            <return>
+                <type deep="false" elementName="Request" modelMemberIdentifier="type:parallel.test.message.Request" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Request"/>
+            </return>
+        </method>
+        <method deep="true" elementName="call" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.task.URHTask.call(()QResponse;)" modifiers="public,">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="call"/>
+                <filter signature="methods of {method-owner}" switchValues="URHTask"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="URHTask" modelMemberIdentifier="type:parallel.test.task.URHTask" modifiers="public," packageName="parallel.test.task" qualifiedName="parallel.test.task.URHTask"/>
+            </declarer>
+            <exceptions>
+                <type deep="false" elementName="TaskExecutionException" modelMemberIdentifier="type:parallel.test.task.exception.TaskExecutionException" modifiers="public," packageName="parallel.test.task.exception" qualifiedName="parallel.test.task.exception.TaskExecutionException"/>
+            </exceptions>
+            <return>
+                <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            </return>
+        </method>
+        <nonRecursiveSubtypes/>
+        <nonRecursiveSupertypes>
+            <type deep="false" elementName="Task" modelMemberIdentifier="type:parallel.test.task.Task" modifiers="abstract,public," packageName="parallel.test.task" qualifiedName="parallel.test.task.Task"/>
+        </nonRecursiveSupertypes>
+        <outwardDependencies>
+            <type deep="false" elementName="Exception" modelMemberIdentifier="type:java.lang.Exception" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Exception"/>
+            <type deep="false" elementName="URHRequest" modelMemberIdentifier="type:parallel.test.message.URHRequest" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.URHRequest"/>
+            <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            <type deep="false" elementName="Task" modelMemberIdentifier="type:parallel.test.task.Task" modifiers="abstract,public," packageName="parallel.test.task" qualifiedName="parallel.test.task.Task"/>
+            <type deep="false" elementName="TaskExecutionException" modelMemberIdentifier="type:parallel.test.task.exception.TaskExecutionException" modifiers="public," packageName="parallel.test.task.exception" qualifiedName="parallel.test.task.exception.TaskExecutionException"/>
+            <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            <type deep="false" elementName="Request" modelMemberIdentifier="type:parallel.test.message.Request" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Request"/>
+            <type deep="false" elementName="ArrayList" modelMemberIdentifier="type:java.util.ArrayList" modifiers="public," packageName="java.util" qualifiedName="java.util.ArrayList"/>
+            <type deep="false" elementName="List" modelMemberIdentifier="type:java.util.List" modifiers="abstract,public," packageName="java.util" qualifiedName="java.util.List"/>
+            <type deep="false" elementName="URHResponse" modelMemberIdentifier="type:parallel.test.message.URHResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.URHResponse"/>
+        </outwardDependencies>
+    </type>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAABx0lEQVR4nOWU3yuDYRTH98e49SNqJTUSr0zaWtpGtjaWMWRujNm0lzGyzI/CWDNLKLXwJhOmKNqFSC5GJhThhrlx+fU+z7IkF6+59K3Tec7znD6dc97nfUSibzq+O4fG346KcR3yB+SQjmppTPa/5woWuzFOYY0LbbCEOlNG4rzeSpDztKC5jjKwnB2rpyvYv9rD4fUB9YGjWTg4BzI6JL+DkzZJpV0hCyKX2/hJOxdb6F6z0soFj6Vm1gx9wIi5o5kUaDu2ibGIG9zZKo1vX27gCvfTvPqgRRiY8WihmNTCfzhPIVfPcej8DSlrXTTDGDRRq/bqQfIFgUl7OT0MPJFkxQfxKLLspci0lVAj6zy2HGKnFJJBGb+uEF5xgUvG3wAXBd+93KNwSAGJS04tGA1h5YSD2teKMo9aeMVkZpJBObQ+ExLvb8mPFdtH85IVI7vJLl7fE9Dw54pJHVqWWWHg2FOcXqWqKT1/M1hc8jP+qofEI9w7E1B7DTTvVz9LDzeKLBsDZkQFXaAJtnUn+sNu6kms4qHiPhlInmDoV3i2neHbrYNyxgAlDyOexGQ/LeinSJtV0yYUDalRPFxDfa3vj2/F/9YHYK+OD5EVjdEAAAAASUVORK5CYII=" height="16" modelElementIdentifier="type:parallel.test.task.URHTask" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAMklEQVR4nGNgGAWjgGhww8n/PzqmmsGPyxv+gwCIpqrByIAmLn7eMYG6BtMkjEfB4AcAIhZF9iVxU3wAAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.task.URHTask.dbUrl" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAMklEQVR4nGNgGAWjgGhww8n/PzqmmsGPyxv+gwCIpqrByIAmLn7eMYG6BtMkjEfB4AcAIhZF9iVxU3wAAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.task.URHTask.pass" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAMklEQVR4nGNgGAWjgGhww8n/PzqmmsGPyxv+gwCIpqrByIAmLn7eMYG6BtMkjEfB4AcAIhZF9iVxU3wAAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.task.URHTask.request" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAMklEQVR4nGNgGAWjgGhww8n/PzqmmsGPyxv+gwCIpqrByIAmLn7eMYG6BtMkjEfB4AcAIhZF9iVxU3wAAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.task.URHTask.user" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.task.URHTask.call(()QResponse;)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.task.URHTask.getRequest(()QRequest;)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.task.URHTask.setConectionParam((QString;QString;QString;)V)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.task.URHTask.setRequest((QRequest;)V)" width="22"/>
+</AgileJWebModel>

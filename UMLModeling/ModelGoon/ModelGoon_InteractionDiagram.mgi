@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="parallel.test.task.Task" x="190" y="-2"/>
+    <CommunicationClass name="parallel.test.message.Request" x="157" y="174">
+        <Association
+            destinationClassName="parallel.test.message.Request.REQUEST_TYPE"
+            endpointName="requestType" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.message.UUSDResponse"
+        x="446" y="129">
+        <Extension destinationClassName="parallel.test.message.Response"/>
+    </CommunicationClass>
+    <CommunicationClass
+        name="parallel.test.message.Response.RESPONSE_TYPE" x="125" y="367"/>
+    <CommunicationClass name="parallel.test.message.URHRequest" x="234" y="229">
+        <Extension destinationClassName="parallel.test.message.Request"/>
+        <Association
+            destinationClassName="parallel.test.message.Request.REQUEST_TYPE"
+            endpointName="reuquestType" kind="Simple"/>
+        <Communication destinationClassName="parallel.test.task.URHTask"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.task.MBPTask" x="585" y="451">
+        <Extension destinationClassName="parallel.test.task.Task"/>
+        <Association
+            destinationClassName="parallel.test.message.MBPRequest"
+            endpointName="request" kind="Simple"/>
+        <Communication destinationClassName="parallel.test.message.MBPResponse"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.message.UUSDRequest" x="235" y="279">
+        <Extension destinationClassName="parallel.test.message.Request"/>
+        <Association
+            destinationClassName="parallel.test.message.Request.REQUEST_TYPE"
+            endpointName="reuquestType" kind="Simple"/>
+        <Communication destinationClassName="parallel.test.task.URHTask"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.message.URHResponse" x="442" y="75">
+        <Extension destinationClassName="parallel.test.message.Response"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.broker.TaskManager" x="83" y="73">
+        <Communication destinationClassName="parallel.test.task.Task"/>
+        <Communication destinationClassName="parallel.test.message.URHResponse"/>
+        <Communication destinationClassName="parallel.test.message.Request"/>
+        <Communication destinationClassName="parallel.test.message.Response"/>
+        <Communication destinationClassName="parallel.test.message.MBPResponse"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.message.ErrorResponse"
+        x="446" y="178">
+        <Extension destinationClassName="parallel.test.message.Response"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.task.UUSDTask" x="774" y="140">
+        <Extension destinationClassName="parallel.test.task.Task"/>
+        <Association
+            destinationClassName="parallel.test.message.UUSDRequest"
+            endpointName="request" kind="Simple"/>
+        <Communication destinationClassName="parallel.test.message.UUSDResponse"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.task.URHTask" x="423" y="250">
+        <Extension destinationClassName="parallel.test.task.Task"/>
+        <Association
+            destinationClassName="parallel.test.message.URHRequest"
+            endpointName="request" kind="Simple"/>
+        <Communication destinationClassName="parallel.test.message.URHResponse"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.message.MBPRequest" x="235" y="321">
+        <Extension destinationClassName="parallel.test.message.Request"/>
+        <Association
+            destinationClassName="parallel.test.message.Request.REQUEST_TYPE"
+            endpointName="reuquestType" kind="Simple"/>
+        <Communication destinationClassName="parallel.test.task.MBPTask"/>
+    </CommunicationClass>
+    <CommunicationClass name="parallel.test.message.Response" x="43" y="367">
+        <Association
+            destinationClassName="parallel.test.message.Response.RESPONSE_TYPE"
+            endpointName="responseType" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass
+        name="parallel.test.message.Request.REQUEST_TYPE" x="230" y="175"/>
+    <CommunicationClass name="parallel.test.message.MBPResponse" x="440" y="29">
+        <Extension destinationClassName="parallel.test.message.Response"/>
+    </CommunicationClass>
+</ClassDiagram>

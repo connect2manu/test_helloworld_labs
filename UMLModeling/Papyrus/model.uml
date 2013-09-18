@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_PSAb4BuNEeOEn_wPEUKreg" name="model">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_PUZBgBuNEeOEn_wPEUKreg" name="Interaction1">
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_cwRX0BuNEeOEn_wPEUKreg" name="ActionExecSpecStart" covered="_YogRMBuNEeOEn_wPEUKreg" execution="_cxKvsBuNEeOEn_wPEUKreg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_cxKvsBuNEeOEn_wPEUKreg" name="ActionExecSpec" covered="_YogRMBuNEeOEn_wPEUKreg" finish="_cxT5oBuNEeOEn_wPEUKreg" start="_cwRX0BuNEeOEn_wPEUKreg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_A1TsUBuOEeOEn_wPEUKreg" name="MessageSend" covered="_YogRMBuNEeOEn_wPEUKreg" message="_A0kFcBuOEeOEn_wPEUKreg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_A2DTMBuOEeOEn_wPEUKreg" name="MessageRecv" covered="_bEt08BuNEeOEn_wPEUKreg" message="_A0kFcBuOEeOEn_wPEUKreg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_eCi4ABuNEeOEn_wPEUKreg" name="ActionExecSpec0Start" covered="_bEt08BuNEeOEn_wPEUKreg" execution="_eDSe4BuNEeOEn_wPEUKreg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_eDSe4BuNEeOEn_wPEUKreg" name="ActionExecSpec0" covered="_bEt08BuNEeOEn_wPEUKreg" finish="_eDbo0BuNEeOEn_wPEUKreg" start="_eCi4ABuNEeOEn_wPEUKreg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_eDbo0BuNEeOEn_wPEUKreg" name="ActionExecSpec0Finish" covered="_bEt08BuNEeOEn_wPEUKreg" execution="_eDSe4BuNEeOEn_wPEUKreg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_cxT5oBuNEeOEn_wPEUKreg" name="ActionExecSpecFinish" covered="_YogRMBuNEeOEn_wPEUKreg" execution="_cxKvsBuNEeOEn_wPEUKreg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_YogRMBuNEeOEn_wPEUKreg" name="Object 1" coveredBy="_cwRX0BuNEeOEn_wPEUKreg _cxT5oBuNEeOEn_wPEUKreg _cxKvsBuNEeOEn_wPEUKreg _A1TsUBuOEeOEn_wPEUKreg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_bEt08BuNEeOEn_wPEUKreg" name="Object2" coveredBy="_eCi4ABuNEeOEn_wPEUKreg _eDbo0BuNEeOEn_wPEUKreg _eDSe4BuNEeOEn_wPEUKreg _A2DTMBuOEeOEn_wPEUKreg"/>
+    <message xmi:type="uml:Message" xmi:id="_A0kFcBuOEeOEn_wPEUKreg" name="1:getData()" messageSort="asynchCall" receiveEvent="_A2DTMBuOEeOEn_wPEUKreg" sendEvent="_A1TsUBuOEeOEn_wPEUKreg"/>
+  </packagedElement>
+</uml:Model>

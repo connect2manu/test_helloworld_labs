@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AgileJWebModel version="1.7.16.v20130804-1241">
+    <type deep="true" elementName="Response" isBinary="false" isDeprecated="false" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response">
+        <filters>
+            <filter signature="abstract classes"/>
+            <filter signature="all classes"/>
+            <filter signature="all types"/>
+            <filter signature="classes with a default constructor"/>
+            <filter signature="inner types named {type-name}" switchValues="Response"/>
+            <filter signature="members of package {package-name}" switchValues="parallel.test.message"/>
+            <filter signature="non java star package types"/>
+            <filter signature="pojo types"/>
+            <filter signature="public types"/>
+            <filter signature="source code types"/>
+            <filter signature="top level source types"/>
+            <filter signature="top level types"/>
+            <filter signature="types named {type-name-pattern}" switchValues="Response"/>
+        </filters>
+        <outermostType>
+            <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+        </outermostType>
+        <field deep="true" elementName="responseType" fieldLineTooltipDescription="Response.responseType&#10;references one&#10;RESPONSE_TYPE" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.message.Response.responseType" modifiers="public,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="responseType"/>
+                <filter signature="public fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+            </containedType>
+        </field>
+        <field deep="true" elementName="exception" fieldLineTooltipDescription="Response.exception&#10;references one&#10;Exception" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.message.Response.exception" modifiers="protected,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="exception"/>
+                <filter signature="protected fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="Exception" modelMemberIdentifier="type:java.lang.Exception" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Exception"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="Exception" modelMemberIdentifier="type:java.lang.Exception" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Exception"/>
+            </containedType>
+        </field>
+        <method deep="true" elementName="setRequestType" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.message.Response.setRequestType(()V)" modifiers="public,">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="setRequestType"/>
+                <filter signature="methods of {method-owner}" switchValues="Response"/>
+                <filter signature="public methods"/>
+                <filter signature="setter methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            </declarer>
+            <return>
+                <type deep="false" elementName="void" modelMemberIdentifier="type:void" modifiers="" packageName="" qualifiedName="void"/>
+            </return>
+        </method>
+        <method deep="true" elementName="getResponseType" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.message.Response.getResponseType(()QRESPONSE_TYPE;)" modifiers="abstract,public,">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="getter methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="getResponseType"/>
+                <filter signature="methods of {method-owner}" switchValues="Response"/>
+                <filter signature="overridden methods"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            </declarer>
+            <return>
+                <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+            </return>
+        </method>
+        <method deep="true" elementName="getException" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.message.Response.getException(()QException;)" modifiers="public,">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="getter methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="getException"/>
+                <filter signature="methods of {method-owner}" switchValues="Response"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            </declarer>
+            <return>
+                <type deep="false" elementName="Exception" modelMemberIdentifier="type:java.lang.Exception" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Exception"/>
+            </return>
+        </method>
+        <method deep="true" elementName="setException" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.message.Response.setException((QException;)V)" modifiers="public," parameterNames="e">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="setException"/>
+                <filter signature="methods of {method-owner}" switchValues="Response"/>
+                <filter signature="public methods"/>
+                <filter signature="setter methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            </declarer>
+            <parameterTypes>
+                <type deep="false" elementName="Exception" modelMemberIdentifier="type:java.lang.Exception" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Exception"/>
+            </parameterTypes>
+            <return>
+                <type deep="false" elementName="void" modelMemberIdentifier="type:void" modifiers="" packageName="" qualifiedName="void"/>
+            </return>
+        </method>
+        <type deep="true" elementName="RESPONSE_TYPE" isBinary="false" isDeprecated="false" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE">
+            <filters>
+                <filter signature="all types"/>
+                <filter signature="inner types named {type-name}" switchValues="RESPONSE_TYPE"/>
+                <filter signature="members of package {package-name}" switchValues="parallel.test.message"/>
+                <filter signature="non java star package types"/>
+                <filter signature="public types"/>
+                <filter signature="self referencing types"/>
+                <filter signature="serializable types"/>
+                <filter signature="source code types"/>
+                <filter signature="types named {type-name-pattern}" switchValues="RESPONSE_TYPE"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            </declarer>
+            <outermostType>
+                <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            </outermostType>
+            <field deep="true" elementName="MBP_WS" fieldLineTooltipDescription="RESPONSE_TYPE.MBP_WS&#10;references one&#10;RESPONSE_TYPE" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.message.Response$RESPONSE_TYPE.MBP_WS" modifiers="">
+                <filters>
+                    <filter signature="all fields"/>
+                    <filter signature="fields named {field-name-pattern}" switchValues="MBP_WS"/>
+                    <filter signature="fields which reference their declarer"/>
+                    <filter signature="package visible fields"/>
+                </filters>
+                <declarer>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </declarer>
+                <rawType>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </rawType>
+                <containedType>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </containedType>
+            </field>
+            <field deep="true" elementName="URH_EJB" fieldLineTooltipDescription="RESPONSE_TYPE.URH_EJB&#10;references one&#10;RESPONSE_TYPE" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.message.Response$RESPONSE_TYPE.URH_EJB" modifiers="">
+                <filters>
+                    <filter signature="all fields"/>
+                    <filter signature="fields named {field-name-pattern}" switchValues="URH_EJB"/>
+                    <filter signature="fields which reference their declarer"/>
+                    <filter signature="package visible fields"/>
+                </filters>
+                <declarer>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </declarer>
+                <rawType>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </rawType>
+                <containedType>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </containedType>
+            </field>
+            <field deep="true" elementName="UUSD_EJB" fieldLineTooltipDescription="RESPONSE_TYPE.UUSD_EJB&#10;references one&#10;RESPONSE_TYPE" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.message.Response$RESPONSE_TYPE.UUSD_EJB" modifiers="">
+                <filters>
+                    <filter signature="all fields"/>
+                    <filter signature="fields named {field-name-pattern}" switchValues="UUSD_EJB"/>
+                    <filter signature="fields which reference their declarer"/>
+                    <filter signature="package visible fields"/>
+                </filters>
+                <declarer>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </declarer>
+                <rawType>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </rawType>
+                <containedType>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </containedType>
+            </field>
+            <field deep="true" elementName="ERROR" fieldLineTooltipDescription="RESPONSE_TYPE.ERROR&#10;references one&#10;RESPONSE_TYPE" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.message.Response$RESPONSE_TYPE.ERROR" modifiers="">
+                <filters>
+                    <filter signature="all fields"/>
+                    <filter signature="fields named {field-name-pattern}" switchValues="ERROR"/>
+                    <filter signature="fields which reference their declarer"/>
+                    <filter signature="package visible fields"/>
+                </filters>
+                <declarer>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </declarer>
+                <rawType>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </rawType>
+                <containedType>
+                    <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+                </containedType>
+            </field>
+            <nonRecursiveSubtypes/>
+            <nonRecursiveSupertypes/>
+            <outwardDependencies>
+                <type deep="false" elementName="Exception" modelMemberIdentifier="type:java.lang.Exception" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Exception"/>
+            </outwardDependencies>
+        </type>
+        <nonRecursiveSubtypes>
+            <type deep="false" elementName="ErrorResponse" modelMemberIdentifier="type:parallel.test.message.ErrorResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.ErrorResponse"/>
+            <type deep="false" elementName="MBPResponse" modelMemberIdentifier="type:parallel.test.message.MBPResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.MBPResponse"/>
+            <type deep="false" elementName="URHResponse" modelMemberIdentifier="type:parallel.test.message.URHResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.URHResponse"/>
+            <type deep="false" elementName="UUSDResponse" modelMemberIdentifier="type:parallel.test.message.UUSDResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.UUSDResponse"/>
+        </nonRecursiveSubtypes>
+        <nonRecursiveSupertypes>
+            <type deep="false" elementName="Object" modelMemberIdentifier="type:java.lang.Object" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Object"/>
+        </nonRecursiveSupertypes>
+        <outwardDependencies>
+            <type deep="false" elementName="Exception" modelMemberIdentifier="type:java.lang.Exception" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Exception"/>
+        </outwardDependencies>
+    </type>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAACAklEQVR4nO1U30tTcRT3j+hP6FWTBEmCFZJXVGJjiC7RsamorSR7aTU32c0f0xpOJ/hzzDWiAmGoF8nQFigoPkQRPSxxYkKRvuh68fHT95xxL7vbHOGzHzic7znfcz98zrnn3qKiLHw+/I6W8GPUBW2oGDKhdszKMeWza1VA4IrrBrn8NfJKkMm6Xj+CM/ZUM4rLnt8F3ecj7Y0HmZh8Djk9dN1bDVnxYPHrAjb2PmFrf5N9ZHsOXsWLq08MOeSZanNUU5uk9FnMifjuGvJh/ccH9C65WHnmWAoSN831wB7pxPz2rEa0lniP8bgfyrdFjn+eHMC3Osh1bVEnssegmm4cUsAK86QV4a1XnNw7TsIW7tCs+00POqMOtnszdlB9tloVOtXUXmmfhEA8rXgzuYMSTxWK3XfY6Fwm16B8oBaGYaM412nEpS9MOmI11hTf9BnFBvg4eXjyC7dGzDD4TGzRnRgWviiwhLpRHbDoFJ8HJqaZGYZNsIYcSJ39Tb+sxAYevHVh9GO6i9OzFFrEvXnShofv5HN3WofEUZJXqX7KLjZDxq6YcSZ+p/7Avz4By0w71xX6WHLQp4yhxC1BGm2ELXIf7uUBDK762VPcKEjL+42guv8mzSS/5pFEu61omG1HgyAjTzHlL0Sqgtqsn3bg9ogFlS+b2DeHCv8rLlEQ/wA8uSRbus8E5gAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="type:parallel.test.message.Response" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAXUlEQVR4nGNgGAXDF+ybo/GfJob+uzftP1UN3z1DHWwoCIDo3TPVKTd8U6/S/3/nc/4jAxB/M1CcYsPXtSvADQfR69rlqRccqxplwYauapKjfgQur5OhvqGjgCoAAJYySwaooDPUAAAAAElFTkSuQmCC" height="16" modelElementIdentifier="field:parallel.test.message.Response.exception" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAXElEQVR4nGNgGAXDD0w8se6/y8ISMAaxqWaoyYyM/507GsEYxKaK4SCDCjeW/ocBEBskRrHBAm2+YJfCAIgNEqPY4Nq98//DDIcZChKj2GCY4XKdQdQ1dBQMDQAAuNtV+eDB0jcAAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.message.Response.responseType" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.message.Response.getException(()QException;)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAA7klEQVR4nGNgoAL4DwQiVRYg6j81zIMbWr1vEthgEE01w5FdS1VX08Rg5GCAYYLBUbp9wn/WRs//elMT/oPYhFwLA3hd7bu4+H/8qpL/Wy7N/T/j2AQwGySGzWCDrgAUg2F8DEMLt/X+D1te8H/1+ZlIeAZYDCSHbjAugGEwc4PH/6a9Tf9b9rUg8P4WsBhIDmfYEQKyPWH/k1YBXbexDIpLwTRIDCRHtsEp61r/28+I/9+xs/F/x47G/51ADGLbT0/4D5Ij22AQcJ6T899rdur/6Xs7/jdtrQezQWIUGQoD+Ru74MkNxKaKoSMTAADT0xoKYwTuIgAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.message.Response.getResponseType(()QRESPONSE_TYPE;)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.message.Response.setException((QException;)V)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.message.Response.setRequestType(()V)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAABUElEQVR4nGNgQAMPLx/5v7Qu8P/sfLv/k5N1/8/KtQHzQeLoaokGu+fWgA1b1Rr9f2G5JxyD+BMTNP+D5MkydEKc+v+ds8r/n9uxAAODDO+JVCDNcJA3QS7dMjkPjP//+4eBL+5ZCnY9yOVEB8viat//y+qD4Rhm2I3jW/4fXzcJjDf0psHlVzZHEGfwzBzL//OKnf8vrQ0EY5jB+xY2wsVAGGQgyNUg9UQZDPJef6za/74YFTDGFhSbJmT9n5So/X9KqsH/CfEaxLt4coo+HMMMO7Nt7v9t04rAGBQEMHmiXQzyIsgloOAAYZjBB5a0wsWQ8fruFOIMBsUyKCnNL3UFY3ypAqSOpMyya04VOHxnZFv8P7S8EwOD0jEojEHqiDYUxfBY1f/zSlyguc4DTIP4IHGyDIUBkDcXlLn/n5pu9H96himYXlLjT1lZMbIBAAjJkU5BPdCfAAAAAElFTkSuQmCC" height="16" modelElementIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAp0lEQVR4nGNgIAL8B4IPe47/P86kC8YgNgjA5DSSpv0Prl8CxiA2TI4og0EGwgCMDZMDGYgOyDIYWTO6wUQZSGpQgGiSDUYG+IKCoGETT6z777KwBIyJDWOiDDWZkfG/c0cjGIPAs94F8KAAsdGDgiiDQYYWbiyFuxDEBokR1EgICLT5wl0KAiA2SIxig2v3zv8PMxxmKEiMYoNhhst1BlHX0FEwNAAACaE8V+KIOE4AAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.message.Response$RESPONSE_TYPE.ERROR" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAp0lEQVR4nGNgIAL8B4IPe47/P86kC8YgNgjA5DSSpv0Prl8CxiA2TI4og0EGwgCMDZMDGYgOyDIYWTO6wUQZSGpQgGiSDUYG+IKCoGETT6z777KwBIyJDWOiDDWZkfG/c0cjGIPAs94F8KAAsdGDgiiDQYYWbiyFuxDEBokR1EgICLT5wl0KAiA2SIxig2v3zv8PMxxmKEiMYoNhhst1BlHX0FEwNAAACaE8V+KIOE4AAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.message.Response$RESPONSE_TYPE.MBP_WS" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAp0lEQVR4nGNgIAL8B4IPe47/P86kC8YgNgjA5DSSpv0Prl8CxiA2TI4og0EGwgCMDZMDGYgOyDIYWTO6wUQZSGpQgGiSDUYG+IKCoGETT6z777KwBIyJDWOiDDWZkfG/c0cjGIPAs94F8KAAsdGDgiiDQYYWbiyFuxDEBokR1EgICLT5wl0KAiA2SIxig2v3zv8PMxxmKEiMYoNhhst1BlHX0FEwNAAACaE8V+KIOE4AAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.message.Response$RESPONSE_TYPE.URH_EJB" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAp0lEQVR4nGNgIAL8B4IPe47/P86kC8YgNgjA5DSSpv0Prl8CxiA2TI4og0EGwgCMDZMDGYgOyDIYWTO6wUQZSGpQgGiSDUYG+IKCoGETT6z777KwBIyJDWOiDDWZkfG/c0cjGIPAs94F8KAAsdGDgiiDQYYWbiyFuxDEBokR1EgICLT5wl0KAiA2SIxig2v3zv8PMxxmKEiMYoNhhst1BlHX0FEwNAAACaE8V+KIOE4AAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.message.Response$RESPONSE_TYPE.UUSD_EJB" width="22"/>
+</AgileJWebModel>

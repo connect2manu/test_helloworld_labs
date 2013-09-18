@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AgileJWebModel version="1.7.16.v20130804-1241">
+    <type deep="true" elementName="UUSDResponse" isBinary="false" isDeprecated="false" modelMemberIdentifier="type:parallel.test.message.UUSDResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.UUSDResponse">
+        <filters>
+            <filter signature="all classes"/>
+            <filter signature="all types"/>
+            <filter signature="classes with a default constructor"/>
+            <filter signature="concrete classes"/>
+            <filter signature="inner types named {type-name}" switchValues="UUSDResponse"/>
+            <filter signature="members of package {package-name}" switchValues="parallel.test.message"/>
+            <filter signature="non java star package types"/>
+            <filter signature="pojo types"/>
+            <filter signature="public types"/>
+            <filter signature="source code types"/>
+            <filter signature="top level source types"/>
+            <filter signature="top level types"/>
+            <filter signature="types named {type-name-pattern}" switchValues="UUSDResponse"/>
+        </filters>
+        <outermostType>
+            <type deep="false" elementName="UUSDResponse" modelMemberIdentifier="type:parallel.test.message.UUSDResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.UUSDResponse"/>
+        </outermostType>
+        <field deep="true" elementName="allAddresses" fieldLineTooltipDescription="UUSDResponse.allAddresses&#10;references many&#10;String" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.message.UUSDResponse.allAddresses" modifiers="private,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="allAddresses"/>
+                <filter signature="one to many fields"/>
+                <filter signature="private fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="UUSDResponse" modelMemberIdentifier="type:parallel.test.message.UUSDResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.UUSDResponse"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="List" modelMemberIdentifier="type:java.util.List&lt;java.lang.String&gt;" modifiers="abstract,public," packageName="java.util" qualifiedName="java.util.List&lt;java.lang.String&gt;"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </containedType>
+        </field>
+        <method deep="true" elementName="getResponseType" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.message.UUSDResponse.getResponseType(()QRESPONSE_TYPE;)" modifiers="public,">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="getter methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="getResponseType"/>
+                <filter signature="methods of {method-owner}" switchValues="UUSDResponse"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="UUSDResponse" modelMemberIdentifier="type:parallel.test.message.UUSDResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.UUSDResponse"/>
+            </declarer>
+            <return>
+                <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response$RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response$RESPONSE_TYPE"/>
+            </return>
+        </method>
+        <method deep="true" elementName="getAllAddresses" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.message.UUSDResponse.getAllAddresses(()QList&lt;QString;&gt;;)" modifiers="public,">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="getter methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="getAllAddresses"/>
+                <filter signature="methods of {method-owner}" switchValues="UUSDResponse"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="UUSDResponse" modelMemberIdentifier="type:parallel.test.message.UUSDResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.UUSDResponse"/>
+            </declarer>
+            <return>
+                <type deep="false" elementName="List" modelMemberIdentifier="type:java.util.List&lt;java.lang.String&gt;" modifiers="abstract,public," packageName="java.util" qualifiedName="java.util.List&lt;java.lang.String&gt;"/>
+            </return>
+        </method>
+        <method deep="true" elementName="setAllAddresses" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.message.UUSDResponse.setAllAddresses((QList&lt;QString;&gt;;)V)" modifiers="public," parameterNames="allAddresses">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="setAllAddresses"/>
+                <filter signature="methods of {method-owner}" switchValues="UUSDResponse"/>
+                <filter signature="public methods"/>
+                <filter signature="setter methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="UUSDResponse" modelMemberIdentifier="type:parallel.test.message.UUSDResponse" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.UUSDResponse"/>
+            </declarer>
+            <parameterTypes>
+                <type deep="false" elementName="List" modelMemberIdentifier="type:java.util.List&lt;java.lang.String&gt;" modifiers="abstract,public," packageName="java.util" qualifiedName="java.util.List&lt;java.lang.String&gt;"/>
+            </parameterTypes>
+            <return>
+                <type deep="false" elementName="void" modelMemberIdentifier="type:void" modifiers="" packageName="" qualifiedName="void"/>
+            </return>
+        </method>
+        <nonRecursiveSubtypes/>
+        <nonRecursiveSupertypes>
+            <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+        </nonRecursiveSupertypes>
+        <outwardDependencies>
+            <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            <type deep="false" elementName="Response" modelMemberIdentifier="type:parallel.test.message.Response" modifiers="abstract,public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response"/>
+            <type deep="false" elementName="RESPONSE_TYPE" modelMemberIdentifier="type:parallel.test.message.Response.RESPONSE_TYPE" modifiers="public," packageName="parallel.test.message" qualifiedName="parallel.test.message.Response.RESPONSE_TYPE"/>
+            <type deep="false" elementName="List" modelMemberIdentifier="type:java.util.List" modifiers="abstract,public," packageName="java.util" qualifiedName="java.util.List"/>
+        </outwardDependencies>
+    </type>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAABx0lEQVR4nOWU3yuDYRTH98e49SNqJTUSr0zaWtpGtjaWMWRujNm0lzGyzI/CWDNLKLXwJhOmKNqFSC5GJhThhrlx+fU+z7IkF6+59K3Tec7znD6dc97nfUSibzq+O4fG346KcR3yB+SQjmppTPa/5woWuzFOYY0LbbCEOlNG4rzeSpDztKC5jjKwnB2rpyvYv9rD4fUB9YGjWTg4BzI6JL+DkzZJpV0hCyKX2/hJOxdb6F6z0soFj6Vm1gx9wIi5o5kUaDu2ibGIG9zZKo1vX27gCvfTvPqgRRiY8WihmNTCfzhPIVfPcej8DSlrXTTDGDRRq/bqQfIFgUl7OT0MPJFkxQfxKLLspci0lVAj6zy2HGKnFJJBGb+uEF5xgUvG3wAXBd+93KNwSAGJS04tGA1h5YSD2teKMo9aeMVkZpJBObQ+ExLvb8mPFdtH85IVI7vJLl7fE9Dw54pJHVqWWWHg2FOcXqWqKT1/M1hc8jP+qofEI9w7E1B7DTTvVz9LDzeKLBsDZkQFXaAJtnUn+sNu6kms4qHiPhlInmDoV3i2neHbrYNyxgAlDyOexGQ/LeinSJtV0yYUDalRPFxDfa3vj2/F/9YHYK+OD5EVjdEAAAAASUVORK5CYII=" height="16" modelElementIdentifier="type:parallel.test.message.UUSDResponse" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAMklEQVR4nGNgGAWjgGhww8n/PzqmmsGPyxv+gwCIpqrByIAmLn7eMYG6BtMkjEfB4AcAIhZF9iVxU3wAAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.message.UUSDResponse.allAddresses" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.message.UUSDResponse.getAllAddresses(()QList&lt;QString;&gt;;)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.message.UUSDResponse.getResponseType(()QRESPONSE_TYPE;)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.message.UUSDResponse.setAllAddresses((QList&lt;QString;&gt;;)V)" width="22"/>
+</AgileJWebModel>

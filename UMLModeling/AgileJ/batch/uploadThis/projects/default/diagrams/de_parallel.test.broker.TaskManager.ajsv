@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)-->
+<ajsv>
+    <diagram creationDate="2013-Sep-12 11:36" filterScript="// by dependency generator&#10;hide field lines&#10;hide inheritance lines&#10;show types named TaskManager in orange&#10;show bytecode types in gray&#10;show all interfaces in blue&#10;show abstract classes in pink" generator="dependency" licenseGrade="evaluation" licenseeName="anon" licenseeOrganization="unknown" seed="parallel.test.broker.TaskManager" version="1.7.16.v20130804-1241">
+        <class className="parallel.test.pool.AuthThreadPoolExecutor" project="ParallelTaskExecTest" xLocation="187" yLocation="96"/>
+        <class className="parallel.test.message.UUSDRequest" project="ParallelTaskExecTest" xLocation="31" yLocation="518"/>
+        <class className="parallel.test.message.MBPRequest" project="ParallelTaskExecTest" xLocation="630" yLocation="838"/>
+        <class className="parallel.test.message.URHRequest" project="ParallelTaskExecTest" xLocation="625" yLocation="1219"/>
+        <class className="parallel.test.message.URHResponse" project="ParallelTaskExecTest" xLocation="1197" yLocation="557"/>
+        <class className="parallel.test.message.ErrorResponse" project="ParallelTaskExecTest" xLocation="2060" yLocation="809"/>
+        <class className="parallel.test.message.Response" project="ParallelTaskExecTest" xLocation="1816" yLocation="307"/>
+        <class className="parallel.test.broker.TaskManager" project="ParallelTaskExecTest" xLocation="1135" yLocation="831"/>
+        <class className="parallel.test.task.Task" project="ParallelTaskExecTest" xLocation="539" yLocation="534"/>
+        <class className="parallel.test.pool.AuthThreadFactory" project="ParallelTaskExecTest" xLocation="2355" yLocation="554"/>
+        <class className="parallel.test.message.MBPResponse" project="ParallelTaskExecTest" xLocation="1563" yLocation="30"/>
+        <class className="parallel.test.message.Request" project="ParallelTaskExecTest" xLocation="30" yLocation="853"/>
+    </diagram>
+</ajsv>

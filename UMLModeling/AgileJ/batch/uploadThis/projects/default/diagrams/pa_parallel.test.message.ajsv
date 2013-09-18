@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)-->
+<ajsv>
+    <diagram creationDate="2013-Sep-12 11:36" filterScript="// By Package generator&#10;hide dependency lines&#10;show all interfaces in blue&#10;show abstract classes in pink" generator="package" licenseGrade="evaluation" licenseeName="anon" licenseeOrganization="unknown" version="1.7.16.v20130804-1241">
+        <class className="parallel.test.message.UUSDRequest" project="ParallelTaskExecTest" xLocation="1219" yLocation="154"/>
+        <class className="parallel.test.message.MBPRequest" project="ParallelTaskExecTest" xLocation="2339" yLocation="253"/>
+        <class className="parallel.test.message.URHResponse" project="ParallelTaskExecTest" xLocation="30" yLocation="352"/>
+        <class className="parallel.test.message.URHRequest" project="ParallelTaskExecTest" xLocation="2010" yLocation="644"/>
+        <class className="parallel.test.message.ErrorResponse" project="ParallelTaskExecTest" xLocation="1213" yLocation="488"/>
+        <class className="parallel.test.message.Response" project="ParallelTaskExecTest" xLocation="669" yLocation="30"/>
+        <class className="parallel.test.message.UUSDResponse" project="ParallelTaskExecTest" xLocation="1039" yLocation="743"/>
+        <class className="parallel.test.message.MBPResponse" project="ParallelTaskExecTest" xLocation="400" yLocation="639"/>
+        <class className="parallel.test.message.Request" project="ParallelTaskExecTest" xLocation="1721" yLocation="85"/>
+    </diagram>
+</ajsv>

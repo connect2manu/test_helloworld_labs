@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="holmes_s" class="com.kagius.example.rest.entities.marshaling.PersonSummary">
+        <property name="code" value="holmes_s" />
+        <property name="name" value="sherlock" />
+        <property name="surname" value="holmes" />
+    </bean>
+    <bean id="holmes_m" class="com.kagius.example.rest.entities.marshaling.PersonSummary">
+        <property name="code" value="holmes_m" />
+        <property name="name" value="mycroft" />
+        <property name="surname" value="holmes" />
+    </bean>
+    <bean id="watson_j" class="com.kagius.example.rest.entities.marshaling.PersonSummary">
+        <property name="code" value="watson_j" />
+        <property name="name" value="john" />
+        <property name="surname" value="watson" />
+    </bean>
+    <bean id="moriarty_j" class="com.kagius.example.rest.entities.marshaling.PersonSummary">
+        <property name="code" value="moriarty_j" />
+        <property name="name" value="james" />
+        <property name="surname" value="moriarty" />
+    </bean>
+
+    <bean id="holmes_s_detail" class="com.kagius.example.rest.entities.marshaling.PersonDetail" parent="holmes_s">
+        <property name="relationships">
+            <list>
+                <bean class="com.kagius.example.rest.entities.marshaling.RelationshipSummary">
+                    <property name="from" ref="holmes_s" />
+                    <property name="to" ref="holmes_m" />
+                    <property name="type" value="brother" />
+                </bean>
+                <bean class="com.kagius.example.rest.entities.marshaling.RelationshipSummary">
+                    <property name="from" ref="holmes_s" />
+                    <property name="to" ref="watson_j" />
+                    <property name="type" value="friend" />
+                </bean>
+                <bean class="com.kagius.example.rest.entities.marshaling.RelationshipSummary">
+                    <property name="from" ref="holmes_s" />
+                    <property name="to" ref="moriarty_j" />
+                    <property name="type" value="enemy" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="watson_j_detail" class="com.kagius.example.rest.entities.marshaling.PersonDetail" parent="watson_j">
+        <property name="relationships">
+            <list>
+                <bean class="com.kagius.example.rest.entities.marshaling.RelationshipSummary">
+                    <property name="from" ref="watson_j" />
+                    <property name="to" ref="holmes_s" />
+                    <property name="type" value="friend" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="holmes_m_detail" class="com.kagius.example.rest.entities.marshaling.PersonDetail" parent="holmes_m">
+        <property name="relationships">
+            <list>
+                <bean class="com.kagius.example.rest.entities.marshaling.RelationshipSummary">
+                    <property name="from" ref="holmes_m" />
+                    <property name="to" ref="holmes_s" />
+                    <property name="type" value="brother" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="moriarty_j_detail" class="com.kagius.example.rest.entities.marshaling.PersonDetail" parent="moriarty_j">
+        <property name="relationships">
+            <list>
+                <bean class="com.kagius.example.rest.entities.marshaling.RelationshipSummary">
+                    <property name="from" ref="moriarty_j" />
+                    <property name="to" ref="holmes_s" />
+                    <property name="type" value="enemy" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

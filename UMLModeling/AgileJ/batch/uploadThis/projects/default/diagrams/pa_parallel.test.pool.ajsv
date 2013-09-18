@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)-->
+<ajsv>
+    <diagram creationDate="2013-Sep-12 11:35" filterScript="// By Package generator&#10;hide dependency lines&#10;show all interfaces in blue&#10;show abstract classes in pink" generator="package" licenseGrade="evaluation" licenseeName="anon" licenseeOrganization="unknown" version="1.7.16.v20130804-1241">
+        <class className="parallel.test.pool.AuthThread" project="ParallelTaskExecTest" xLocation="307" yLocation="425"/>
+        <class className="parallel.test.pool.AuthThreadPoolExecutor" project="ParallelTaskExecTest" xLocation="30" yLocation="30"/>
+        <class className="parallel.test.pool.AuthThreadFactory" project="ParallelTaskExecTest" xLocation="713" yLocation="424"/>
+    </diagram>
+</ajsv>

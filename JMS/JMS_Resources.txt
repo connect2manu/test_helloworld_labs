@@ -1,0 +1,2 @@
+https://github.com/bsnyder/spring-jms-examples
+http://bsnyderblog.blogspot.in/2010/02/using-spring-to-receive-jms-messages.html

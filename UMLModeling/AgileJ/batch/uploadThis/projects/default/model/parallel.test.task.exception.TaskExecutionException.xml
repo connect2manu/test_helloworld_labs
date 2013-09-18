@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AgileJWebModel version="1.7.16.v20130804-1241">
+    <type deep="true" elementName="TaskExecutionException" isBinary="false" isDeprecated="false" modelMemberIdentifier="type:parallel.test.task.exception.TaskExecutionException" modifiers="public," packageName="parallel.test.task.exception" qualifiedName="parallel.test.task.exception.TaskExecutionException">
+        <filters>
+            <filter signature="all classes"/>
+            <filter signature="all types"/>
+            <filter signature="classes with a default constructor"/>
+            <filter signature="concrete classes"/>
+            <filter signature="exceptions"/>
+            <filter signature="inner types named {type-name}" switchValues="TaskExecutionException"/>
+            <filter signature="members of package {package-name}" switchValues="parallel.test.task.exception"/>
+            <filter signature="non java star package types"/>
+            <filter signature="pojo types"/>
+            <filter signature="public types"/>
+            <filter signature="serializable types"/>
+            <filter signature="source code types"/>
+            <filter signature="top level source types"/>
+            <filter signature="top level types"/>
+            <filter signature="types named {type-name-pattern}" switchValues="TaskExecutionException"/>
+            <filter signature="types with static members"/>
+        </filters>
+        <outermostType>
+            <type deep="false" elementName="TaskExecutionException" modelMemberIdentifier="type:parallel.test.task.exception.TaskExecutionException" modifiers="public," packageName="parallel.test.task.exception" qualifiedName="parallel.test.task.exception.TaskExecutionException"/>
+        </outermostType>
+        <field deep="true" elementName="serialVersionUID" fieldLineTooltipDescription="TaskExecutionException.serialVersionUID&#10;references one&#10;long" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.task.exception.TaskExecutionException.serialVersionUID" modifiers="final,private,static,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="serialVersionUID"/>
+                <filter signature="private fields"/>
+                <filter signature="serial version uid fields"/>
+                <filter signature="static fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="TaskExecutionException" modelMemberIdentifier="type:parallel.test.task.exception.TaskExecutionException" modifiers="public," packageName="parallel.test.task.exception" qualifiedName="parallel.test.task.exception.TaskExecutionException"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="long" modelMemberIdentifier="type:long" modifiers="" packageName="" qualifiedName="long"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="long" modelMemberIdentifier="type:long" modifiers="" packageName="" qualifiedName="long"/>
+            </containedType>
+        </field>
+        <method deep="true" elementName="TaskExecutionException" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.task.exception.TaskExecutionException.TaskExecutionException(()V)" modifiers="public,">
+            <filters>
+                <filter signature="constructors"/>
+                <filter signature="default constructors"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="TaskExecutionException"/>
+                <filter signature="methods of {method-owner}" switchValues="TaskExecutionException"/>
+                <filter signature="overloaded methods"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="TaskExecutionException" modelMemberIdentifier="type:parallel.test.task.exception.TaskExecutionException" modifiers="public," packageName="parallel.test.task.exception" qualifiedName="parallel.test.task.exception.TaskExecutionException"/>
+            </declarer>
+        </method>
+        <method deep="true" elementName="TaskExecutionException" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.task.exception.TaskExecutionException.TaskExecutionException((QString;)V)" modifiers="public," parameterNames="message">
+            <filters>
+                <filter signature="constructors"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="TaskExecutionException"/>
+                <filter signature="methods of {method-owner}" switchValues="TaskExecutionException"/>
+                <filter signature="non default constructors"/>
+                <filter signature="overloaded methods"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="TaskExecutionException" modelMemberIdentifier="type:parallel.test.task.exception.TaskExecutionException" modifiers="public," packageName="parallel.test.task.exception" qualifiedName="parallel.test.task.exception.TaskExecutionException"/>
+            </declarer>
+            <parameterTypes>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </parameterTypes>
+        </method>
+        <method deep="true" elementName="TaskExecutionException" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.task.exception.TaskExecutionException.TaskExecutionException((QString;QThrowable;)V)" modifiers="public," parameterNames="message,throwable">
+            <filters>
+                <filter signature="constructors"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="TaskExecutionException"/>
+                <filter signature="methods of {method-owner}" switchValues="TaskExecutionException"/>
+                <filter signature="non default constructors"/>
+                <filter signature="overloaded methods"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="TaskExecutionException" modelMemberIdentifier="type:parallel.test.task.exception.TaskExecutionException" modifiers="public," packageName="parallel.test.task.exception" qualifiedName="parallel.test.task.exception.TaskExecutionException"/>
+            </declarer>
+            <parameterTypes>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+                <type deep="false" elementName="Throwable" modelMemberIdentifier="type:java.lang.Throwable" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Throwable"/>
+            </parameterTypes>
+        </method>
+        <method deep="true" elementName="TaskExecutionException" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.task.exception.TaskExecutionException.TaskExecutionException((QThrowable;)V)" modifiers="public," parameterNames="throwable">
+            <filters>
+                <filter signature="constructors"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="TaskExecutionException"/>
+                <filter signature="methods of {method-owner}" switchValues="TaskExecutionException"/>
+                <filter signature="non default constructors"/>
+                <filter signature="overloaded methods"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="TaskExecutionException" modelMemberIdentifier="type:parallel.test.task.exception.TaskExecutionException" modifiers="public," packageName="parallel.test.task.exception" qualifiedName="parallel.test.task.exception.TaskExecutionException"/>
+            </declarer>
+            <parameterTypes>
+                <type deep="false" elementName="Throwable" modelMemberIdentifier="type:java.lang.Throwable" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Throwable"/>
+            </parameterTypes>
+        </method>
+        <nonRecursiveSubtypes/>
+        <nonRecursiveSupertypes>
+            <type deep="false" elementName="Exception" modelMemberIdentifier="type:java.lang.Exception" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Exception"/>
+        </nonRecursiveSupertypes>
+        <outwardDependencies>
+            <type deep="false" elementName="Exception" modelMemberIdentifier="type:java.lang.Exception" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Exception"/>
+            <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            <type deep="false" elementName="Throwable" modelMemberIdentifier="type:java.lang.Throwable" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Throwable"/>
+        </outwardDependencies>
+    </type>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAABx0lEQVR4nOWU3yuDYRTH98e49SNqJTUSr0zaWtpGtjaWMWRujNm0lzGyzI/CWDNLKLXwJhOmKNqFSC5GJhThhrlx+fU+z7IkF6+59K3Tec7znD6dc97nfUSibzq+O4fG346KcR3yB+SQjmppTPa/5woWuzFOYY0LbbCEOlNG4rzeSpDztKC5jjKwnB2rpyvYv9rD4fUB9YGjWTg4BzI6JL+DkzZJpV0hCyKX2/hJOxdb6F6z0soFj6Vm1gx9wIi5o5kUaDu2ibGIG9zZKo1vX27gCvfTvPqgRRiY8WihmNTCfzhPIVfPcej8DSlrXTTDGDRRq/bqQfIFgUl7OT0MPJFkxQfxKLLspci0lVAj6zy2HGKnFJJBGb+uEF5xgUvG3wAXBd+93KNwSAGJS04tGA1h5YSD2teKMo9aeMVkZpJBObQ+ExLvb8mPFdtH85IVI7vJLl7fE9Dw54pJHVqWWWHg2FOcXqWqKT1/M1hc8jP+qofEI9w7E1B7DTTvVz9LDzeKLBsDZkQFXaAJtnUn+sNu6kms4qHiPhlInmDoV3i2neHbrYNyxgAlDyOexGQ/LeinSJtV0yYUDalRPFxDfa3vj2/F/9YHYK+OD5EVjdEAAAAASUVORK5CYII=" height="16" modelElementIdentifier="type:parallel.test.task.exception.TaskExecutionException" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAiElEQVR4nGNgIAL8B4IPe47/P86kC8YgNgjA5DSSpv0Prl8CxiA2TI4og0EGwgCMDZMDGYgOyDIYWTO6wUQZSGpQgGiSDUYG+IKCZIOJCWOiDLvh5P8fhkHgWe8CeFCA2OhBQZLBj8sbwBpANIhPkjfxGYwMqGowzMXPOyZQ12B0TBWDR8HgBwDoDS/D0GPxBAAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="field:parallel.test.task.exception.TaskExecutionException.serialVersionUID" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAA6ElEQVR4nGNgoBD8BwL99V7/FatM/ivVmf7f/fbof0rNBAOHbZFwA/sfLgCzqWowMhgaBhMdFKXbJ/xnbfT8rzc14T+IjUsdSZHnu7j4f/yqkv9bLs39P+PYBDAbJIbPcILBULit93/Y8oL/q8/PRMIzwGIgObzexAeYGzz+N+1t+t+yrwWB97eAxUByZBss2xP2P2kV0HUby6C4FEyDxEByZBucsq71v/2M+P8dOxv/d+xo/N8JxCC2/fSE/yA5sg0GAec5Of+9Zqf+n76343/T1nowGyRGkaEwkL+xC57cQGyqGDoyAQA+++MipdXKzwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.task.exception.TaskExecutionException.TaskExecutionException(()V)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAA6ElEQVR4nGNgoBD8BwL99V7/FatM/ivVmf7f/fbof0rNBAOHbZFwA/sfLgCzqWowMhgaBhMdFKXbJ/xnbfT8rzc14T+IjUsdSZHnu7j4f/yqkv9bLs39P+PYBDAbJIbPcILBULit93/Y8oL/q8/PRMIzwGIgObzexAeYGzz+N+1t+t+yrwWB97eAxUByZBss2xP2P2kV0HUby6C4FEyDxEByZBucsq71v/2M+P8dOxv/d+xo/N8JxCC2/fSE/yA5sg0GAec5Of+9Zqf+n76343/T1nowGyRGkaEwkL+xC57cQGyqGDoyAQA+++MipdXKzwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.task.exception.TaskExecutionException.TaskExecutionException((QString;)V)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAA6ElEQVR4nGNgoBD8BwL99V7/FatM/ivVmf7f/fbof0rNBAOHbZFwA/sfLgCzqWowMhgaBhMdFKXbJ/xnbfT8rzc14T+IjUsdSZHnu7j4f/yqkv9bLs39P+PYBDAbJIbPcILBULit93/Y8oL/q8/PRMIzwGIgObzexAeYGzz+N+1t+t+yrwWB97eAxUByZBss2xP2P2kV0HUby6C4FEyDxEByZBucsq71v/2M+P8dOxv/d+xo/N8JxCC2/fSE/yA5sg0GAec5Of+9Zqf+n76343/T1nowGyRGkaEwkL+xC57cQGyqGDoyAQA+++MipdXKzwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.task.exception.TaskExecutionException.TaskExecutionException((QString;QThrowable;)V)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAA6ElEQVR4nGNgoBD8BwL99V7/FatM/ivVmf7f/fbof0rNBAOHbZFwA/sfLgCzqWowMhgaBhMdFKXbJ/xnbfT8rzc14T+IjUsdSZHnu7j4f/yqkv9bLs39P+PYBDAbJIbPcILBULit93/Y8oL/q8/PRMIzwGIgObzexAeYGzz+N+1t+t+yrwWB97eAxUByZBss2xP2P2kV0HUby6C4FEyDxEByZBucsq71v/2M+P8dOxv/d+xo/N8JxCC2/fSE/yA5sg0GAec5Of+9Zqf+n76343/T1nowGyRGkaEwkL+xC57cQGyqGDoyAQA+++MipdXKzwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.task.exception.TaskExecutionException.TaskExecutionException((QThrowable;)V)" width="22"/>
+</AgileJWebModel>

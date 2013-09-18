@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)-->
+<ajsv>
+    <diagram creationDate="2013-Sep-12 11:28" filterScript="" licenseGrade="evaluation" licenseeName="anon" licenseeOrganization="unknown" version="1.7.16.v20130804-1241">
+        <class className="parallel.test.task.MBPTask" project="ParallelTaskExecTest" xLocation="100" yLocation="399"/>
+        <class className="parallel.test.task.UUSDTask" project="ParallelTaskExecTest" xLocation="733" yLocation="378"/>
+        <class className="parallel.test.task.URHTask" project="ParallelTaskExecTest" xLocation="1341" yLocation="403"/>
+        <class className="parallel.test.task.Task" project="ParallelTaskExecTest" xLocation="719" yLocation="100"/>
+    </diagram>
+</ajsv>

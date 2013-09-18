@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)-->
+<ajsv>
+    <diagram creationDate="2013-Sep-12 11:35" filterScript="// by inheritance generator&#10;hide dependency lines&#10;hide field lines&#10;show types named Request in orange&#10;show bytecode types in gray&#10;show all interfaces in blue&#10;show abstract classes in pink&#10;show overridden methods in red larger bold&#10;show overriding methods in purple larger bold" generator="inheritance" licenseGrade="evaluation" licenseeName="anon" licenseeOrganization="unknown" seed="parallel.test.message.Request" version="1.7.16.v20130804-1241">
+        <class className="parallel.test.message.UUSDRequest" project="ParallelTaskExecTest" xLocation="149" yLocation="30"/>
+        <class className="parallel.test.message.MBPRequest" project="ParallelTaskExecTest" xLocation="111" yLocation="879"/>
+        <class className="parallel.test.message.URHRequest" project="ParallelTaskExecTest" xLocation="703" yLocation="572"/>
+        <class className="parallel.test.message.Request" project="ParallelTaskExecTest" xLocation="30" yLocation="370"/>
+    </diagram>
+</ajsv>

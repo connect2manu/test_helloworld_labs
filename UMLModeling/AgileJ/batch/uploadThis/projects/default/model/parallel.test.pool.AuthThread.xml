@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AgileJWebModel version="1.7.16.v20130804-1241">
+    <type deep="true" elementName="AuthThread" isBinary="false" isDeprecated="false" modelMemberIdentifier="type:parallel.test.pool.AuthThread" modifiers="public," packageName="parallel.test.pool" qualifiedName="parallel.test.pool.AuthThread">
+        <filters>
+            <filter signature="all classes"/>
+            <filter signature="all types"/>
+            <filter signature="concrete classes"/>
+            <filter signature="decorator type"/>
+            <filter signature="inner types named {type-name}" switchValues="AuthThread"/>
+            <filter signature="members of package {package-name}" switchValues="parallel.test.pool"/>
+            <filter signature="non java star package types"/>
+            <filter signature="public types"/>
+            <filter signature="source code types"/>
+            <filter signature="top level source types"/>
+            <filter signature="top level types"/>
+            <filter signature="types named {type-name-pattern}" switchValues="AuthThread"/>
+            <filter signature="types with static members"/>
+        </filters>
+        <outermostType>
+            <type deep="false" elementName="AuthThread" modelMemberIdentifier="type:parallel.test.pool.AuthThread" modifiers="public," packageName="parallel.test.pool" qualifiedName="parallel.test.pool.AuthThread"/>
+        </outermostType>
+        <field deep="true" elementName="NAME" fieldLineTooltipDescription="AuthThread.NAME&#10;references one&#10;String" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.pool.AuthThread.NAME" modifiers="final,public,static,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="NAME"/>
+                <filter signature="public fields"/>
+                <filter signature="static fields"/>
+                <filter signature="static string fields"/>
+                <filter signature="string fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="AuthThread" modelMemberIdentifier="type:parallel.test.pool.AuthThread" modifiers="public," packageName="parallel.test.pool" qualifiedName="parallel.test.pool.AuthThread"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </containedType>
+        </field>
+        <field deep="true" elementName="created" fieldLineTooltipDescription="AuthThread.created&#10;references one&#10;AtomicInteger" isBinary="false" isDeprecated="false" modelMemberIdentifier="field:parallel.test.pool.AuthThread.created" modifiers="final,private,static,">
+            <filters>
+                <filter signature="all fields"/>
+                <filter signature="fields named {field-name-pattern}" switchValues="created"/>
+                <filter signature="private fields"/>
+                <filter signature="static fields"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="AuthThread" modelMemberIdentifier="type:parallel.test.pool.AuthThread" modifiers="public," packageName="parallel.test.pool" qualifiedName="parallel.test.pool.AuthThread"/>
+            </declarer>
+            <rawType>
+                <type deep="false" elementName="AtomicInteger" modelMemberIdentifier="type:java.util.concurrent.atomic.AtomicInteger" modifiers="public," packageName="java.util.concurrent.atomic" qualifiedName="java.util.concurrent.atomic.AtomicInteger"/>
+            </rawType>
+            <containedType>
+                <type deep="false" elementName="AtomicInteger" modelMemberIdentifier="type:java.util.concurrent.atomic.AtomicInteger" modifiers="public," packageName="java.util.concurrent.atomic" qualifiedName="java.util.concurrent.atomic.AtomicInteger"/>
+            </containedType>
+        </field>
+        <method deep="true" elementName="AuthThread" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.pool.AuthThread.AuthThread((QRunnable;QString;)V)" modifiers="public," parameterNames="r,name">
+            <filters>
+                <filter signature="constructors"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="AuthThread"/>
+                <filter signature="methods of {method-owner}" switchValues="AuthThread"/>
+                <filter signature="non default constructors"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="AuthThread" modelMemberIdentifier="type:parallel.test.pool.AuthThread" modifiers="public," packageName="parallel.test.pool" qualifiedName="parallel.test.pool.AuthThread"/>
+            </declarer>
+            <parameterTypes>
+                <type deep="false" elementName="Runnable" modelMemberIdentifier="type:java.lang.Runnable" modifiers="abstract,public," packageName="java.lang" qualifiedName="java.lang.Runnable"/>
+                <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            </parameterTypes>
+        </method>
+        <method deep="true" elementName="run" isBinary="false" isDeprecated="false" modelMemberIdentifier="method:parallel.test.pool.AuthThread.run(()V)" modifiers="public,">
+            <filters>
+                <filter signature="all methods"/>
+                <filter signature="methods named {method-name-pattern}" switchValues="run"/>
+                <filter signature="methods of {method-owner}" switchValues="AuthThread"/>
+                <filter signature="public methods"/>
+            </filters>
+            <declarer>
+                <type deep="false" elementName="AuthThread" modelMemberIdentifier="type:parallel.test.pool.AuthThread" modifiers="public," packageName="parallel.test.pool" qualifiedName="parallel.test.pool.AuthThread"/>
+            </declarer>
+            <return>
+                <type deep="false" elementName="void" modelMemberIdentifier="type:void" modifiers="" packageName="" qualifiedName="void"/>
+            </return>
+        </method>
+        <nonRecursiveSubtypes/>
+        <nonRecursiveSupertypes>
+            <type deep="false" elementName="Thread" modelMemberIdentifier="type:java.lang.Thread" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Thread"/>
+        </nonRecursiveSupertypes>
+        <outwardDependencies>
+            <type deep="false" elementName="String" modelMemberIdentifier="type:java.lang.String" modifiers="final,public," packageName="java.lang" qualifiedName="java.lang.String"/>
+            <type deep="false" elementName="Runnable" modelMemberIdentifier="type:java.lang.Runnable" modifiers="abstract,public," packageName="java.lang" qualifiedName="java.lang.Runnable"/>
+            <type deep="false" elementName="AtomicInteger" modelMemberIdentifier="type:java.util.concurrent.atomic.AtomicInteger" modifiers="public," packageName="java.util.concurrent.atomic" qualifiedName="java.util.concurrent.atomic.AtomicInteger"/>
+            <type deep="false" elementName="Thread" modelMemberIdentifier="type:java.lang.Thread" modifiers="public," packageName="java.lang" qualifiedName="java.lang.Thread"/>
+        </outwardDependencies>
+    </type>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAABx0lEQVR4nOWU3yuDYRTH98e49SNqJTUSr0zaWtpGtjaWMWRujNm0lzGyzI/CWDNLKLXwJhOmKNqFSC5GJhThhrlx+fU+z7IkF6+59K3Tec7znD6dc97nfUSibzq+O4fG346KcR3yB+SQjmppTPa/5woWuzFOYY0LbbCEOlNG4rzeSpDztKC5jjKwnB2rpyvYv9rD4fUB9YGjWTg4BzI6JL+DkzZJpV0hCyKX2/hJOxdb6F6z0soFj6Vm1gx9wIi5o5kUaDu2ibGIG9zZKo1vX27gCvfTvPqgRRiY8WihmNTCfzhPIVfPcej8DSlrXTTDGDRRq/bqQfIFgUl7OT0MPJFkxQfxKLLspci0lVAj6zy2HGKnFJJBGb+uEF5xgUvG3wAXBd+93KNwSAGJS04tGA1h5YSD2teKMo9aeMVkZpJBObQ+ExLvb8mPFdtH85IVI7vJLl7fE9Dw54pJHVqWWWHg2FOcXqWqKT1/M1hc8jP+qofEI9w7E1B7DTTvVz9LDzeKLBsDZkQFXaAJtnUn+sNu6kms4qHiPhlInmDoV3i2neHbrYNyxgAlDyOexGQ/LeinSJtV0yYUDalRPFxDfa3vj2/F/9YHYK+OD5EVjdEAAAAASUVORK5CYII=" height="16" modelElementIdentifier="type:parallel.test.pool.AuthThread" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAp0lEQVR4nGNgIAL8B4IPe47/P86kC8YgNgjA5DSSpv0Prl8CxiA2TI4og0EGwgCMDZMDGYgOyDIYWTO6wUQZSGpQgGiSDUYG+IKCoGETT6z777KwBIyJDWOiDDWZkfG/c0cjGIPAs94F8KAAsdGDgiiDQYYWbiyFuxDEBokR1EgICLT5wl0KAiA2SIxig2v3zv8PMxxmKEiMYoNhhst1BlHX0FEwNAAACaE8V+KIOE4AAAAASUVORK5CYII=" height="16" modelElementIdentifier="field:parallel.test.pool.AuthThread.NAME" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAiElEQVR4nGNgIAL8B4IPe47/P86kC8YgNgjA5DSSpv0Prl8CxiA2TI4og0EGwgCMDZMDGYgOyDIYWTO6wUQZSGpQgGiSDUYG+IKCZIOJCWOiDLvh5P8fhkHgWe8CeFCA2OhBQZLBj8sbwBpANIhPkjfxGYwMqGowzMXPOyZQ12B0TBWDR8HgBwDoDS/D0GPxBAAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="field:parallel.test.pool.AuthThread.created" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAA6ElEQVR4nGNgoBD8BwL99V7/FatM/ivVmf7f/fbof0rNBAOHbZFwA/sfLgCzqWowMhgaBhMdFKXbJ/xnbfT8rzc14T+IjUsdSZHnu7j4f/yqkv9bLs39P+PYBDAbJIbPcILBULit93/Y8oL/q8/PRMIzwGIgObzexAeYGzz+N+1t+t+yrwWB97eAxUByZBss2xP2P2kV0HUby6C4FEyDxEByZBucsq71v/2M+P8dOxv/d+xo/N8JxCC2/fSE/yA5sg0GAec5Of+9Zqf+n76343/T1nowGyRGkaEwkL+xC57cQGyqGDoyAQA+++MipdXKzwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.pool.AuthThread.AuthThread((QRunnable;QString;)V)" width="22"/>
+    <icon data="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAuElEQVR4nGNgGAXDD5Run/CftdHzv97UhP8gNlUM9V1c/D9+Vcn/LZfm/p9xbAKYDRKjyNDCbb3/w5YX/F99fiYSngEWA8mRbTBzg8f/pr1N/1v2tSDw/hawGEiObINle8L+J60Cum5jGRSXgmmQGEiObINT1rX+t58R/79jZ+P/jh2N/zuBGMS2n57wHyRHtsEg4Dwn57/X7NT/0/d2/G/aWg9mg8QoMhQG8jd2wZMbiE0VQ0cmAAD3yYO+kqE/HwAAAABJRU5ErkJggg==" height="16" modelElementIdentifier="method:parallel.test.pool.AuthThread.run(()V)" width="22"/>
+</AgileJWebModel>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="parallel.test" x="174" y="133"/>
+    <Package name="parallel.test.broker" x="301" y="132">
+        <DependencyLink destination="parallel.test.task"/>
+        <DependencyLink destination="parallel.test.message"/>
+        <DependencyLink destination="parallel.test.pool"/>
+    </Package>
+    <Package name="parallel.test.message" x="277" y="245">
+        <DependencyLink destination="parallel.test.task"/>
+    </Package>
+    <Package name="parallel.test.pool" x="108" y="246"/>
+    <Package name="parallel.test.task" x="453" y="244">
+        <DependencyLink destination="parallel.test.message"/>
+        <DependencyLink destination="parallel.test.task.exception"/>
+    </Package>
+    <Package name="parallel.test.task.exception" x="430" y="304"/>
+    <Package name="parallel" x="81" y="135"/>
+</PackageAnalysis>
