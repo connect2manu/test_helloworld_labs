@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.kagius.example.rest.actions" />
+
+    <import resource="data.xml"/>
+    <bean id="people" scope="singleton" class="com.kagius.example.rest.entities.data.InMemoryPersonDaoImpl">
+        <constructor-arg>
+            <map>
+                <entry key="holmes_s" value-ref="holmes_s_detail" />
+                <entry key="holmes_m" value-ref="holmes_m_detail" />
+                <entry key="watson_j" value-ref="watson_j_detail" />
+                <entry key="moriarty_j" value-ref="moriarty_j_detail" />
+            </map>
+        </constructor-arg>
+    </bean>
+</beans>
