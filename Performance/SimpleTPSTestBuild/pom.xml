@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.acn.tqs</groupId>
-	<artifactId>perfTest</artifactId>
+	<artifactId>perftest</artifactId>
 	<name>Performance Test</name>
 	<description>Performance Test Servlet</description>
 	<packaging>war</packaging>
