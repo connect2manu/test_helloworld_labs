@@ -1,4 +1,4 @@
-package com.jackson.test.model;
+package com.jackson.test.sm.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

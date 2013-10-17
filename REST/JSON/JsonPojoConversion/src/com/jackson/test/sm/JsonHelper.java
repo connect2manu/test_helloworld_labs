@@ -18,7 +18,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jackson.test.model.RECodRequest;
+import com.jackson.test.sm.model.RECodRequest;
 
 /**
  * @author manu.mehrotra
