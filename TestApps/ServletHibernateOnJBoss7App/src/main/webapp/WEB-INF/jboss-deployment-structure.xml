@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<jboss-deployment-structure>   
+	<deployment>    
+		<dependencies>
+			<module name="com.mysql" />
+			<module name="javax.servlet.api" />
+			<module name="javax.transaction.api" />
+			<!-- module name="org.infinispan" / -->
+			<module name="org.hibernate" />
+			<module name="org.javassist" />					
+			<module name="org.slf4j" />
+			<module name="org.apache.commons.configuration" />
+			
+			<module name="javax.api" />
+			<module name="javax.persistence.api" />
+			<module name="javax.xml.bind.api" />
+			<module name="org.dom4j" />		
+		</dependencies>
+	</deployment> 
+</jboss-deployment-structure> 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- ## Datasource properties -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.datasource">java:/MySqlDS</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property> -->
+		<!-- <property name="hibernate.connection.username">admin</property> -->
+		<!-- <property name="hibernate.connection.password">password</property> -->
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<!-- ## Setting to suppress envers.autoRegister required for using Hibernate 4.0.1 fixed (not required) in 4.1 -->
+		<property name="hibernate.listeners.envers.autoRegister">false</property>
+
+		<!-- ## Infinispan as 2LC -->
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+		<!-- property name="hibernate.cache.use_query_cache">true</property>
+		<property name="hibernate.cache.region.factory_class">org.jboss.as.jpa.hibernate4.infinispan.InfinispanRegionFactory</property>
+		<property name="hibernate.cache.infinispan.cachemanager">java:jboss/infinispan/container/hibernate</property -->
+		
+		<!-- ## Mapping files -->
+		<mapping class="com.manu.demo.application.model.Notification" />
+	</session-factory>
+</hibernate-configuration>

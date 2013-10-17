@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   targetNamespace="http://www.manu.com/demo/xml" 
+		   xmlns="http://www.xyz.com/test" 
+		   attributeFormDefault="qualified" 
+		   elementFormDefault="qualified">
+	<xs:element name="NotificationServiceResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NotificationList">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="Notification">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="NotificationType" type="xs:string" />
+										<xs:element name="TimeStamp" type="xs:unsignedLong">
+											<xs:annotation>
+												<xs:documentation>UNIX timestamp: the difference, measured
+													in
+													seconds, between the current time and midnight, January 1,
+													1970 UTC
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
