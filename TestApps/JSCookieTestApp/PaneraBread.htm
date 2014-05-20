@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function getCookie(c_name)
+{
+	var c_value = document.cookie;
+	var c_start = c_value.indexOf(" " + c_name + "=");
+	if (c_start == -1)
+	{
+		c_start = c_value.indexOf(c_name + "=");
+	}
+	if (c_start == -1)
+	{
+		c_value = null;
+	}
+	else
+	{
+		c_start = c_value.indexOf("=", c_start) + 1;
+		var c_end = c_value.indexOf(";", c_start);
+		if (c_end == -1)
+		{
+			c_end = c_value.length;
+		}
+		c_value = unescape(c_value.substring(c_start,c_end));
+	}
+	return c_value;
+}
+
+function checkCookie()
+{
+var items=getCookie("pending_order_items");
+if (items!=null && items!="")
+{
+	alert("Pending Items in Order " + items);
+}
+else {
+	alert("No pending Order");
+}
+}
+</script>
+</head>
+<body onload="checkCookie()">
+<H4>Cookie Test</H4>
+</body>
+</html>

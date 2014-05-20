@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0144)https://network.realmedia.com/2/track_targeting/cookie/lb/1545916865@x88?cAction=Add&cName=RTG&cValue=panerabread.com&cExpires=30&cAnalytics=RTG -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Cookie Monster - USNetwork/track_targeting : cookieMonster</title>
+</head>
+<body>
+    <script type="text/javascript">
+        cmString = 'cAction=Add&cName=RTG&cValue=panerabread.com&cExpires=30&cAnalytics=RTG';
+        cmAction = null;
+        cmName = null;
+        cmValue = null;
+        cmExpires = 90;
+        cmDelim = '|';
+        cmDebug = false;
+        cmAnalytics = 'cmAdd';
+        cmProtocol = 'https://';
+        cmPixelBase = 'https://network.realmedia.com/5/track_targeting/cookie/lb/L22/383216027/x95/USNetwork/track_targeting/' + ((cmProtocol == 'https://') ? 'reporting_secure' : 'reporting') + '/1?';
+
+        var cmStringTerms = cmString.split('&');
+        for (var i = 0; i < cmStringTerms.length; i++) {
+            var cmStringPair = cmStringTerms[i].split('=');
+            if (cmStringPair[0] == 'cDebug') { cmDebug = true; }
+            if (cmStringPair[0] == 'cAction') { cmAction = cmStringPair[1]; }
+            else if (cmStringPair[0] == 'cName') { cmName = cmStringPair[1]; }
+            else if (cmStringPair[0] == 'cValue') { cmValue = cmStringPair[1]; }
+            else if (cmStringPair[0] == 'cExpires') { cmExpires = cmStringPair[1]; }
+            else if (cmStringPair[0] == 'cDelim') { cmDelim = cmStringPair[1]; }
+            else if (cmStringPair[0] == 'cAnalytics') { cmAnalytics = cmStringPair[1]; }
+        }
+
+        if (cmAction == null) { if (cmDebug) { console.log('Error : Cookie Monster Action not specified'); } }
+        if ((cmName == null) || (cmName == '')) { cmAction = null; if (cmDebug) { console.log('Error : Cookie Name Not Specified'); } }
+        if ((cmValue == null) || (cmValue == '')) { cmAction = null; if (cmDebug) { console.log('Error : Cookie Value Not Specified'); } }
+        if (cmAction == null) { if (cmDebug) { console.info('MMM Coookie!'); } }
+        // Update Cookie - Add Value
+        else if (cmAction == 'Add') {
+            var cmOldValue = (readCookie(cmName) != null) ? readCookie(cmName) : '';
+            var cmNewValue = cmOldValue;
+            var cmValueTerms = cmValue.split(',');
+            cmAnalyticsValue = '';
+            for (var i = 0; i < cmValueTerms.length; i++) {
+                var cmOldValueTerms = cmOldValue.split(cmDelim);
+                var addValue = true;
+                for (var j = 0; j < cmOldValueTerms.length; j++) {
+                    if (cmValueTerms[i] == cmOldValueTerms[j]) {
+                        addValue = false;
+                        if (cmDebug) { console.info('Value ' + cmValueTerms[i] + ' already exists in cookie ' + cmName); }
+                    }
+                }
+                if (addValue) {
+                    cmNewValue += (cmNewValue != '') ? cmDelim + cmValueTerms[i] : cmValueTerms[i];
+                    cmAnalyticsValue += ((cmAnalyticsValue != '') ? '&' : '') + cmAnalytics + '=' + cmValueTerms[i];
+                    if (cmDebug) { console.info('Value ' + cmValueTerms[i] + ' added to cookie ' + cmName); }
+                }
+            }
+            createCookie(cmName, cmNewValue, cmExpires);
+            if (cmAnalyticsValue != '') {
+                cmPixel = new Image(1, 1);
+                cmPixel.src = cmPixelBase + 'XE&' + cmAnalyticsValue + '&XE';
+                cmPixel = null;
+            }
+        }
+        // Update Cookie - Remove Value
+        else if (cmAction == 'Remove') {
+            var cmOldValue = (readCookie(cmName) != null) ? readCookie(cmName) : '';
+            if (cmOldValue != '') {
+                var cmNewValue = '';
+                var cmValueTerms = cmValue.split(',');
+                for (var i = 0; i < cmValueTerms.length; i++) {
+                    var cmOldValueTerms = cmOldValue.split(cmDelim);
+                    for (var j = 0; j < cmOldValueTerms.length; j++) {
+                        if (cmValueTerms[i] != cmOldValueTerms[j]) { cmNewValue += ((cmNewValue == '') ? cmOldValueTerms[j] : (cmDelim + cmOldValueTerms[j])); }
+                        else {
+                            var cmPixel = new Image(1, 1);
+                            cmPixel.src = cmPixelBase + 'XE&cmRemove=' + cmOldValueTerms[j] + '&XE';
+                            if (cmDebug) { console.info('Value ' + cmOldValueTerms[j] + ' removed from cookie ' + cmName); }
+                        }
+                    }
+                }
+                createCookie(cmName, cmNewValue, cmExpires);
+            }
+        }
+        // Over Write Cookie
+        else if (cmAction == 'Rewrite') {
+            var newValueTemp = '';
+            var cmValueTerms = cmValue.split(',');
+            for (var i = 0; i < cmValueTerms.length; i++) { newValueTemp += ((newValueTemp == '') ? cmValueTerms[i] : (cmDelim + cmValueTerms[i])); }
+            createCookie(cmName, newValueTemp, cmExpires);
+        }
+        // Delete Cookie
+        else if (cmAction == 'Delete') { eraseCookie(cmName); }
+
+        if (cmDebug) {
+            var ca = document.cookie.split(';');
+            var ca_temp = 'Current Cookies : \n';
+            for (var i = 0; i < ca.length; i++) {
+                var caPairs = ca[i].split('=');
+                ca_temp += '\n  Name : ' + caPairs[0] + ', Value : ' + caPairs[1];
+            }
+            console.info(ca_temp);
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) { return c.substring(nameEQ.length, c.length); }
+            }
+            return null;
+        }
+        function createCookie(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            }
+            else {
+                var expires = "";
+            }
+            document.cookie = name + "=" + value + expires + "; path=/; domain=.realmedia.com";
+        }
+        function eraseCookie(name) { createCookie(name, "", -1); }
+    </script>	
+
+</body></html>

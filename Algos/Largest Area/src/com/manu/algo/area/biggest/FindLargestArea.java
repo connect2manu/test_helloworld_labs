@@ -53,7 +53,7 @@ public class FindLargestArea {
 		int maxArea = -1;
 		try {
 			maxArea = findBiggestArea(new File(FindLargestArea.class.getResource(FILE_NAME).toURI()));
-			System.out.println("Largest Area = "+maxArea+" | Total time taken = " + (System.currentTimeMillis() - startTime)/1000 + " ms");
+			System.out.println("Largest Area = "+maxArea+" | Total time taken = " + (System.currentTimeMillis() - startTime) + " ms");
 		} catch (URISyntaxException e) {
 			System.err.println("Unable to locate file - map.txt. ERROR: "+e.getMessage());
 		}
